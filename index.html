@@ -10,23 +10,62 @@
 <body>
     <!--Шапка-->
     <header>
-        <a href="index.html"> <img src="img/logo.svg" alt="gllacy logo"></a>
+        <img src="img/logo.svg" alt="gllacy logo">
         <nav>
             <ul>
-                <li><a href="#">Каталог</a></li>
+                <!--Разделы сайта-->
+                <li class="catalog"><a href="#">Каталог</a>
+                    <ul>
+                        <li>
+                            <a href="#">Новинки</a>
+                        </li>
+                        <li>
+                            <a href="catalog.html">Сливочое</a>
+                        </li>
+                        <li>
+                            <a href="#">Щербеты</a>
+                        </li>
+                        <li>
+                            <a href="#">Фруктовый лёд</a>
+                        </li>
+                        <li>
+                            <a href="#">Мелорин</a>
+                        </li>
+                    </ul>
+                </li>
                 <li> <a href="#">Доставка и оплата</a> </li>
                 <li> <a href="#">О компании</a> </li>
             </ul>
 
             <ul>
                 <li>
-                    <button type="button">Поиск</button>
+                    <button form="search" type="button">Поиск</button>
+                    <form action="https://echo.htmlacademy.ru" id="search">
+                        <div>
+                            <input id="button" type="text" placeholder="Что Вы хотите найти?">
+                        </div>
+                    </form>
                 </li>
                 <li>
-                    <button type="button">Вход</button>
+                    <button type="button" form="login">Вход</button>
+                    <form action="https://echo.htmlacademy.ru" method="post" id="login">
+                        <input type="text" name="email" id="email" placeholder="Электроная почта">
+                        <input type="password" name="password" id="password" placeholder="Пароль">
+                        <button type="submit">Войти</button>
+                        <a href="#">Забыли пароль?</a>
+                        <a href="#">Новая регистрация</a>
+                    </form>
                 </li>
                 <li>
-                    <button type="button">Корзина</button>
+                    <button type="button" id="cart">Корзина</button>
+                    <div id="cart">
+                        <ul>
+                            <li>
+                                <button type="reset">X</button>
+                            </li>
+                        </ul>
+                    </div>
+
                 </li>
             </ul>
 
@@ -35,7 +74,7 @@
             8 812 450-25-25</p>
     </header>
     <main>
-        <h1>Магазин интернет мороженного Glaccy</h1>
+        <h1 class="visually-hidden">Магазин интернет мороженного Glaccy</h1>
         <section>
             <!--Карусель-->
 
@@ -59,7 +98,7 @@
         </section>
         <section>
             <!--Список с мороженым-->
-            <h2>Список с мороженым</h2>
+            <h2 class="visually-hidden">Список с мороженым</h2>
 
             <ul>
                 <li>
@@ -151,8 +190,27 @@
     </main>
 
     <footer>
+
+        <section class="visually-hidden">
+            <h2>Мы обязательно вам ответим!</h2>
+            <button type="button">X</button>
+            <form action="https://echo.htmlacademy.ru">
+                <label for="pull-name" class="visually-hidden">Введите имя</label>
+                <input type="text" id="pull-name" placeholder="Как вас зовут?">
+
+                <label for="pull-mail" class="visually-hidden">Почта</label>
+                <input type="text" id="pull-mail" placeholder="Ваша почта для ответа?">
+
+                <label for="text" class="visually-hidden">Вопрос</label>
+                <textarea name="question-text" id="text" rows="5"></textarea>
+
+                <button type="submit">Отправить</button>
+            </form>
+        </section>
+
+
         <div>
-            <h3>Наши соц. сети</h3>
+            <h3 class="visually-hidden">Наши соц. сети</h3 class="visually-hidden">
             <ul>
                 <!--Контакты-->
                 <li><a href="#">Твиттер</a></li>
@@ -162,7 +220,7 @@
             </ul>
         </div>
         <div>
-            <h3>Справочная информация</h3>
+            <h3 class="visually-hidden">Справочная информация</h3 class="visually-hidden">
             <ul>
                 <!--Справочная информация jk-->
                 <li><a href="#">Для поставщиков</a></li>

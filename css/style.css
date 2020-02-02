@@ -1,0 +1,42 @@
+.visually-hidden {
+    display: none;
+}
+
+a {
+    color: black;
+}
+
+li.catalog ul{
+    display: none;
+}
+
+li.catalog:hover ul{
+    display: block;
+}
+
+li.catalog ul li:first-child {
+    border-bottom: 1px solid black;
+    font-weight: bold;
+}
+
+li.catalog ul li {
+    padding: 5px;
+}
+
+li.catalog ul li:hover {
+    background-color: #fbded7;
+}
+
+li.catalog ul li:active {
+    background-color: #f6b5a5;
+}
+
+form{
+    display: block;
+}
+
+
+
+
+
+

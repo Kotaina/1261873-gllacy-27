@@ -13,20 +13,56 @@
         <a href="index.html"> <img src="img/logo.svg" alt="gllacy logo"></a>
         <nav>
             <ul>
-                <li><a href="#">Каталог</a></li>
+                <!--Разделы сайта-->
+                <li class="catalog"><a href="#">Каталог</a>
+                    <ul>
+                        <li>
+                            <a href="#">Новинки</a>
+                        </li>
+                        <li>
+                            <a href="#">Щербеты</a>
+                        </li>
+                        <li>
+                            <a href="#">Фруктовый лёд</a>
+                        </li>
+                        <li>
+                            <a href="#">Мелорин</a>
+                        </li>
+                    </ul>
+                </li>
                 <li> <a href="#">Доставка и оплата</a> </li>
                 <li> <a href="#">О компании</a> </li>
             </ul>
 
             <ul>
                 <li>
-                    <button type="button">Поиск</button>
+                    <button form="search" type="button">Поиск</button>
+                    <form action="https://echo.htmlacademy.ru" id="search">
+                        <div>
+                            <input id="button" type="text" placeholder="Что Вы хотите найти?">
+                        </div>
+                    </form>
                 </li>
                 <li>
-                    <button type="button">Вход</button>
+                    <button type="button" form="login">Вход</button>
+                    <form action="https://echo.htmlacademy.ru" method="post" id="login">
+                        <input type="text" name="email" id="email" placeholder="Электроная почта">
+                        <input type="password" name="password" id="password" placeholder="Пароль">
+                        <button type="submit">Войти</button>
+                        <a href="#">Забыли пароль?</a>
+                        <a href="#">Новая регистрация</a>
+                    </form>
                 </li>
                 <li>
-                    <button type="button">Корзина</button>
+                    <button type="button" id="cart">Корзина</button>
+                    <div id="cart">
+                        <ul>
+                            <li>
+                                <button type="reset">X</button>
+                            </li>
+                        </ul>
+                    </div>
+
                 </li>
             </ul>
 
