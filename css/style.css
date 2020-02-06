@@ -1,11 +1,70 @@
-.visually-hidden {
-    display: none;
+body {
+background-color: #849d8f;
 }
 
 a {
+    text-decoration: none;
     color: black;
 }
 
+.sorts .type_a,
+.item_list .type_a {
+    display: none;
+}
+
+
+.price {
+    color: grey;
+}
+
+header,
+.card_one,
+.card_two,
+.sorts,
+.menu {
+    color: white;
+}
+
+.btn_search {
+    background-color: rgba(255, 255, 255, 0.5);
+    background-image: url("img/search.svg");
+    border: none;
+    height: 33px;
+    width: 33px;
+    border-radius: 50%;
+
+
+}
+
+.card_two,
+.card_one,
+.news,
+.subs {
+    width: 560px;
+    height: 230px;
+    border: 1px solid black;
+    border-radius: 20px;
+    padding: 22px 30px 24px 23px;
+}
+
+.sorts a {
+    color: white;
+}
+
+li img {
+    border-radius: 50%;
+}
+
+ul {
+list-style: none;
+}
+
+.visually_hidden {
+    display: none;
+}
+
+
+/* Описание выпадающего меню:*/
 li.catalog ul{
     display: none;
 }
@@ -36,7 +95,49 @@ form{
 }
 
 
+.description p:first-child::before {
+    background-image: url("img/ici.png");
+}
+
+.description {
+    column-count: 2;
+    border: 1px solid black;
+    border-radius: 20px;
+    background-image: url("img/w****");
+    color: #323232;
+    height: 306px;
+    padding: 27px 36px 32px 30px;
+}
 
 
+.description p {
+    max-width: 487px;
+}
 
+button.type_a {
+    border: none;
+    border-radius: 50px;
+    background-color: #e85238;
+    color: white;
+    width: 166px;
+    height: 46px;
+    font-weight: bold;
+    font-size: 18pt;
+    text-shadow: 1px 1px 1px black;
+    box-shadow:  1px 1px 1px black;
+}
 
+button.type_a:hover {
+    background-color: #f17c64;
+    cursor: pointer;
+}
+
+button.type_a:active {
+    background-color: #f17c64;
+    text-shadow: -1px -1px 1px black;
+    box-shadow:  -1px -1px 1px black;
+}
+
+.card_one {
+    background-image: url('../img/straw_back.jpg');
+}
