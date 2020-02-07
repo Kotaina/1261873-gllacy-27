@@ -7,25 +7,25 @@ a {
     color: black;
 }
 
-.sorts .type_a,
-.item_list .type_a {
+.sorts .type-a,
+.item_list .type-a {
     display: none;
 }
 
 
-.price {
+.modal-cart-item .price {
     color: grey;
 }
 
 header,
-.card_one,
-.card_two,
+.card-one,
+.card-two,
 .sorts,
 .menu {
     color: white;
 }
 
-.btn_search {
+.btn-search {
     background-color: rgba(255, 255, 255, 0.5);
     background-image: url("img/search.svg");
     border: none;
@@ -36,8 +36,8 @@ header,
 
 }
 
-.card_two,
-.card_one,
+.card-two,
+.card-one,
 .news,
 .subs {
     width: 560px;
@@ -59,7 +59,7 @@ ul {
 list-style: none;
 }
 
-.visually_hidden {
+.visually-hidden {
     display: none;
 }
 
@@ -114,7 +114,7 @@ form{
     max-width: 487px;
 }
 
-button.type_a {
+button.type-a {
     border: none;
     border-radius: 50px;
     background-color: #e85238;
@@ -127,17 +127,17 @@ button.type_a {
     box-shadow:  1px 1px 1px black;
 }
 
-button.type_a:hover {
+button.type-a:hover {
     background-color: #f17c64;
     cursor: pointer;
 }
 
-button.type_a:active {
+button.type-a:active {
     background-color: #f17c64;
     text-shadow: -1px -1px 1px black;
     box-shadow:  -1px -1px 1px black;
 }
 
-.card_one {
+.card-one {
     background-image: url('../img/straw_back.jpg');
 }

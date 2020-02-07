@@ -9,16 +9,17 @@
 
 
 <body>
-    <header>
+    <!--Шапка-->
+    <header class="main-header">
         <div class="container">
-            <a href="index.html">
+            <div>
                 <img src="img/logo.svg" alt="gllacy logo">
-            </a>
-            <nav>
-                <ul class="menu">
+            </div>
+            <nav class="menu-nav">
+                <ul class="menu-list">
                     <!--Разделы сайта-->
                     <li class="catalog"><a href="#">Каталог</a>
-                        <ul>
+                        <ul class="menu-sub-list">
                             <li>
                                 <a href="#">Новинки</a>
                             </li>
@@ -40,14 +41,14 @@
                     <li class="about"> <a href="#">О компании</a> </li>
                 </ul>
 
-                <ul class='menu_add'>
+                <ul class='menu-add'>
                     <li>
-                        <button type="button" class="btn_search">Поиск</button>
+                        <button type="button" class="btn-search">Поиск</button>
                         <div>
-                            <h2 class="visually_hidden">Форма поиска</h2>
+                            <h2 class="visually-hidden">Форма поиска</h2>
                             <form action="https://echo.htmlacademy.ru" id="search">
                                 <div>
-                                    <label for="button" class="visually_hidden"></label>
+                                    <label for="button" class="visually-hidden"></label>
                                     <input id="button" type="text" placeholder="Что Вы хотите найти?">
                                 </div>
                             </form>
@@ -58,11 +59,11 @@
                         <div>
                             <form action="https://echo.htmlacademy.ru" method="post" id="login">
                                 <div>
-                                    <label for="text" class="visually_hidden">Электроная почта</label>
+                                    <label for="text" class="visually-hidden">Электроная почта</label>
                                     <input type="text" name="email" id="email" placeholder="Электроная почта">
                                 </div>
                                 <div>
-                                    <label for="password" class="visually_hidden"></label>
+                                    <label for="password" class="visually-hidden"></label>
                                     <input type="password" name="password" id="password" placeholder="Пароль">
                                 </div>
                                 <div>
@@ -78,23 +79,27 @@
                     </li>
                     <li>
                         <button type="button">Корзина</button>
-                        <div class="modal_cart">
-                            <h3 class="visually_hidden">Корзина</h3>
-                            <ul>
-                                <li>
+                        <div class="modal-cart">
+                            <h3 class="visually-hidden">Корзина</h3>
+                            <ul class="modal-cart-list">
+                                <li class="modal-cart-item">
                                     <button type="button">Отменить выбор товара</button>
-                                    <img src="" alt="">
-                                    <p></p>
-                                    <p></p>
-                                    <span></span>
+                                    <img src="" alt="Превью выбора">
+                                    <p>Пломбир с апельсиновым джемом</p>
+                                    <p>1,5кг х <span class="price">200 руб.</span></p>
+                                    <span>300 руб.</span>
                                 </li>
-                                <li>
-
+                                <li class="modal-cart-item">
+                                    <button type="button">Отменить выбор товара</button>
+                                    <img src="" alt="Превью выбора">
+                                    <p>Клубничный пломбир с присыпкой из белого шоколада</p>
+                                    <p>1,5кг х <span class="price">300 руб.</span></p>
+                                    <span>450 руб.</span>
                                 </li>
                             </ul>
-                            <div class="modal_cart_footer">
-                                <p></p>
-                                <button>Оформить заказ</button>
+                            <div class="modal-cart-footer">
+                                <p> <b>Итого: 750 руб.</b></p>
+                                <button class="type-a">Оформить заказ</button>
                             </div>
                         </div>
 
@@ -107,10 +112,10 @@
         </div>
     </header>
     <main>
-        <section>
-            <div>
+        <section class="sub-navigation">
+            <div class="container">
                 <h2>Сливочное мороженое</h2>
-                <ul>
+                <ul class="sub-navigation-list">
                     <li> <a href="index.html">Главная</a> </li>
                     <li><a href="#">Каталог</a></li>
                     <li><a href="#">Сливочное</a></li>
@@ -119,21 +124,84 @@
         </section>
 
         <section class="filters">
-            <div>
-                <!--Фильтры выбора-->
+            <div class="container">
+                <form method="get" action="https://echo.htmlacademy.ru">
+                    <!--Фильтры выбора-->
+                    <fieldset>
+                        <legend>Сортировка</legend>
+                        <div class="sort-view">
+                            <select name="sort-options">
+                                <option value="popular" selected>По популярности</option>
+                                <option value="new">По новизне</option>
+                            </select>
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <div class="price-volume">
+                            <!--фильтр стоимости-->
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Жирность:</legend>
+                        <ul class="fat-radio-list">
+                            <li>
+                                <label for="0per" class="visually-hidden">0</label>
+                                <input id="0per" type="radio" name="fat-select" value="0">0%
+                            </li>
+                            <li>
+                                <label for="10per" class="visually-hidden">До 10</label>
+                                <input id="10per" type="radio" name="fat-select" value="10">До 10%
+                            </li>
+                            <li>
+                                <label for="lt30" class="visually-hidden">До 30</label>
+                                <input id="lt30" type="radio" name="fat-select" value="lt30">До 30%
+                            </li>
+                            <li>
+                                <label for="gt30" class="visually-hidden">Более 30</label>
+                                <input id="gt30" type="radio" name="fat-select" value="gt30">Более 30%
+                            </li>
+                        </ul>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Наполнители:</legend>
+                        <ul class="filling-checkbox-list">
+                            <li>
+                                <label for="chocolate" class="visually-hidden">шоколадные</label>
+                                <input id="chocolate" type="checkbox" name="chocolate" value="chocolate">шоколадные
+                            </li>
+                            <li>
+                                <label for="sugar" class="visually-hidden">сахарные</label>
+                                <input id="sugar" type="checkbox" name="sugar" value="sugar">сахарные присыпки
+                            </li>
+                            <li>
+                                <label for="fruits" class="visually-hidden">фрукты</label>
+                                <input id="fruits" type="checkbox" name="fruits" value="fruits">фрукты
+                            </li>
+                            <li>
+                                <label for="syrup" class="visually-hidden">сиропы</label>
+                                <input id="syrup" type="checkbox" name="syrup" value="syrup">сиропы
+                            </li>
+                            <li>
+                                <label for="jam" class="visually-hidden">джемы</label>
+                                <input id="jam" type="checkbox" name="jam" value="jam">джемы
+                            </li>
+                        </ul>
+                    </fieldset>
+                    <button type="submit" class="btn btn-filter">Применить</button>
+                </form>
             </div>
         </section>
-        <section>
-            <div class="item_list">
+        <section class="icecream-menu">
+            <div class="container">
                 <!--Список с мороженым-->
-                <ul>
+                <ul class="icecream-menu-list">
                     <li>
                         <img src="img/ice1.jpg" alt="Сливочное с апельсиновым
           джемом и цитрусовой стружкой">
                         <p>310Р/кг</p>
                         <p>Сливочное с апельсиновым <br>
                             джемом и цитрусовой стружкой</p>
-                        <button class="type_a">Быстрый просмотр</button>
+                        <button class="btn btn-orange">Быстрый просмотр</button>
                     </li>
                     <li>
                         <img src="img/ice2.jpg" alt="Сливочно-кофейное с кусочками
@@ -141,7 +209,7 @@
                         <p>380 Р/кг</p>
                         <p> Сливочно-кофейное с кусочками <br>
                             шоколада</p>
-                        <button class="type_a">Быстрый просмотр</button>
+                        <button class="btn btn-orange">Быстрый просмотр</button>
                     </li>
                     <li>
                         <img src="img/ice3.jpg" alt="Сливочно-клубничное с
@@ -149,7 +217,7 @@
                         <p>355 Р/кг</p>
                         <p>Сливочно-клубничное с <br>
                             присыпкой из белого шоколада</p>
-                        <button class="type_a">Быстрый просмотр</button>
+                        <button class="btn btn-orange">Быстрый просмотр</button>
                     </li>
                     <li>
                         <img src="img/ice4.jpg" alt="Сливочное крем-брюле с
@@ -157,7 +225,7 @@
                         <p>415 Р/кг</p>
                         <p>Сливочное крем-брюле с <br>
                             карамельной подливкой </p>
-                        <button class="type_a">Быстрый просмотр</button>
+                        <button class="btn btn-orange">Быстрый просмотр</button>
                     </li>
                     <li>
                         <img src="img/ice5.jpg" alt="Сливочное с брусничным
@@ -165,7 +233,7 @@
                         <p>310Р/кг</p>
                         <p>Сливочное с брусничным <br>
                             джемом</p>
-                        <button class="type_a">Быстрый просмотр</button>
+                        <button class="btn btn-orange">Быстрый просмотр</button>
                     </li>
                     <li>
                         <img src="img/ice6.jpg" alt="Сливочно-черничное с цельными
@@ -173,7 +241,7 @@
                         <p>380 Р/кг</p>
                         <p>Сливочно-черничное с цельными <br>
                             ягодами брусники</p>
-                        <button class="type_a">Быстрый просмотр</button>
+                        <button class="btn btn-orange">Быстрый просмотр</button>
                     </li>
                     <li>
                         <img src="img/ice7.jpg" alt="Сливочно-лимонное с
@@ -181,7 +249,7 @@
                         <p>355 Р/кг</p>
                         <p>Сливочно-лимонное с <br>
                             карамельной присыпокой</p>
-                        <button class="type_a">Быстрый просмотр</button>
+                        <button class="btn btn-orange">Быстрый просмотр</button>
                     </li>
                     <li>
                         <img src="img/ice8.jpg" alt="Сливочное с шоколадной
@@ -189,7 +257,7 @@
                         <p>415 Р/кг</p>
                         <p>Сливочное с шоколадной <br>
                             стружкой </p>
-                        <button class="type_a">Быстрый просмотр</button>
+                        <button class="btn btn-orange">Быстрый просмотр</button>
                     </li>
                     <li>
                         <img src="img/ice9.jpg" alt="Сливочно-ванильное с
@@ -197,7 +265,7 @@
                         <p>310Р/кг</p>
                         <p>Сливочно-ванильное с <br>
                             кусочками шоколада</p>
-                        <button class="type_a">Быстрый просмотр</button>
+                        <button class="btn btn-orange">Быстрый просмотр</button>
                     </li>
                     <li>
                         <img src="img/ice10.jpg" alt="Сливочное с ментоловым
@@ -205,7 +273,7 @@
                         <p>380 Р/кг</p>
                         <p>Сливочное с ментоловым <br>
                             сиропом</p>
-                        <button class="type_a">Быстрый просмотр</button>
+                        <button class="btn btn-orange">Быстрый просмотр</button>
                     </li>
                     <li>
                         <img src="img/ice11.jpg" alt="Сливочное с кусочками чёрного
@@ -213,21 +281,21 @@
                         <p>355 Р/кг</p>
                         <p>Сливочное с кусочками чёрного<br>
                             шоколада</p>
-                        <button class="type_a">Быстрый просмотр</button>
+                        <button class="btn btn-orange">Быстрый просмотр</button>
                     </li>
                     <li>
                         <img src="img/ice12.jpg" alt="Сливочное с мятным сиропом">
                         <p>415 Р/кг</p>
                         <p>Сливочное с мятным сиропом</p>
-                        <button class="type_a">Быстрый просмотр</button>
+                        <button class="btn btn-orange">Быстрый просмотр</button>
                     </li>
                 </ul>
             </div>
         </section>
         <section>
             <!--Пагинация-->
-            <div>
-                <ul>
+            <div class='container'>
+                <ul class="pagination-list">
                     <li><a href="#">1</a></li>
                     <li><a href="#">2</a></li>
                     <li><a href="#">3</a></li>
@@ -237,29 +305,11 @@
             </div>
         </section>
     </main>
-    <footer>
-        <div>
-            <section class="visually_hidden popup">
-                <h2>Мы обязательно вам ответим!</h2>
-                <button type="button"></button>
-                <form action="https://echo.htmlacademy.ru">
-                    <label for="pull_name" class="visually_hidden">Введите имя</label>
-                    <input type="text" id="pull_name" placeholder="Как вас зовут?">
-
-                    <label for="pull_mail" class="visually_hidden">Почта</label>
-                    <input type="text" id="pull_mail" placeholder="Ваша почта для ответа?">
-
-                    <label for="text" class="visually_hidden">Вопрос</label>
-                    <textarea name="question_text" id="text" rows="5"></textarea>
-
-                    <button type="submit">Отправить</button>
-                </form>
-            </section>
-
-
-            <div>
-                <h3 class="visually_hidden">Наши соц. сети</h3 class="visually_hidden">
-                <ul>
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-social">
+                <h3 class="visually-hidden">Наши соц. сети</h3 class="visually-hidden">
+                <ul class="social-list">
                     <!--Контакты-->
                     <li><a href="#">Твиттер</a></li>
                     <li><a href="#">Инстаграм</a></li>
@@ -267,9 +317,9 @@
                     <li><a href="#">Вконтакте</a></li>
                 </ul>
             </div>
-            <div>
-                <h3 class="visually_hidden">Справочная информация</h3 class="visually_hidden">
-                <ul>
+            <div class="footer-info">
+                <h3 class="visually-hidden">Справочная информация</h3 class="visually-hidden">
+                <ul class="info-list">
                     <!--Справочная информация jk-->
                     <li><a href="#">Для поставщиков</a></li>
                     <li><a href="#">Наши документы</a></li>
@@ -277,14 +327,36 @@
                     <li><a href="#">Экологические стандарты</a></li>
                 </ul>
             </div>
-            <div>
-                <a href="https://www.htmlacademy.ru"> <img src="img/logo_html.svg" alt="HTML Academy logo" width="120"
+            <div class="footer-logo">
+                <a href="https://www.htmlacademy.ru"> <img src="img/logo-html.svg" alt="HTML Academy logo" width="120"
                         height="46"> </a>
 
                 <p>Сделано в <a href="#"><span> Html </span> Academy</a> 2020</p>
             </div>
         </div>
     </footer>
+    <!--Форма обратной связи-->
+    <section class="visually-hidden popup">
+        <h2>Мы обязательно вам ответим!</h2>
+        <button type="button"></button>
+        <form action="https://echo.htmlacademy.ru">
+            <div>
+                <label for="name" class="visually-hidden">Введите имя</label>
+                <input type="text" id="name" placeholder="Как вас зовут?">
+            </div>
+            <div>
+                <label for="mail" class="visually-hidden">Почта</label>
+                <input type="text" id="mail" placeholder="Ваша почта для ответа?">
+            </div>
+            <div>
+                <label for="text" class="visually-hidden">Вопрос</label>
+                <textarea name="question-text" id="text" rows="5"></textarea>
+            </div>
+
+            <button type="submit">Отправить</button>
+        </form>
+    </section>
+
 </body>
 
 </html>
