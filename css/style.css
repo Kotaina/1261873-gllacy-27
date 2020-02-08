@@ -1,68 +1,23 @@
 body {
+margin: 0;
+padding: 0;
 background-color: #849d8f;
-}
-
-a {
-    text-decoration: none;
-    color: black;
-}
-
-.sorts .type-a,
-.item_list .type-a {
-    display: none;
-}
-
-
-.modal-cart-item .price {
-    color: grey;
-}
-
-header,
-.card-one,
-.card-two,
-.sorts,
-.menu {
-    color: white;
-}
-
-.btn-search {
-    background-color: rgba(255, 255, 255, 0.5);
-    background-image: url("img/search.svg");
-    border: none;
-    height: 33px;
-    width: 33px;
-    border-radius: 50%;
-
-
-}
-
-.card-two,
-.card-one,
-.news,
-.subs {
-    width: 560px;
-    height: 230px;
-    border: 1px solid black;
-    border-radius: 20px;
-    padding: 22px 30px 24px 23px;
-}
-
-.sorts a {
-    color: white;
-}
-
-li img {
-    border-radius: 50%;
-}
-
-ul {
-list-style: none;
+font-family: 'Roboto', sans-serif;
+font-weight: 400;
+color: white;
 }
 
 .visually-hidden {
     display: none;
 }
+                               /* HEADER */
+.menu-nav li {
+    list-style: none;
+}
 
+.menu-nav a {
+    color: inherit;
+}
 
 /* Описание выпадающего меню:*/
 li.catalog ul{
@@ -94,50 +49,311 @@ form{
     display: block;
 }
 
-
-.description p:first-child::before {
-    background-image: url("img/ici.png");
+.modal-search,
+.modal-login,
+.modal-cart {
+    display: none;
 }
 
-.description {
-    column-count: 2;
-    border: 1px solid black;
+.schedule {
+    font-size: 14px;
+}
+
+                                /* MAIN */
+
+                                /* CARDS-BONUS */
+.card-one,
+.card-two {
+    border: 1px solid transparent;
     border-radius: 20px;
-    background-image: url("img/w****");
-    color: #323232;
-    height: 306px;
-    padding: 27px 36px 32px 30px;
+    height: 230px;
+    width: 560px;
+   /* padding: 20px; */
+    font-size: 18px;
+    background-repeat: no-repeat;
+    background-size:  560px 230px;
 }
 
-
-.description p {
-    max-width: 487px;
+.card-one h2,
+.card-two h2 {
+    font-size: 36px;
+    padding-left: 20px;
 }
 
-button.type-a {
+.card-one p,
+.card-two p {
+    padding: 10px 20px 0px 20px;
+    line-height: 23px;
+}
+
+.card-one {
+    background-image: url('..//img/rasp_back.jpg');
+}
+
+.card-two {
+    background-image: url('../img/choc_back.jpg');
+}
+
+                                        /*btn-orange*/
+
+.btn-orange {
     border: none;
     border-radius: 50px;
     background-color: #e85238;
     color: white;
-    width: 166px;
+    width: 165px;
     height: 46px;
     font-weight: bold;
-    font-size: 18pt;
+    font-size: 14pt;
     text-shadow: 1px 1px 1px black;
     box-shadow:  1px 1px 1px black;
 }
 
-button.type-a:hover {
+.btn-orange:hover {
     background-color: #f17c64;
     cursor: pointer;
 }
 
-button.type-a:active {
+.btn-orange:active {
     background-color: #f17c64;
     text-shadow: -1px -1px 1px black;
     box-shadow:  -1px -1px 1px black;
 }
 
-.card-one {
-    background-image: url('../img/straw_back.jpg');
+                                        /* ICECREAM SORTS */
+
+.icecream-sorts li {
+    list-style: none;
+    height: 406px;
+    width: 294px;
+}
+
+.icecream-sorts p {
+    text-align: center;
+}
+
+.icecream-sorts img {
+    border-radius: 50%;
+                            /* Убрал рамер, чтобы не мешал*/
+    background-position: center;
+    padding-left:12px;
+    padding-top: 6px;
+}
+
+.icecream-sorts .hit {
+    border-radius: 50%;
+    height: 60px;
+    width: 60px;
+}
+
+.icecream-sorts .btn-orange {
+    display: none;
+}
+
+.icecream-sorts .btn-orange:hover,
+.icecream-sorts .btn-orange:active {
+    display: block;
+}
+
+.icecream-sorts li:hover,
+.icecream-sorts li:focus
+{
+    background-color: rgba(255, 255, 255, 0.3);
+    height: 406px;
+    width: 294px;
+    border-radius: 5px;
+}
+
+                                            /* DESCRIPTION */
+.description {
+    height: 306;
+    width: 1146px;
+    border: 1px solid black;
+    border-radius: 20px;
+    background-image: url("../img/wayfer_back.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    color: black;
+}
+
+.description h2 {
+    font-size: 24px;
+    padding-top: ; /* Почему-то задаёт паддинг для картинки*/
+}
+
+.news-card,
+.subscribe-card {
+    height: 221px;
+    width: 560px;
+    border: 1px solid black;
+    border-radius: 20px;
+}
+
+.news-card h2 {
+    font-size: 16px;
+    color: black;
+}
+
+.news-card a {
+    color: black;
+    font-size: 24px;
+    font-weight: 700;
+/*    max-width: 282px; */
+
+  /*  padding-left: 21px;
+    padding-right: 50px; */
+}
+
+.news-card {
+    background-image: url("../img/straw_back.jpg");
+    background-position: center;
+}
+
+.subscribe-card p{
+    color: black;
+    font-size: 16px;
+    margin-left: 24px;
+    margin-top: 43px;
+    margin-right: 28px;
+    margin-bottom: 0px;
+
+}
+
+.subscribe-card input {
+    border: 1px solid gray;
+    box-sizing: border-box;
+    width: 368px;
+    height: 42px;
+    border-radius: 5px;
+    margin-left: 27px;
+    margin-top: 42px;
+    font-size: 16px;
+    padding: 10px;
+}
+
+.subscribe-card {
+    background-color: #f8f7f4; /* Не работает */
+    background-position: center;
+    background-image: url("../img/post_back.jpg");
+    background-position: center;
+}
+
+.subscribe-card .btn-orange {
+    position: 406px 41px;
+}
+
+.map {
+    background-image:url("../img/map.png");
+    height: 429px;
+    width: 1200px;
+}
+
+
+                                        /* FOOTER */
+.main-footer li {
+    list-style: none;
+}
+
+.footer-info a {
+    color: white;
+    line-height: 17px;
+}
+
+.suppliers {
+    font-weight: bold;
+}
+
+.footer-logo {
+    height: 41px;
+    width: 120px;
+}
+
+.html-font {
+    color: white;
+}
+
+.footer-logo p {
+    line-height: 20px;
+}
+
+
+
+.sub-navigation li {
+    list-style: none;
+}
+
+.sub-navigation a {
+    color: white;
+}
+
+a .special {
+    text-decoration: none;
+}
+
+.filters li {
+    list-style: none;
+}
+
+
+.icecream-menu-list li {
+    list-style: none;
+    height: 406px;
+    width: 294px;
+}
+
+.icecream-menu-list p {
+    text-align: center;
+}
+
+.icecream-menu-list img {
+    border-radius: 50%;
+                            /* Убрал рамер, чтобы не мешал*/
+    background-position: center;
+    padding-left:12px;
+    padding-top: 6px;
+}
+
+.icecream-menu-list .hit {
+    border-radius: 50%;
+    height: 60px;
+    width: 60px;
+}
+
+.icecream-menu-list .btn-orange {
+    display: none;
+}
+
+.icecream-menu-list .btn-orange:hover,
+.icecream-menu-list .btn-orange:active {
+    display: block;
+}
+
+.icecream-menu-list li:hover,
+.icecream-menu-list li:focus
+{
+    background-color: rgba(255, 255, 255, 0.3);
+    height: 406px;
+    width: 294px;
+    border-radius: 5px;
+}
+
+.pagination-list li {
+    list-style: none;
+}
+
+.pagination-list a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    height: 26px;
+    width: 26px;
+    position: center;
+}
+
+.pagination-list a:hover { /* Фон почему-то всё равно смещён*/
+    color:black;
+    text-decoration: none;
+    background-color: white;
+    border-radius: 20px;
+    position: center;
 }

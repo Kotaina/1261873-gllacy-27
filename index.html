@@ -5,6 +5,9 @@
     <meta charset="utf-8">
     <title>Магазин мороженого Gllacy</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link href="https://fonts.googleapis.com/css?family=
+    Roboto:400,400i,700&display=swap&subset=cyrillic" rel="stylesheet">
 
 </head>
 
@@ -42,10 +45,10 @@
                     <li class="about"> <a href="#">О компании</a> </li>
                 </ul>
 
-                <ul class='menu-form'>
-                    <li>
+                <ul class='menu-forms'>
+                    <li class="searh-form">
                         <button type="button" class="btn-search">Поиск</button>
-                        <div class="container">
+                        <div class="container modal-search">
                             <h2 class="visually-hidden">Форма поиска</h2>
                             <form action="https://echo.htmlacademy.ru" id="search">
                                 <div>
@@ -57,7 +60,7 @@
                     </li>
                     <li>
                         <button type="button" form="login">Вход</button>
-                        <div class="container">
+                        <div class="container modal-login">
                             <form action="https://echo.htmlacademy.ru" method="post" id="login">
                                 <div>
                                     <label for="email-input" class="visually-hidden">Электроная почта</label>
@@ -149,12 +152,11 @@
                     <li>
                         <img src="img/ice1.jpg" alt="Сливочное с апельсиновым
           джемом и цитрусовой стружкой">
+                        <div class="hit"><img src="img/hit.jpg" alt="Хит"></div>
                         <p>310 &#8381/кг</p>
-
                         <p>Сливочное с апельсиновым <br>
                             джемом и цитрусовой стружкой</p>
                         <button class="btn btn-orange">Быстрый просмотр</button>
-
                     </li>
                     <li>
                         <img src="img/ice2.jpg" alt="Сливочно-кофейное с кусочками
@@ -231,14 +233,14 @@
                     <form action="https://echo.htmlacademy.ru">
                         <div>
                             <label for="email-input" class="visually-hidden">Почта</label>
-                            <input type="text" id="email-input" placeholder="Электроная почта">
+                            <input type="text" id="email-input" placeholder="email@examle.com">
                         </div>
                         <button type="submit" class="btn btn-orange">Отправить</button>
                     </form>
                 </aside>
             </div>
         </section>
-        <section>
+        <section class="map">
             <!--Место для карты-->
         </section>
     </main>
@@ -259,17 +261,17 @@
                 <h3 class="visually-hidden">Справочная информация</h3 class="visually-hidden">
                 <ul class="info-list">
                     <!--Справочная информация jk-->
-                    <li><a href="#">Для поставщиков</a></li>
+                    <li><a href="#"><span class="suppliers">Для поставщиков</span></a></li>
                     <li><a href="#">Наши документы</a></li>
                     <li><a href="#">О производстве</a></li>
                     <li><a href="#">Экологические стандарты</a></li>
                 </ul>
             </div>
             <div class="footer-logo">
-                <a href="https://www.htmlacademy.ru"> <img src="img/logo-html.svg" alt="HTML Academy logo" width="120"
+                <a href="https://www.htmlacademy.ru"> <img src="img/logo_html.svg" alt="HTML Academy logo" width="120"
                         height="46"> </a>
 
-                <p>Сделано в <a href="#"><span> Html </span> Academy</a> 2020</p>
+                <p>Сделано в <a href="#"><span class="html-font"> Html Academy</span> </a> 2020</p>
             </div>
         </div>
     </footer>

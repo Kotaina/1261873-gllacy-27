@@ -41,34 +41,33 @@
                     <li class="about"> <a href="#">О компании</a> </li>
                 </ul>
 
-                <ul class='menu-add'>
-                    <li>
+                <ul class='menu-forms'>
+                    <li class="searh-form">
                         <button type="button" class="btn-search">Поиск</button>
-                        <div>
+                        <div class="container modal-search">
                             <h2 class="visually-hidden">Форма поиска</h2>
                             <form action="https://echo.htmlacademy.ru" id="search">
                                 <div>
-                                    <label for="button" class="visually-hidden"></label>
-                                    <input id="button" type="text" placeholder="Что Вы хотите найти?">
+                                    <label for="search-input" class="visually-hidden"></label>
+                                    <input id="search-input" type="text" placeholder="Что Вы хотите найти?">
                                 </div>
                             </form>
                         </div>
                     </li>
                     <li>
                         <button type="button" form="login">Вход</button>
-                        <div>
+                        <div class="container modal-login">
                             <form action="https://echo.htmlacademy.ru" method="post" id="login">
                                 <div>
-                                    <label for="text" class="visually-hidden">Электроная почта</label>
-                                    <input type="text" name="email" id="email" placeholder="Электроная почта">
+                                    <label for="email-input" class="visually-hidden">Электроная почта</label>
+                                    <input type="text" name="email" id="email-input" placeholder="Электроная почта">
                                 </div>
                                 <div>
-                                    <label for="password" class="visually-hidden"></label>
-                                    <input type="password" name="password" id="password" placeholder="Пароль">
+                                    <label for="password-input" class="visually-hidden"></label>
+                                    <input type="password" name="password" id="password-input" placeholder="Пароль">
                                 </div>
                                 <div>
                                     <button type="submit">Войти</button>
-                                    <!---->
                                     <ul>
                                         <li> <a href="#">Забыли пароль?</a> </li>
                                         <li> <a href="#">Новая регистрация</a></li>
@@ -86,20 +85,20 @@
                                     <button type="button">Отменить выбор товара</button>
                                     <img src="" alt="Превью выбора">
                                     <p>Пломбир с апельсиновым джемом</p>
-                                    <p>1,5кг х <span class="price">200 руб.</span></p>
+                                    <p>1,5кг х <span class="cart-item-price">200 руб.</span></p>
                                     <span>300 руб.</span>
                                 </li>
                                 <li class="modal-cart-item">
                                     <button type="button">Отменить выбор товара</button>
                                     <img src="" alt="Превью выбора">
                                     <p>Клубничный пломбир с присыпкой из белого шоколада</p>
-                                    <p>1,5кг х <span class="price">300 руб.</span></p>
+                                    <p>1,5кг х <span class="cart-item-price">300 руб.</span></p>
                                     <span>450 руб.</span>
                                 </li>
                             </ul>
                             <div class="modal-cart-footer">
-                                <p> <b>Итого: 750 руб.</b></p>
-                                <button class="type-a">Оформить заказ</button>
+                                <p> <span class="cart-total-price">Итого: 750 руб.</span> </p>
+                                <button class="btn btn-orange">Оформить заказ</button>
                             </div>
                         </div>
 
@@ -107,8 +106,10 @@
                 </ul>
 
             </nav>
-            <p>С 10 до 20, ежедневно <br>
-                8 812 450-25-25</p>
+            <div class="container">
+                <p class="schedule">С 10 до 20, ежедневно <br>
+                    8 812 450-25-25</p>
+            </div>
         </div>
     </header>
     <main>
@@ -118,7 +119,7 @@
                 <ul class="sub-navigation-list">
                     <li> <a href="index.html">Главная</a> </li>
                     <li><a href="#">Каталог</a></li>
-                    <li><a href="#">Сливочное</a></li>
+                    <li><a href="#"><span class="special">Сливочное</span>></a></li>
                 </ul>
             </div>
         </section>
