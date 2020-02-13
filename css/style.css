@@ -2,9 +2,10 @@ body {
 margin: 0;
 padding: 0;
 background-color: #849d8f;
-font-family: 'Roboto', sans-serif;
+font-family: 'Roboto', "Arial", sans-serif;
 font-weight: 400;
 color: white;
+max-width: 1200px;
 }
 
 .visually-hidden {
@@ -62,28 +63,45 @@ form{
                                 /* MAIN */
 
                                 /* CARDS-BONUS */
+
+.cards-bonus .container {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 27px;
+    padding-right: 27px;
+}
+
 .card-one,
 .card-two {
     border: 1px solid transparent;
     border-radius: 20px;
     height: 230px;
     width: 560px;
-   /* padding: 20px; */
+    padding: 26px 30px 24px 21px;
     font-size: 18px;
     background-repeat: no-repeat;
     background-size:  560px 230px;
+    box-sizing: border-box;
 }
 
 .card-one h2,
 .card-two h2 {
-    font-size: 36px;
-    padding-left: 20px;
+    font-size: 35px;
+    margin: 0px;
+
 }
 
 .card-one p,
 .card-two p {
-    padding: 10px 20px 0px 20px;
+    font-size: 16px;
+    margin-top: 18px;
+    margin-bottom: 0px;
     line-height: 23px;
+}
+
+.cards-bonus .btn-orange {
+    box-sizing: content-box;
+    margin: 45px 30px 0px 350px ;
 }
 
 .card-one {
@@ -121,42 +139,53 @@ form{
 }
 
                                         /* ICECREAM SORTS */
+.icecream-bonus {
+    padding-left: 27px;
+    padding-right: 27px;
+}
 
-.icecream-sorts li {
+.icecream-sorts { /*Иначе появляется паддинг*/
+    padding: 0px;
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.icecream-sorts-item {
     list-style: none;
     height: 406px;
     width: 294px;
-}
-
-.icecream-sorts p {
     text-align: center;
 }
 
-.icecream-sorts img {
+.underline {
+    border-bottom: 1px solid white;
+}
+
+.icecream-sorts-item img {
     border-radius: 50%;
                             /* Убрал рамер, чтобы не мешал*/
     background-position: center;
-    padding-left:12px;
-    padding-top: 6px;
+    margin-top: 7px;
 }
 
-.icecream-sorts .hit {
+.icecream-sorts-item .hit /*Спрятан*/ {
     border-radius: 50%;
+    position: top;
     height: 60px;
     width: 60px;
 }
 
-.icecream-sorts .btn-orange {
+.icecream-sorts-item .btn-orange {
     display: none;
 }
 
-.icecream-sorts .btn-orange:hover,
-.icecream-sorts .btn-orange:active {
+.icecream-sorts-item:hover .btn-orange {
     display: block;
 }
 
-.icecream-sorts li:hover,
-.icecream-sorts li:focus
+.icecream-sorts-item:hover,
+.icecream-sorts-item:focus
 {
     background-color: rgba(255, 255, 255, 0.3);
     height: 406px;
@@ -164,86 +193,144 @@ form{
     border-radius: 5px;
 }
 
+
                                             /* DESCRIPTION */
 .description {
-    height: 306;
-    width: 1146px;
-    border: 1px solid black;
+    max-height: 306;
+    max-width: 1146px;
+    margin-top: 42px;
+    margin-left: 27px;
+    margin-right: 27px;
+    box-sizing: border-box;
+    padding: 37px 33px 31px 21px;
     border-radius: 20px;
     background-image: url("../img/wayfer_back.jpg");
-    background-repeat: no-repeat;
+    background-repeat: repeat;
     background-position: center;
     color: black;
 }
 
 .description h2 {
     font-size: 24px;
-    padding-top: ; /* Почему-то задаёт паддинг для картинки*/
+    margin: 0px;
+}
+
+.about-us {
+    display: flex;
+    margin-top: 21px;
+    margin-bottom: 27px;
+}
+
+.about-us p {
+    flex-wrap: wrap;
+    margin: 0px;
+    width: 552px;
+    max-height: 81px;
+}
+
+.about-us p:first-child:before {
+    content: url('../img/ici.png');
+}
+
+.about-us p:nth-child(2):before {
+    content: url('../img/leaf.png')
+}
+
+.about-us p:nth-child(3)::before {
+    content: url('../img/cow.png');
+}
+
+.about-us p:last-child:before {
+    content: url('../img/term.png');
+}
+
+
+                                /*Две карточки*/
+
+.additional-cards .container {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 27px;
+    padding-right: 27px;
+    margin-top: 40px;
+
 }
 
 .news-card,
 .subscribe-card {
-    height: 221px;
-    width: 560px;
     border: 1px solid black;
     border-radius: 20px;
-}
-
-.news-card h2 {
-    font-size: 16px;
+    height: 222px;
+    width: 560px;
+    box-sizing: border-box;
     color: black;
-}
-
-.news-card a {
-    color: black;
-    font-size: 24px;
-    font-weight: 700;
-/*    max-width: 282px; */
-
-  /*  padding-left: 21px;
-    padding-right: 50px; */
 }
 
 .news-card {
-    background-image: url("../img/straw_back.jpg");
-    background-position: center;
+    padding: 30px 250px 84px 20px;
+    background-image: url('../img/straw_back.jpg');
 }
 
-.subscribe-card p{
-    color: black;
+.news-card h2{
+    margin: 0px;
     font-size: 16px;
-    margin-left: 24px;
-    margin-top: 43px;
-    margin-right: 28px;
-    margin-bottom: 0px;
+}
 
+.news-card p {
+    margin: 0px;
+    margin-top: 16px;
+}
+
+.news-card a {
+    margin: 0px;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+
+.subscribe-card {
+    padding: 6px;
+    background-image: url('../img/post_back.jpg');
+    position: center;
 }
 
 .subscribe-card input {
-    border: 1px solid gray;
-    box-sizing: border-box;
-    width: 368px;
-    height: 42px;
+    border: 1px solid #d3d3d2;
     border-radius: 5px;
-    margin-left: 27px;
+    width: 315px;
+    height: 20px;
     margin-top: 42px;
     font-size: 16px;
-    padding: 10px;
-}
-
-.subscribe-card {
-    background-color: #f8f7f4; /* Не работает */
-    background-position: center;
-    background-image: url("../img/post_back.jpg");
-    background-position: center;
+    padding: 11px;
 }
 
 .subscribe-card .btn-orange {
-    position: 406px 41px;
+    box-sizing: border-box;
+    margin-left: 350px;
+    margin-bottom: 29px;
 }
 
+.subscribe-card .face-color {
+    background-color: #f8f7f4;
+    position: center;
+    border-radius: 20px;
+    border: 1px solid transparent;
+    padding: 35px 23px 0px 21px;
+}
+
+.subscribe-card p {
+    margin: 0px;
+}
+
+
+
+
+
+
+                                            /* Карта */
 .map {
     background-image:url("../img/map.png");
+    margin-top: 40px;
     height: 429px;
     width: 1200px;
 }
@@ -357,3 +444,27 @@ a .special {
     border-radius: 20px;
     position: center;
 }
+
+/*
+/* Флексы */
+
+.main-header .container {
+    display: flex;
+    align-items: flex-start;
+
+    min-height: 75px;
+    max-width: 1200px;
+
+}
+
+
+.catalog {
+    max-width: 351px;
+    margin-right: auto;
+    margin-left: 0px;
+}
+
+.menu-forms {
+    margin-left: auto;
+}
+
