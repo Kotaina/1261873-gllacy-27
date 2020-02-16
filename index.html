@@ -46,11 +46,11 @@
                 </ul>
 
                 <ul class='menu-forms'>
-                    <li class="searh-form">
+                    <li class="searh-form visually-hidden">
                         <button type="button" class="btn-search">Поиск</button>
-                        <div class="container modal-search">
+                        <div class="container modal-search>
                             <h2 class="visually-hidden">Форма поиска</h2>
-                            <form action="https://echo.htmlacademy.ru" id="search">
+                            <form action="https://echo.htmlacademy.ru">
                                 <div>
                                     <label for="search-input" class="visually-hidden"></label>
                                     <input id="search-input" type="text" placeholder="Что Вы хотите найти?">
@@ -58,10 +58,10 @@
                             </form>
                         </div>
                     </li>
-                    <li>
+                    <li class="visually-hidden">
                         <button type="button" form="login">Вход</button>
                         <div class="container modal-login">
-                            <form action="https://echo.htmlacademy.ru" method="post" id="login">
+                            <form action="https://echo.htmlacademy.ru" method="post">
                                 <div>
                                     <label for="email-input" class="visually-hidden">Электроная почта</label>
                                     <input type="text" name="email" id="email-input" placeholder="Электроная почта">
@@ -110,7 +110,7 @@
                 </ul>
 
             </nav>
-            <div class="container">
+            <div>
                 <p class="schedule">С 10 до 20, ежедневно <br>
                     8 812 450-25-25</p>
             </div>
@@ -125,14 +125,14 @@
         </section>
         <section class="cards-bonus">
             <div class="container">
-                <div class="card-one">
+                <div class="card card-one">
                     <!--Малинка даром-->
                     <h2>Малинка даром!</h2>
                     <p> При покупке 2 кг любого фруктового мороженого, добавим
                         в ваш заказ банку малинового варенья бесплатно.</p>
                     <button type="button" class="btn btn-orange">Хочу варенье!</button>
                 </div>
-                <div class="card-two">
+                <div class="card card-two">
                     <!--Шоколадки даром!-->
                     <h2>Шоколадки даром!</h2>
                     <p>При покупке 2 кг пломбира, добавим в ваш заказ упаковку
@@ -150,36 +150,54 @@
 
                 <ul class="icecream-sorts">
                     <li class="icecream-sorts-item">
-                        <img src="img/ice1.jpg" alt="Сливочное с апельсиновым
+
+                        <div class ="icecream-sorts-img-back">
+                            <img src="img/ice1.jpg" alt="Сливочное с апельсиновым
           джемом и цитрусовой стружкой">
-                        <div class="hit visually-hidden"><img src=" img/hit.jpg" alt="Хит"></div>
-                        <p class="price">310 &#8381/кг</p>
+                        </div>
+
+                        <div class="hit"><img src=" img/hit.jpg" alt="Хит"></div>
+
+                        <p class="price">310 &#8381<span class="min-font">/кг</span></p>
+
                         <p><span class="underline">Сливочное с апельсиновым
                                 джемом и цитрусовой стружкой</span></p>
                         <button class="btn btn-orange">Быстрый просмотр</button>
                     </li>
+
                     <li class="icecream-sorts-item">
-                        <img src="img/ice2.jpg" alt="Сливочно-кофейное с кусочками
+                        <div class ="icecream-sorts-img-back">
+                            <img src="img/ice2.jpg" alt="Сливочно-кофейное с кусочками
                     шоколада">
-                        <p>380 &#8381/кг</p>
+                        </div>
+                        <div class="hit"><img src=" img/hit.jpg" alt="Хит"></div>
+                        <p class="price">380 &#8381<span class="min-font">/кг</span></p>
 
                         <p><span class="underline">Сливочно-кофейное с кусочками <br>
                                 шоколада</span> </p>
                         <button class="btn btn-orange">Быстрый просмотр</button>
                     </li>
+
                     <li class="icecream-sorts-item">
-                        <img src="img/ice3.jpg" alt="Сливочно-клубничное с
+                        <div class ="icecream-sorts-img-back">
+                            <img src="img/ice3.jpg" alt="Сливочно-клубничное с
                     присыпкой из белого шоколада">
-                        <p>355 &#8381/кг</p>
+                        </div>
+                        <div class="hit"><img src=" img/hit.jpg" alt="Хит"></div>
+                        <p class="price">355 &#8381<span class="min-font">/кг</span></p>
 
                         <p><span class="underline">Сливочно-клубничное с <br>
                                 присыпкой из белого шоколада</span></p>
                         <button class="btn btn-orange">Быстрый просмотр</button>
                     </li>
+
                     <li class="icecream-sorts-item">
+                        <div class ="icecream-sorts-img-back">
                         <img src="img/ice4.jpg" alt="Сливочное крем-брюле с
                     карамельной подливкой">
-                        <p>415 &#8381/кг</p>
+                        </div>
+                        <div class="hit"><img src=" img/hit.jpg" alt="Хит"></div>
+                        <p class="price">415 &#8381<span class="min-font">/кг</span></p>
 
                         <p><span class="underline">Сливочное крем-брюле с <br>
                                 карамельной подливкой</span></p>
@@ -192,7 +210,8 @@
         <section class="description">
             <div class="container">
                 <!--Описание магазина-->
-                <h2>Магазин Глэйси - это онлайн- и офлайн- магазин по продаже мороженого собственного
+                <h2>Магазин Глэйси - это онлайн - и офлайн - магазин по продаже
+                    мороженого собственного
                     производства на развес</h2>
                 <div class="about-us">
                     <p>Всё наше мороженое изготавливается на собственном
@@ -220,23 +239,25 @@
 
         <section class="additional-cards">
             <div class="container">
-                <article class="news-card">
+                <article class="add-card news-card">
                     <h2>Новое в нашем блоге</h2>
                     <p><a href="#">10 способов сервировки
                             фруктовых щербетов к столу</a></p>
                 </article>
 
-                <aside class="subscribe-card">
+                <aside class="add-card subscribe-card">
                     <div class="face-color">
-                        <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе
-                            всего самого вкусного, что у нас происходит. Обещаем не спамить
+                        <p>Подпишитесь на нашу сладкую рассылку и будете всегда
+                            в курсе
+                            всего самого вкусного, что у нас происходит. Обещаем
+                            не спамить
                             и не слать всякой ненужной ерунды. Честно =)</p>
                         <form action="https://echo.htmlacademy.ru">
-                            <div>
+                            <div class="subscribe-card-action">
                                 <label for="email-input" class="visually-hidden">Почта</label>
                                 <input type="text" id="email-input" placeholder="email@examle.com">
+                                <button type="submit" class="btn btn-orange">Отправить</button>
                             </div>
-                            <button type="submit" class="btn btn-orange">Отправить</button>
                         </form>
                     </div>
                 </aside>
