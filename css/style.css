@@ -85,6 +85,11 @@ li.catalog ul li:active {
     font-size: 14px;
 }
 
+.schedule a {
+    color: white;
+    text-decoration: none;
+}
+
 /* MAIN */
 
 /* CARDS-BONUS */
@@ -127,25 +132,15 @@ li.catalog ul li:active {
 
 .card-one {
     background-image: url("../img/rasp_back.jpg");
-    background-color: red;
+    background-color: #d35376;
 }
 
 .card-two {
     background-image: url("../img/choc_back.jpg");
-    background-color: chocolate;
+    background-color: #462a1c;
 }
 
 /* ICECREAM SORTS */
-
-/* Подложка
-.icecream-sorts-img-back {
-    background-color: rgb(248, 162, 81);
-    margin-top: 40px;
-    height: 260px;
-    width: 260px;
-    border-radius: 50%;
-}
-*/
 
 .icecream-sorts {
     padding: 0;
@@ -162,16 +157,9 @@ li.catalog ul li:active {
     text-align: center;
 }
 
-.underline {
-    line-height: 22px;
-    border-bottom: 1px solid white;
-    position: relative;
-    bottom: 120px;
-}
-
 .icecream-sorts-item img {
     border-radius: 50%;
-    /* Убрал рамер, чтобы не мешал*/
+    background-color: #feebc9;
     background-position: center;
     margin-top: 7px;
 }
@@ -199,6 +187,14 @@ li.catalog ul li:active {
 .min-font {
     font-size: 30px;
     font-weight: 700;
+}
+
+.underline {
+    line-height: 22px;
+    border-bottom: 1px solid white;
+    margin: 5px;
+    position: relative;
+    bottom: 120px;
 }
 
 .icecream-sorts-item .btn-orange {
@@ -295,6 +291,7 @@ li.catalog ul li:active {
 .news-card {
     padding: 30px 250px 50px 20px;
     background-image: url("../img/straw_back.jpg");
+    background-color: white;
 }
 
 .news-card h2 {
@@ -319,6 +316,7 @@ li.catalog ul li:active {
     padding: 6px;
     background-image: url("../img/post_back.jpg");
     position: center;
+    background-color: whitesmoke;
 }
 
 .subscribe-card .face-color {
@@ -394,7 +392,7 @@ li.catalog ul li:active {
     line-height: 20px;
 }
 
-/* CATALOG  */
+/* -------CATALOG-------  */
 
 .sub-navigation li {
     list-style: none;
@@ -406,7 +404,7 @@ li.catalog ul li:active {
 
 .sub-navigation-list {
     display: flex;
-    padding: 0px;
+    padding: 0;
 }
 
 .sub-navigation-list li {
@@ -491,7 +489,7 @@ a .special {
     font-size: 16px;
     padding: 12px 18px 12px 16px;
     border-radius: 30px;
-    margin: 0px;
+    margin: 0;
     height: 35px;
     background-color: rgba(255, 255, 255, 0.3);
 }
@@ -515,8 +513,9 @@ a .special {
 /* Список мороженого */
 
 .icecream-menu-list {
-    padding: 0px;
+    padding: 0;
     display: flex;
+    justify-content: space-between;
     flex-wrap: wrap;
 }
 
@@ -525,14 +524,14 @@ a .special {
     height: 406px;
     width: 294px;
     border: 1px solid transparent;
+    text-align: center;
 }
 
-.icecream-menu-list img {
+.icecream-menu-item img {
     border-radius: 50%;
-    /* Убрал рамер, чтобы не мешал*/
     background-position: center;
-    padding-left: 12px;
-    padding-top: 6px;
+    background-color: darkorange;
+    margin-top: 7px;
 }
 
 .icecream-menu-list li:hover,
@@ -551,7 +550,7 @@ a .special {
     font-weight: 700;
     position: relative;
     bottom: 60px;
-    left: 10px;
+    right: 55px;
 }
 
 .catalog-price .min-font {
@@ -566,6 +565,7 @@ a .special {
 
 .catalog-underline {
     line-height: 22px;
+    margin: 10px;
     border-bottom: 1px solid white;
     position: relative;
     bottom: 40px;
@@ -585,15 +585,21 @@ a .special {
 }
 
 /* Пагинация */
-.pagination-list li {
-    display: block;
-    position: relative;
-    top: 50%;
-    left: 50%;
+
+.pagination-list {
+    list-style-type: none;
+    display: flex;
+    align-items: flex-end;
+    margin-right: 60px;
+    justify-content: flex-end;
 }
 
-.pagination-list li {
-    list-style: none;
+.page-1 a {
+    background-color: white;
+    color: black !important;
+    border-radius: 20px;
+    height: 26px;
+    width: 26px;
 }
 
 .pagination-list a {
@@ -602,14 +608,15 @@ a .special {
     text-decoration: none;
     height: 26px;
     width: 26px;
-    position: center;
+    text-align: center;
+    padding-top: 4px;
+    box-sizing: border-box;
 }
 
-.pagination-list a:hover {
-    /* Фон почему-то всё равно смещён*/
+.pagination-list a:hover,
+.pagination-list a:focus {
     color: black;
     text-decoration: none;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.7);
     border-radius: 20px;
-    position: center;
 }
