@@ -1,5 +1,5 @@
 body {
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
     background-color: #849d8f;
     font-family: "Roboto", "Arial", sans-serif;
@@ -7,12 +7,14 @@ body {
     font-size: 16px;
     line-height: 17px;
     color: white;
+    width: 1200px;
 }
 
 .visually-hidden {
     display: none;
 }
 
+/*Стандартная оранжевая кнопка*/
 .btn-orange {
     width: 189px;
     height: 46px;
@@ -24,22 +26,41 @@ body {
     border: none;
     border-radius: 50px;
     background-color: #e85238;
-    text-shadow: 1px 1px 1px black;
-    box-shadow: 1px 1px 1px black;
+    text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
+    box-shadow: 0 2px 2px rgba(172, 16, 0, 0.64);
+    cursor: pointer;
+    text-align: center;
 }
 
-.btn-orange:hover {
-    background-color: #f17c64;
-    cursor: pointer;
+.btn-orange:hover,
+.btn-orange:focus {
+    outline: 0;
+    background: linear-gradient(to bottom, #f58669 0%, #ec6f5e 100%);
+    box-shadow: 0 2px 2px #ac1000;
 }
 
 .btn-orange:active {
-    background-color: #f17c64;
-    text-shadow: -1px -1px 1px black;
-    box-shadow: -1px -1px 1px black;
+    box-shadow: inset 0 2px 2px #ac1000;
+    background: linear-gradient(to bottom, #d84732 0%, #e1613e 100%);
 }
 
 /* HEADER */
+
+.header-line {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+}
+
+/*Все акт. элементы строки*/
+.menu-nav {
+    display: flex;
+    align-items: baseline;
+
+    margin: 0;
+    box-sizing: content-box; /* Думаю так*/
+    padding-top: 0px;
+}
 
 .menu-nav li {
     list-style: none;
@@ -49,29 +70,183 @@ body {
     color: inherit;
 }
 
+/*Три ссылки*/
+.menu-list {
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 700;
+    margin: 0;
+    min-width: 352px;
+    box-sizing: content-box;
+    padding-left: 40px;
+}
+
+/*Белая кнопка ссылки*/
+.catalog:hover,
+.catalog:focus {
+    color: black;
+    background-color: white;
+    box-sizing: border-box;
+    padding: 7px 14px 7px 12px;
+    width: 87px;
+    height: 32px;
+    border-radius: 15px;
+}
+
+.catalog:hover a,
+.catalog:focus a {
+    text-decoration: none;
+}
+
+/*Три кнопки*/
+.menu-forms {
+    display: flex;
+    align-self: center;
+    margin: 0;
+    margin-left: 353px;
+    min-width: 245px;
+}
+
+.menu-forms li {
+    margin-left: 10px;
+    padding-right: 0;
+}
+
+.btn-search {
+    height: 32px;
+    width: 32px;
+    border: 0px solid transparent;
+    border-radius: 50%;
+    background-image: url("../img/search.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.btn-search:hover,
+.btn-search:focus {
+    background-color: white;
+}
+
+.btn-login {
+    color: white;
+    font-size: 14px;
+    line-height: 16px;
+    height: 32px;
+    width: 92px;
+    border: none;
+    border-radius: 15px;
+    padding: 7px 15px;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.btn-login span {
+    position: relative;
+    bottom: 5px;
+}
+
+.btn-login::before {
+    content: url("../img/enter.png");
+    margin-right: 9px;
+}
+
+.btn-login:hover,
+.btn-login:focus {
+    background-color: white;
+    color: black;
+}
+
+.btn-cart {
+    height: 32px;
+    width: 100px;
+    font-size: 14px;
+    line-height: 16px;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    padding: 6px 8px;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.btn-cart::before {
+    content: url("../img/cart.png");
+    height: 23px;
+    width: 23px;
+    margin-right: 6px;
+}
+
+.btn-cart span {
+    position: relative;
+    bottom: 5px;
+}
+
+.btn-cart:hover,
+.btn-cart:focus {
+    background-color: white;
+    color: black;
+}
+
+/*Время работы*/
+.schedule {
+    font-size: 14px;
+    line-height: 16px;
+    margin: 0;
+}
+
+.schedule a {
+    color: white;
+    text-decoration: none;
+    font-size: 22px;
+    line-height: 24px;
+}
+
 /* Описание выпадающего меню:*/
-li.catalog ul {
+
+.menu-sub-list {
     display: none;
+    color: black;
+    background-color: #f8f7f4;
+    padding-left: 0;
+    margin: 7px;
+    height: 174px;
+    width: 143px;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    box-sizing: border-box;
 }
 
-li.catalog:hover ul {
+.menu-sub-list a {
+    text-decoration: none;
+}
+
+/*li.catalog:hover .menu-sub-list {
     display: block;
+} */
+
+.menu-sub-list li {
+    box-sizing: border-box;
+    padding: 7px 0px 7px 21px;
+    height: 33px; /* По макету 28*/
+    font-size: 14px;
+    line-height: 16px;
 }
 
-li.catalog ul li:first-child {
-    border-bottom: 1px solid black;
+.menu-sub-list li:first-child {
+    border-bottom: 1px solid #d1d0ce;
     font-weight: bold;
+    height: 40px; /* По макету 38*/
+    padding: 11px 0px 11px 21px;
 }
 
-li.catalog ul li {
-    padding: 5px;
-}
-
-li.catalog ul li:hover {
+.menu-sub-list li:hover,
+.menu-sub-list li:focus {
     background-color: #fbded7;
 }
 
-li.catalog ul li:active {
+.menu-sub-list li:active {
     background-color: #f6b5a5;
 }
 
@@ -79,15 +254,6 @@ li.catalog ul li:active {
 .modal-login,
 .modal-cart {
     display: none;
-}
-
-.schedule {
-    font-size: 14px;
-}
-
-.schedule a {
-    color: white;
-    text-decoration: none;
 }
 
 /* MAIN */
@@ -104,6 +270,7 @@ li.catalog ul li:active {
     background-repeat: no-repeat;
     background-size: 560px 230px;
     box-sizing: border-box;
+    background-color: #d35376;
 }
 
 .cards-bonus .container {
@@ -132,12 +299,10 @@ li.catalog ul li:active {
 
 .card-one {
     background-image: url("../img/rasp_back.jpg");
-    background-color: #d35376;
 }
 
 .card-two {
     background-image: url("../img/choc_back.jpg");
-    background-color: #462a1c;
 }
 
 /* ICECREAM SORTS */
@@ -218,8 +383,7 @@ li.catalog ul li:active {
 
 /* DESCRIPTION */
 .description {
-    height: 306;
-    max-width: 1146px;
+    min-height: 306px;
     margin-top: 42px;
     box-sizing: border-box;
     padding: 30px 32px 30px 21px;
@@ -237,37 +401,44 @@ li.catalog ul li:active {
     margin: 0;
 }
 
-.description p {
-    line-height: 22px;
-}
-
 .about-us {
     display: flex;
-    margin-top: 21px;
-    margin-bottom: 27px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 0;
 }
 
 .about-us p {
     flex-wrap: wrap;
     margin: 0;
-    width: 552px;
-    max-height: 81px;
+    margin-top: 11px;
+    line-height: 22px;
+    max-width: 541px;
+    min-height: 81px;
 }
 
 .about-us p:first-child:before {
     content: url("../img/ici.png");
+    width: 48px;
+    height: 48px;
 }
 
 .about-us p:nth-child(2):before {
     content: url("../img/leaf.png");
+    width: 48px;
+    height: 48px;
 }
 
 .about-us p:nth-child(3)::before {
     content: url("../img/cow.png");
+    width: 48px;
+    height: 48px;
 }
 
 .about-us p:last-child:before {
     content: url("../img/term.png");
+    width: 48px;
+    height: 48px;
 }
 
 /*Две карточки*/
@@ -315,7 +486,7 @@ li.catalog ul li:active {
 .subscribe-card {
     padding: 6px;
     background-image: url("../img/post_back.jpg");
-    position: center;
+    background-position: center;
     background-color: whitesmoke;
 }
 
@@ -366,53 +537,144 @@ li.catalog ul li:active {
 }
 
 /* FOOTER */
+.footer-line {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 17px;
+    padding-bottom: 30px;
+    min-height: 55px;
+}
+
 .main-footer li {
     list-style: none;
 }
+/* Иконки соц. сетей*/
+.social-list {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    margin-left: 28px;
+    padding: 0;
+    min-width: 186px;
+    min-height: 38px;
+}
 
-.footer-info a {
+.social-list li {
+    height: 38px;
+    width: 38px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.3);
+    background-position: center;
+}
+
+.social-list li:hover,
+.social-list li:focus {
+    background-color: white;
+}
+
+.twitter {
+    background-image: url("../img/twitter.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 30px;
+    width: 30px;
+}
+
+.inst {
+    background-image: url("../img/inst.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 30px;
+    width: 30px;
+}
+
+.fb {
+    background-image: url("../img/fb.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 30px;
+    width: 30px;
+}
+
+.vk {
+    background-image: url("../img/vk.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 30px;
+    width: 30px;
+}
+
+/*Ссылки в центре*/
+.info-list {
+    margin: 0;
+    padding: 0;
+    max-width: 312px;
+    min-height: 44px;
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.info-list li {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    min-width: 111px;
+}
+
+.info-list li:nth-child(2n) {
+    margin-left: 30px;
+}
+
+.info-list a {
+    text-decoration: none;
     color: white;
-    line-height: 17px;
+    font-size: 13px;
+    line-height: 18px;
 }
 
 .suppliers {
     font-weight: bold;
 }
 
+/*Логотип*/
 .footer-logo {
-    height: 41px;
-    width: 120px;
+    height: 61px;
+    width: 191px;
+}
+
+.footer-logo a {
+    text-decoration: none;
 }
 
 .html-font {
     color: white;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .footer-logo p {
-    line-height: 20px;
+    margin-top: 3px;
+    font-size: 12px;
+    line-height: 18px;
 }
 
 /* -------CATALOG-------  */
 
-.sub-navigation li {
-    list-style: none;
-}
-
-.sub-navigation a {
-    color: white;
-}
-
 .sub-navigation-list {
     display: flex;
     padding: 0;
+    list-style: none;
 }
 
 .sub-navigation-list li {
     margin-left: 20px;
 }
 
-a .special {
+.sub-navigation-list a {
+    color: white;
     text-decoration: none;
+}
+
+.br-underline {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 /*Фильтры*/
@@ -425,6 +687,7 @@ a .special {
     margin-top: 33px;
     max-width: 1200px;
 }
+
 .filters form {
     display: flex;
     flex-wrap: wrap;
@@ -432,12 +695,12 @@ a .special {
 
 .filters legend {
     margin-left: 17px;
-    margin-bottom: 8px;
+    margin-bottom: 3px;
     font-size: 14px;
     font-family: inherit;
     color: white;
 }
-
+/*Сортировка*/
 .filters .sort-field {
     border: none;
     width: 193px;
@@ -453,32 +716,33 @@ a .special {
     border-radius: 20px;
     background-color: rgba(255, 255, 255, 0.3);
 }
-
+/*Фильтр стоимости*/
 .price-volume {
     width: 219px;
     height: 57px;
 }
-
-.filters .fat-field {
+/*Жирность*/
+.fat-field {
     border: none;
     max-width: 417px;
 }
 
-.fat-field .fat-radio-list {
+.fat-radio-list {
     font-size: 16x;
     display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
     height: 37px;
     width: 417px;
     background-color: rgba(255, 255, 255, 0.3);
     margin: 0;
-    padding: 15px 18px 11px 16px;
+    padding: 9px 15px 7px 15px;
     border-radius: 30px;
+    font-size: 16px;
+    line-height: 18px;
 }
 
-.fat-field .fat-radio-list li {
-    margin-left: 18px;
-}
-
+/*Наполнители*/
 .filters .fill-field {
     border: none;
     max-width: 707px;
@@ -486,19 +750,27 @@ a .special {
 
 .filling-checkbox-list {
     display: flex;
+    justify-content: space-between;
     font-size: 16px;
-    padding: 12px 18px 12px 16px;
+    line-height: 18px;
+    padding: 7px 15px 7px;
     border-radius: 30px;
     margin: 0;
+    box-sizing: border-box;
     height: 35px;
     background-color: rgba(255, 255, 255, 0.3);
 }
 
-.filling-checkbox-list li {
+.filling-checkbox-list li:not(.first) {
+    /*Не пашет*/
     margin-left: 20px;
 }
 
+/*Кнопка применить*/
 .btn-filter {
+    align-self: flex-end;
+    position: relative;
+    bottom: 10px;
     color: white;
     width: 144px;
     height: 37px;
@@ -508,6 +780,17 @@ a .special {
     border: 2px solid white;
     border-radius: 30px;
     padding: 10px auto 13px;
+}
+
+.btn-filter:hover,
+.btn-filter:focus {
+    color: black;
+    background-color: white;
+}
+
+.btn-filter:active {
+    border: none;
+    box-shadow: inset 0 1px 2px #8a8b8a;
 }
 
 /* Список мороженого */

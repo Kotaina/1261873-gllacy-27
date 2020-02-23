@@ -12,8 +12,9 @@
     <!--Шапка-->
     <header class="main-header">
         <div class="container">
+            <div class="header-line">
             <div>
-                <a href="index.html"><img src="img/logo.svg" alt="gllacy logo"></a>
+                <img src="img/logo.svg" alt="gllacy logo">
             </div>
             <nav class="menu-nav">
                 <ul class="menu-list">
@@ -42,9 +43,9 @@
                 </ul>
 
                 <ul class='menu-forms'>
-                    <li class="searh-form visually-hidden">
-                        <button type="button" class="btn-search">Поиск</button>
-                        <div class="container modal-search>
+                    <li>
+                        <button type="button" class="btn-search"></button>
+                        <div class="modal-search">
                             <h2 class="visually-hidden">Форма поиска</h2>
                             <form action="https://echo.htmlacademy.ru">
                                 <div>
@@ -54,9 +55,9 @@
                             </form>
                         </div>
                     </li>
-                    <li class="visually-hidden">
-                        <button type="button" form="login">Вход</button>
-                        <div class="container modal-login">
+                    <li>
+                        <button type="button" form="login" class="btn-login"><span>Вход</span></button>
+                        <div class="modal-login">
                             <form action="https://echo.htmlacademy.ru" method="post">
                                 <div>
                                     <label for="email-input" class="visually-hidden">Электроная почта</label>
@@ -77,7 +78,7 @@
                         </div>
                     </li>
                     <li>
-                        <button type="button">Корзина</button>
+                        <button type="button" class="btn-cart"><span>Пусто</span></button>
                         <div class="modal-cart">
                             <h3 class="visually-hidden">Корзина</h3>
                             <ul class="modal-cart-list">
@@ -112,14 +113,15 @@
                     </p>
             </div>
         </div>
+        </div>
     </header>
     <main>
         <section class="sub-navigation">
             <div class="container">
                 <ul class="sub-navigation-list">
-                    <li> <a href="index.html">Главная</a> </li>
-                    <li><a href="#">Каталог</a></li>
-                    <li><a href="#"><span class="special">Сливочное</span></a></li>
+                    <li class="br-underline"> <a href="index.html">Главная</a> </li>
+                    <li class="br-underline"><a href="#">Каталог</a></li>
+                    <li><a href="#">Сливочное</a></li>
                 </ul>
                 <h2>Сливочное мороженое</h2>
             </div>
@@ -167,7 +169,7 @@
                     <fieldset class="fill-field">
                         <legend>Наполнители:</legend>
                         <ul class="filling-checkbox-list">
-                            <li>
+                            <li class="first">
                                 <label for="chocolate" class="visually-hidden">шоколадные</label>
                                 <input id="chocolate" type="checkbox" name="chocolate" value="chocolate">шоколадные
                             </li>
@@ -190,7 +192,7 @@
                         </ul>
                     </fieldset>
                     <button type="submit" class="btn btn-filter">Применить</button>
-                </form>
+            </div>
             </div>
         </section>
         <section class="icecream-menu">
@@ -368,16 +370,18 @@
             </div>
         </section>
     </main>
+
     <footer class="main-footer">
         <div class="container">
+            <div class="footer-line">
             <div class="footer-social">
                 <h3 class="visually-hidden">Наши соц. сети</h3 class="visually-hidden">
                 <ul class="social-list">
                     <!--Контакты-->
-                    <li><a href="#">Твиттер</a></li>
-                    <li><a href="#">Инстаграм</a></li>
-                    <li><a href="#">Фейсбук</a></li>
-                    <li><a href="#">Вконтакте</a></li>
+                    <li class="twitter"><a href="#"></a></li>
+                    <li class="inst"><a href="#"></a></li>
+                    <li class="fb"><a href="#"></a></li>
+                    <li class="vk"><a href="#"></a></li>
                 </ul>
             </div>
             <div class="footer-info">
@@ -391,11 +395,12 @@
                 </ul>
             </div>
             <div class="footer-logo">
-                <a href="https://www.htmlacademy.ru"> <img src="img/logo_html.svg" alt="HTML Academy logo" width="120"
-                        height="46"> </a>
+                <a href="https://www.htmlacademy.ru"> <img src="img/logo_html.svg" alt="HTML Academy logo" width="110"
+                        height="43"> </a>
 
-                <p>Сделано в <a href="#"><span class="html-font"> Html Academy</span> </a> 2020</p>
+                <p>Сделано в <a href="#"><span class="html-font"> HTML Academy</span> </a>© 2020</p>
             </div>
+        </div>
         </div>
     </footer>
     <!--Форма обратной связи-->
