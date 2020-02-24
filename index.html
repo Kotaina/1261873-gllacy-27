@@ -54,7 +54,7 @@
                             <form action="https://echo.htmlacademy.ru">
                                 <div>
                                     <label for="search-input" class="visually-hidden"></label>
-                                    <input id="search-input" type="text" placeholder="Что Вы хотите найти?">
+                                    <input id="search-input" type="text" placeholder="Крем-брюле">
                                 </div>
                             </form>
                         </div>
@@ -65,14 +65,14 @@
                             <form action="https://echo.htmlacademy.ru" method="post">
                                 <div>
                                     <label for="email-input" class="visually-hidden">Электроная почта</label>
-                                    <input type="text" name="email" id="email-input" placeholder="Электроная почта">
+                                    <input type="text" name="email" id="email-input" placeholder="email@examle.com">
                                 </div>
                                 <div>
                                     <label for="password-input" class="visually-hidden"></label>
                                     <input type="password" name="password" id="password-input" placeholder="Пароль">
                                 </div>
-                                <div>
-                                    <button type="submit">Войти</button>
+                                <div class="login-active">
+                                    <button type="submit" class="btn-orange">Войти</button>
                                     <ul>
                                         <li> <a href="#">Забыли пароль?</a> </li>
                                         <li> <a href="#">Новая регистрация</a></li>
@@ -209,8 +209,8 @@
             </div>
         </section>
 
+        <div class="container">
         <section class="description">
-            <div class="container">
                 <!--Описание магазина-->
                 <h2>Магазин Глэйси - это онлайн - и офлайн - магазин по продаже
                     мороженого собственного
@@ -236,8 +236,8 @@
                         в специальном термопаке, который не даёт мороженому
                         растаять в пути и позволяет сохранить превосходный вкус.</p>
                 </div>
-            </div>
         </section>
+    </div>
 
         <section class="additional-cards">
             <div class="container">
@@ -294,8 +294,9 @@
                 </ul>
             </div>
             <div class="footer-logo">
-                <a href="https://www.htmlacademy.ru"> <img src="img/logo_html.svg" alt="HTML Academy logo" width="110"
-                        height="43"> </a>
+                <a href="https://www.htmlacademy.ru"> <img src="img/logo_html.svg"
+                     alt="HTML Academy logo" width="125"
+                        height="39"> </a>
 
                 <p>Сделано в <a href="#"><span class="html-font"> HTML Academy</span> </a>© 2020</p>
             </div>
@@ -303,24 +304,24 @@
         </div>
     </footer>
     <!--Форма обратной связи-->
-    <section class="visually-hidden popup">
+    <section class="popup">
         <h2>Мы обязательно вам ответим!</h2>
-        <button type="button"></button>
+        <button type="button" class="visually-hidden"></button>
         <form action="https://echo.htmlacademy.ru">
-            <div>
+            <div class="popup-name">
                 <label for="popup-name" class="visually-hidden">Введите имя</label>
                 <input type="text" id="popup-name" placeholder="Как вас зовут?">
             </div>
-            <div>
+            <div class="popup-mail">
                 <label for="popup-mail" class="visually-hidden">Почта</label>
-                <input type="text" id="popup-mail" placeholder="Ваша почта для ответа?">
+                <input type="text" id="popup-mail" placeholder="email@example.com">
             </div>
-            <div>
+            <div class="popup-text">
                 <label for="popuptext" class="visually-hidden">Вопрос</label>
                 <textarea name="question-text" id="popuptext" rows="5"></textarea>
             </div>
 
-            <button type="submit">Отправить</button>
+            <button type="submit" class="btn-orange">Отправить</button>
         </form>
     </section>
 

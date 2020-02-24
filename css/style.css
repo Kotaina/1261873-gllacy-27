@@ -1,5 +1,4 @@
 body {
-    margin: 0 auto;
     padding: 0;
     background-color: #849d8f;
     font-family: "Roboto", "Arial", sans-serif;
@@ -7,11 +6,18 @@ body {
     font-size: 16px;
     line-height: 17px;
     color: white;
-    width: 1200px;
 }
 
 .visually-hidden {
     display: none;
+}
+
+.container {
+    padding-left: 27px;
+    padding-right: 27px;
+    max-width: 1200px;
+    box-sizing: border-box;
+    margin: 0 auto;
 }
 
 /*Стандартная оранжевая кнопка*/
@@ -25,7 +31,7 @@ body {
     font-weight: bold;
     border: none;
     border-radius: 50px;
-    background-color: #e85238;
+    background: linear-gradient(to bottom, #f26843 0%, #e74a35 100%);
     text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
     box-shadow: 0 2px 2px rgba(172, 16, 0, 0.64);
     cursor: pointer;
@@ -50,13 +56,13 @@ body {
     display: flex;
     justify-content: flex-end;
     flex-wrap: wrap;
+    padding-top: 10px;
 }
 
 /*Все акт. элементы строки*/
 .menu-nav {
     display: flex;
     align-items: baseline;
-
     margin: 0;
     box-sizing: content-box; /* Думаю так*/
     padding-top: 0px;
@@ -75,18 +81,24 @@ body {
     display: flex;
     justify-content: space-between;
     align-self: center;
+    min-width: 352px;
     font-size: 16px;
     line-height: 18px;
     font-weight: 700;
-    margin: 0;
-    min-width: 352px;
     box-sizing: content-box;
     padding-left: 40px;
+    margin: 0;
+}
+
+.menu-list a {
+    text-decoration: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 /*Белая кнопка ссылки*/
 .catalog:hover,
 .catalog:focus {
+    display: block;
     color: black;
     background-color: white;
     box-sizing: border-box;
@@ -101,12 +113,65 @@ body {
     text-decoration: none;
 }
 
+/* Описание выпадающего меню:*/
+.menu-sub-list {
+    display: none;
+    position: absolute;
+    color: black;
+    background-color: #f8f7f4;
+    padding-left: 0;
+    margin-top: 17px;
+    height: 174px;
+    width: 143px;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.menu-sub-list a {
+    text-decoration: none;
+}
+
+.catalog:hover .menu-sub-list,
+.catalog:focus .menu-sub-list {
+    display: block;
+}
+
+.menu-sub-list li {
+    box-sizing: border-box;
+    padding: 7px 0px 7px 21px;
+    height: 33px; /* По макету 28*/
+    font-size: 14px;
+    line-height: 16px;
+}
+
+.menu-sub-list li:first-child {
+    border-bottom: 1px solid #d1d0ce;
+    font-weight: bold;
+    height: 40px; /* По макету 38*/
+    padding: 11px 0px 11px 21px;
+}
+
+.menu-sub-list li:hover,
+.menu-sub-list li:focus {
+    background-color: #fbded7;
+}
+
+.menu-sub-list li:active {
+    background-color: #f6b5a5;
+}
+
 /*Три кнопки*/
+.modal-search,
+.modal-cart {
+    display: none;
+}
+
 .menu-forms {
     display: flex;
     align-self: center;
     margin: 0;
-    margin-left: 353px;
+    margin-left: 303px;
     min-width: 245px;
 }
 
@@ -114,7 +179,7 @@ body {
     margin-left: 10px;
     padding-right: 0;
 }
-
+/*Поиск*/
 .btn-search {
     height: 32px;
     width: 32px;
@@ -124,6 +189,7 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-color: rgba(255, 255, 255, 0.3);
+    cursor: pointer;
 }
 
 .btn-search:hover,
@@ -131,6 +197,34 @@ body {
     background-color: white;
 }
 
+.btn-search:active .modal-search {
+    display: block;
+}
+
+.modal-search {
+    width: 343px;
+    height: 84px;
+    box-sizing: border-box;
+    position: absolute;
+    right: 495px;
+    padding: 20px 15px;
+    background-color: #f8f7f4;
+    border-radius: 7px;
+}
+
+.modal-search input {
+    width: 310px;
+    height: 44px;
+    border: 1px solid #b8b8b8;
+    box-sizing: border-box;
+    border-radius: 5px;
+    padding: 14px;
+    color: #b8b8b8;
+    font-size: 14px;
+    line-height: 24px;
+}
+
+/*Вход*/
 .btn-login {
     color: white;
     font-size: 14px;
@@ -141,6 +235,7 @@ body {
     border-radius: 15px;
     padding: 7px 15px;
     background-color: rgba(255, 255, 255, 0.3);
+    cursor: pointer;
 }
 
 .btn-login span {
@@ -159,6 +254,51 @@ body {
     color: black;
 }
 
+.modal-login {
+    width: 280px;
+    height: 214px;
+    box-sizing: border-box;
+    position: absolute;
+    right: 165px;
+    margin-top: 5px;
+    padding: 20px;
+    background-color: #f8f7f4;
+    border-radius: 7px;
+}
+
+.modal-login input {
+    width: 240px;
+    height: 44px;
+    border: 1px solid #b8b8b8;
+    box-sizing: border-box;
+    border-radius: 5px;
+    padding: 19px 16px 19px;
+    color: #b8b8b8;
+    font-size: 14px;
+    line-height: 24px;
+    margin-bottom: 20px;
+}
+
+.login-active {
+    display: flex;
+    justify-content: space-between;
+    width: 242px;
+    color: black;
+    font-size: 14px;
+    line-height: 24px;
+}
+
+.login-active ul {
+    padding: 0;
+    margin: 0;
+}
+
+.login-active button {
+    width: 100px;
+    height: 44px;
+}
+
+/*Корзина*/
 .btn-cart {
     height: 32px;
     width: 100px;
@@ -169,6 +309,7 @@ body {
     border-radius: 15px;
     padding: 6px 8px;
     background-color: rgba(255, 255, 255, 0.3);
+    cursor: pointer;
 }
 
 .btn-cart::before {
@@ -201,59 +342,7 @@ body {
     text-decoration: none;
     font-size: 22px;
     line-height: 24px;
-}
-
-/* Описание выпадающего меню:*/
-
-.menu-sub-list {
-    display: none;
-    color: black;
-    background-color: #f8f7f4;
-    padding-left: 0;
-    margin: 7px;
-    height: 174px;
-    width: 143px;
-    border: 1px solid transparent;
-    border-radius: 5px;
-    box-sizing: border-box;
-}
-
-.menu-sub-list a {
-    text-decoration: none;
-}
-
-/*li.catalog:hover .menu-sub-list {
-    display: block;
-} */
-
-.menu-sub-list li {
-    box-sizing: border-box;
-    padding: 7px 0px 7px 21px;
-    height: 33px; /* По макету 28*/
-    font-size: 14px;
-    line-height: 16px;
-}
-
-.menu-sub-list li:first-child {
-    border-bottom: 1px solid #d1d0ce;
-    font-weight: bold;
-    height: 40px; /* По макету 38*/
-    padding: 11px 0px 11px 21px;
-}
-
-.menu-sub-list li:hover,
-.menu-sub-list li:focus {
-    background-color: #fbded7;
-}
-
-.menu-sub-list li:active {
-    background-color: #f6b5a5;
-}
-
-.modal-search,
-.modal-login,
-.modal-cart {
-    display: none;
+    font-weight: 500;
 }
 
 /* MAIN */
@@ -267,6 +356,7 @@ body {
     width: 560px;
     padding: 24px 29px 24px 20px;
     font-size: 18px;
+    font-weight: bold;
     background-repeat: no-repeat;
     background-size: 560px 230px;
     box-sizing: border-box;
@@ -356,7 +446,7 @@ body {
 
 .underline {
     line-height: 22px;
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
     margin: 5px;
     position: relative;
     bottom: 120px;
@@ -531,7 +621,7 @@ body {
 /* Карта */
 .map {
     background-image: url("../img/map.png");
-    margin-top: 40px;
+    margin: 40px auto 0;
     height: 429px;
     width: 1200px;
 }
@@ -565,6 +655,7 @@ body {
     border-radius: 50%;
     background-color: rgba(255, 255, 255, 0.3);
     background-position: center;
+    cursor: pointer;
 }
 
 .social-list li:hover,
@@ -762,7 +853,6 @@ body {
 }
 
 .filling-checkbox-list li:not(.first) {
-    /*Не пашет*/
     margin-left: 20px;
 }
 
@@ -797,6 +887,8 @@ body {
 
 .icecream-menu-list {
     padding: 0;
+    box-sizing: border-box;
+    min-width: 1200px; /*Не уверен, что надо так*/
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -849,7 +941,7 @@ body {
 .catalog-underline {
     line-height: 22px;
     margin: 10px;
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
     position: relative;
     bottom: 40px;
 }
@@ -877,17 +969,19 @@ body {
     justify-content: flex-end;
 }
 
-.page-1 a {
+.page-1 {
     background-color: white;
-    color: black !important;
+    color: black;
     border-radius: 20px;
     height: 26px;
     width: 26px;
 }
+.page-1:hover {
+    color: black;
+}
 
 .pagination-list a {
     display: block;
-    color: white;
     text-decoration: none;
     height: 26px;
     width: 26px;
@@ -896,10 +990,67 @@ body {
     box-sizing: border-box;
 }
 
+.pagination-list a:not(.page-1) {
+    color: white;
+}
+
 .pagination-list a:hover,
 .pagination-list a:focus {
     color: black;
     text-decoration: none;
     background-color: rgba(255, 255, 255, 0.7);
     border-radius: 20px;
+}
+
+.popup {
+    box-sizing: border-box;
+    position: absolute;
+    left: 50%;
+    right: 50%;
+    margin-left: -238px;
+    width: 478px;
+    height: 442px;
+    padding: 21px 25px 22px 24px;
+    background-color: #f8f7f4;
+    border-radius: 10px;
+}
+
+.popup h2 {
+    color: black;
+    font-size: 24px;
+    line-height: 28px;
+    margin: 0;
+    margin-bottom: 24px;
+}
+
+.popup input {
+    width: 268px;
+    height: 44px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    padding: 15px;
+    border: 1px solid #d3d3d2;
+    border-radius: 10px;
+    color: #d3d3d2;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.popup textarea {
+    width: 430px;
+    height: 155px;
+    box-sizing: border-box;
+    padding: 15px;
+    margin-bottom: 25px;
+    border: 1px solid #d3d3d2;
+    border-radius: 10px;
+    color: #d3d3d2;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.popup button {
+    margin-left: 290px;
+    width: 138px;
+    height: 46px;
 }
