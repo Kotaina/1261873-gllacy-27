@@ -8,25 +8,23 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,
     700&display=swap&subset=cyrillic" rel="stylesheet">
-
 </head>
 
 <body>
 
     <!--Шапка-->
     <header class="main-header">
-        <div class="container">
-            <div class="header-line">
+        <div class="container header-line">
             <div>
                 <img src="img/logo.svg" alt="gllacy logo">
             </div>
             <nav class="menu-nav">
                 <ul class="menu-list">
                     <!--Разделы сайта-->
-                    <li class="catalog"><a href="#">Каталог</a>
+                    <li class="menu-list-item"><a href="#" class="menu-list-link"> <span class="underline" >Каталог</span></a>
                         <ul class="menu-sub-list">
                             <li>
-                                <a href="#">Новинки</a>
+                                <a href="#" >Новинки</a>
                             </li>
                             <li>
                                 <a href="catalog.html">Сливочное</a>
@@ -42,8 +40,8 @@
                             </li>
                         </ul>
                     </li>
-                    <li class="deliver"> <a href="#">Доставка и оплата</a> </li>
-                    <li class="about"> <a href="#">О компании</a> </li>
+                    <li class="menu-list-item"> <a href="#" class="menu-list-link" > <span class="underline" >Доставка и оплата</span> </a> </li>
+                    <li class="menu-list-item"> <a href="#" class="menu-list-link" > <span class="underline" >О компании</span> </a> </li>
                 </ul>
 
                 <ul class='menu-forms'>
@@ -61,7 +59,7 @@
                     </li>
                     <li>
                         <button type="button" form="login" class="btn-login"><span>Вход</span></button>
-                        <div class="modal-login">
+                        <div class="modal-login visually-hidden">
                             <form action="https://echo.htmlacademy.ru" method="post">
                                 <div>
                                     <label for="email-input" class="visually-hidden">Электроная почта</label>
@@ -109,14 +107,12 @@
 
                     </li>
                 </ul>
-
             </nav>
             <div>
                 <p class="schedule">С 10 до 20, ежедневно <br>
                     <a href="tel:88124502525">8 812 450-25-25</a>
-                    </p>
+                </p>
             </div>
-        </div>
         </div>
     </header>
     <main>
@@ -162,7 +158,7 @@
 
                         <p class="price">310 &#8381<span class="min-font">/кг</span></p>
 
-                        <p><span class="underline">Сливочное с апельсиновым
+                        <p class="item-description" ><span class="underline">Сливочное с апельсиновым
                                 джемом и цитрусовой стружкой</span></p>
                         <button class="btn btn-orange">Быстрый просмотр</button>
                     </li>
@@ -175,7 +171,7 @@
                         <div class="hit"><img src=" img/hit.jpg" alt="Хит"></div>
                         <p class="price">380 &#8381<span class="min-font">/кг</span></p>
 
-                        <p><span class="underline">Сливочно-кофейное с кусочками <br>
+                        <p class="item-description" ><span class="underline">Сливочно-кофейное с кусочками <br>
                                 шоколада</span> </p>
                         <button class="btn btn-orange">Быстрый просмотр</button>
                     </li>
@@ -188,7 +184,7 @@
                         <div class="hit"><img src=" img/hit.jpg" alt="Хит"></div>
                         <p class="price">355 &#8381<span class="min-font">/кг</span></p>
 
-                        <p><span class="underline">Сливочно-клубничное с <br>
+                        <p class="item-description" ><span class="underline">Сливочно-клубничное с <br>
                                 присыпкой из белого шоколада</span></p>
                         <button class="btn btn-orange">Быстрый просмотр</button>
                     </li>
@@ -201,7 +197,7 @@
                         <div class="hit"><img src=" img/hit.jpg" alt="Хит"></div>
                         <p class="price">415 &#8381<span class="min-font">/кг</span></p>
 
-                        <p><span class="underline">Сливочное крем-брюле с <br>
+                        <p class="item-description" ><span class="underline">Сливочное крем-брюле с <br>
                                 карамельной подливкой</span></p>
                         <button class="btn btn-orange">Быстрый просмотр</button>
                     </li>
@@ -214,7 +210,8 @@
                 <!--Описание магазина-->
                 <h2>Магазин Глэйси - это онлайн - и офлайн - магазин по продаже
                     мороженого собственного
-                    производства на развес</h2>
+                    производства на развес
+                </h2>
                 <div class="about-us">
                     <p>Всё наше мороженое изготавливается на собственном
                         производстве, с использованием современного оборудования
@@ -237,7 +234,7 @@
                         растаять в пути и позволяет сохранить превосходный вкус.</p>
                 </div>
         </section>
-    </div>
+        </div>
 
         <section class="additional-cards">
             <div class="container">
@@ -271,8 +268,7 @@
     </main>
 
     <footer class="main-footer">
-        <div class="container">
-            <div class="footer-line">
+        <div class="container footer-line">
             <div class="footer-social">
                 <h3 class="visually-hidden">Наши соц. сети</h3 class="visually-hidden">
                 <ul class="social-list">
@@ -299,12 +295,11 @@
                         height="39"> </a>
 
                 <p>Сделано в <a href="#"><span class="html-font"> HTML Academy</span> </a>© 2020</p>
-            </div>
-        </div>
+             </div>
         </div>
     </footer>
     <!--Форма обратной связи-->
-    <section class="popup">
+    <section class="popup visually-hidden">
         <h2>Мы обязательно вам ответим!</h2>
         <button type="button" class="visually-hidden"></button>
         <form action="https://echo.htmlacademy.ru">

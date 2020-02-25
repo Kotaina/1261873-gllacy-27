@@ -15,7 +15,7 @@ body {
 .container {
     padding-left: 27px;
     padding-right: 27px;
-    max-width: 1200px;
+    width: 1200px;
     box-sizing: border-box;
     margin: 0 auto;
 }
@@ -62,9 +62,8 @@ body {
 /*Все акт. элементы строки*/
 .menu-nav {
     display: flex;
-    align-items: baseline;
+    align-items: center;
     margin: 0;
-    box-sizing: content-box; /* Думаю так*/
     padding-top: 0px;
 }
 
@@ -90,27 +89,21 @@ body {
     margin: 0;
 }
 
-.menu-list a {
-    text-decoration: none;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-}
-
 /*Белая кнопка ссылки*/
-.catalog:hover,
-.catalog:focus {
+.menu-list-link {
     display: block;
-    color: black;
-    background-color: white;
+    text-decoration: none;
     box-sizing: border-box;
-    padding: 7px 14px 7px 12px;
-    width: 87px;
-    height: 32px;
+    padding: 12px 15px;
+    /* height: 32px; */
     border-radius: 15px;
 }
 
-.catalog:hover a,
-.catalog:focus a {
-    text-decoration: none;
+.menu-list-link:hover,
+.menu-list-link:focus {
+    color: black;
+    background-color: white;
+    padding: 12px 15px;
 }
 
 /* Описание выпадающего меню:*/
@@ -120,7 +113,7 @@ body {
     color: black;
     background-color: #f8f7f4;
     padding-left: 0;
-    margin-top: 17px;
+    margin-top: 3px;
     height: 174px;
     width: 143px;
     border: 1px solid transparent;
@@ -130,10 +123,11 @@ body {
 
 .menu-sub-list a {
     text-decoration: none;
+    padding-bottom: 20px;
 }
 
-.catalog:hover .menu-sub-list,
-.catalog:focus .menu-sub-list {
+.menu-list-item:first-child:hover .menu-sub-list,
+.menu-list-item:first-child:focus .menu-sub-list {
     display: block;
 }
 
@@ -171,7 +165,7 @@ body {
     display: flex;
     align-self: center;
     margin: 0;
-    margin-left: 303px;
+    margin-left: 276px;
     min-width: 245px;
 }
 
@@ -445,11 +439,14 @@ body {
 }
 
 .underline {
-    line-height: 22px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.item-description {
+    line-height: 22px;
     margin: 5px;
     position: relative;
-    bottom: 120px;
+    bottom: 100px;
 }
 
 .icecream-sorts-item .btn-orange {
@@ -459,7 +456,7 @@ body {
 .icecream-sorts-item:hover .btn-orange {
     display: block;
     position: relative;
-    bottom: 125px;
+    bottom: 95px;
     left: 50px;
 }
 
@@ -755,13 +752,18 @@ body {
     list-style: none;
 }
 
-.sub-navigation-list li {
+.sub-navigation-list li:not(:first-child) {
     margin-left: 20px;
 }
 
 .sub-navigation-list a {
     color: white;
     text-decoration: none;
+}
+
+.sub-navigation h2 {
+    font-size: 35px;
+    line-height: 41px;
 }
 
 .br-underline {
@@ -792,8 +794,9 @@ body {
     color: white;
 }
 /*Сортировка*/
-.filters .sort-field {
+.sort-field {
     border: none;
+    padding-left: 0;
     width: 193px;
 }
 
@@ -834,8 +837,9 @@ body {
 }
 
 /*Наполнители*/
-.filters .fill-field {
+.fill-field {
     border: none;
+    padding-left: 0;
     max-width: 707px;
 }
 

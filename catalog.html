@@ -11,18 +11,17 @@
 <body>
     <!--Шапка-->
     <header class="main-header">
-        <div class="container">
-            <div class="header-line">
+        <div class="container header-line">
             <div>
                 <img src="img/logo.svg" alt="gllacy logo">
             </div>
             <nav class="menu-nav">
                 <ul class="menu-list">
                     <!--Разделы сайта-->
-                    <li class="catalog"><a href="#">Каталог</a>
+                    <li class="menu-list-item"><a href="#" class="menu-list-link"> <span class="underline" >Каталог</span></a>
                         <ul class="menu-sub-list">
                             <li>
-                                <a href="#">Новинки</a>
+                                <a href="#" >Новинки</a>
                             </li>
                             <li>
                                 <a href="catalog.html">Сливочное</a>
@@ -38,8 +37,8 @@
                             </li>
                         </ul>
                     </li>
-                    <li class="deliver"> <a href="#">Доставка и оплата</a> </li>
-                    <li class="about"> <a href="#">О компании</a> </li>
+                    <li class="menu-list-item"> <a href="#" class="menu-list-link" > <span class="underline" >Доставка и оплата</span> </a> </li>
+                    <li class="menu-list-item"> <a href="#" class="menu-list-link" > <span class="underline" >О компании</span> </a> </li>
                 </ul>
 
                 <ul class='menu-forms'>
@@ -50,25 +49,25 @@
                             <form action="https://echo.htmlacademy.ru">
                                 <div>
                                     <label for="search-input" class="visually-hidden"></label>
-                                    <input id="search-input" type="text" placeholder="Что Вы хотите найти?">
+                                    <input id="search-input" type="text" placeholder="Крем-брюле">
                                 </div>
                             </form>
                         </div>
                     </li>
                     <li>
                         <button type="button" form="login" class="btn-login"><span>Вход</span></button>
-                        <div class="modal-login">
+                        <div class="modal-login visually-hidden">
                             <form action="https://echo.htmlacademy.ru" method="post">
                                 <div>
                                     <label for="email-input" class="visually-hidden">Электроная почта</label>
-                                    <input type="text" name="email" id="email-input" placeholder="Электроная почта">
+                                    <input type="text" name="email" id="email-input" placeholder="email@examle.com">
                                 </div>
                                 <div>
                                     <label for="password-input" class="visually-hidden"></label>
                                     <input type="password" name="password" id="password-input" placeholder="Пароль">
                                 </div>
-                                <div>
-                                    <button type="submit">Войти</button>
+                                <div class="login-active">
+                                    <button type="submit" class="btn-orange">Войти</button>
                                     <ul>
                                         <li> <a href="#">Забыли пароль?</a> </li>
                                         <li> <a href="#">Новая регистрация</a></li>
@@ -105,14 +104,12 @@
 
                     </li>
                 </ul>
-
             </nav>
             <div>
                 <p class="schedule">С 10 до 20, ежедневно <br>
                     <a href="tel:88124502525">8 812 450-25-25</a>
-                    </p>
+                </p>
             </div>
-        </div>
         </div>
     </header>
     <main>
@@ -372,8 +369,7 @@
     </main>
 
     <footer class="main-footer">
-        <div class="container">
-            <div class="footer-line">
+        <div class="container footer-line">
             <div class="footer-social">
                 <h3 class="visually-hidden">Наши соц. сети</h3 class="visually-hidden">
                 <ul class="social-list">
@@ -400,8 +396,7 @@
                         height="39"> </a>
 
                 <p>Сделано в <a href="#"><span class="html-font"> HTML Academy</span> </a>© 2020</p>
-            </div>
-        </div>
+             </div>
         </div>
     </footer>
     <!--Форма обратной связи-->
