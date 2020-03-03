@@ -20,6 +20,10 @@ body {
     margin: 0 auto;
 }
 
+.underline {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
 /*Стандартная оранжевая кнопка*/
 .btn-orange {
     width: 189px;
@@ -54,7 +58,7 @@ body {
 
 .header-line {
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     flex-wrap: wrap;
     padding-top: 10px;
 }
@@ -62,6 +66,8 @@ body {
 /*Все акт. элементы строки*/
 .menu-nav {
     display: flex;
+    justify-content: space-between;
+    flex-grow: 1;
     align-items: center;
     margin: 0;
     padding-top: 0px;
@@ -89,21 +95,25 @@ body {
     margin: 0;
 }
 
+.menu-list-item {
+    padding-bottom: 10px;
+}
+
 /*Белая кнопка ссылки*/
 .menu-list-link {
     display: block;
     text-decoration: none;
-    box-sizing: border-box;
-    padding: 12px 15px;
+    padding: 10px 15px;
     /* height: 32px; */
-    border-radius: 15px;
+    border-radius: 20px;
 }
 
 .menu-list-link:hover,
 .menu-list-link:focus {
     color: black;
     background-color: white;
-    padding: 12px 15px;
+    box-sizing: content-box;
+    padding: 10px 15px;
 }
 
 /* Описание выпадающего меню:*/
@@ -121,11 +131,6 @@ body {
     box-sizing: border-box;
 }
 
-.menu-sub-list a {
-    text-decoration: none;
-    padding-bottom: 20px;
-}
-
 .menu-list-item:first-child:hover .menu-sub-list,
 .menu-list-item:first-child:focus .menu-sub-list {
     display: block;
@@ -133,26 +138,32 @@ body {
 
 .menu-sub-list li {
     box-sizing: border-box;
-    padding: 7px 0px 7px 21px;
-    height: 33px; /* По макету 28*/
+    /*  height: 33px; /* По макету 28*/
     font-size: 14px;
+    font-weight: 400;
     line-height: 16px;
 }
 
 .menu-sub-list li:first-child {
     border-bottom: 1px solid #d1d0ce;
     font-weight: bold;
-    height: 40px; /* По макету 38*/
-    padding: 11px 0px 11px 21px;
+    padding: 8px 0px 8px 0px;
 }
 
-.menu-sub-list li:hover,
-.menu-sub-list li:focus {
+.menu-sub-list a:hover,
+.menu-sub-list a:focus {
     background-color: #fbded7;
 }
 
-.menu-sub-list li:active {
+.menu-sub-list a:active {
     background-color: #f6b5a5;
+}
+
+.menu-sub-list a,
+.menu-sub-list span {
+    display: block;
+    text-decoration: none;
+    padding: 7px 17px 7px 21px;
 }
 
 /*Три кнопки*/
@@ -165,7 +176,7 @@ body {
     display: flex;
     align-self: center;
     margin: 0;
-    margin-left: 276px;
+    /* margin-left: 276px;*/
     min-width: 245px;
 }
 
@@ -329,14 +340,20 @@ body {
     font-size: 14px;
     line-height: 16px;
     margin: 0;
+    text-align: right;
+    min-width: 168px;
+    min-height: 40px;
+    margin-bottom: 10px;
 }
 
 .schedule a {
+    display: inline-block;
+    margin-top: 4px;
     color: white;
     text-decoration: none;
     font-size: 22px;
     line-height: 24px;
-    font-weight: 500;
+    font-weight: 600;
 }
 
 /* MAIN */
@@ -346,15 +363,16 @@ body {
 .cards-bonus .card {
     border: 0 solid transparent;
     border-radius: 20px;
-    height: 230px;
+    min-height: 230px;
     width: 560px;
-    padding: 24px 29px 24px 20px;
+    padding: 24px 26px 24px 20px;
     font-size: 18px;
     font-weight: bold;
     background-repeat: no-repeat;
     background-size: 560px 230px;
     box-sizing: border-box;
     background-color: #d35376;
+    background-repeat: repeat-y;
 }
 
 .cards-bonus .container {
@@ -387,23 +405,49 @@ body {
 
 .card-two {
     background-image: url("../img/choc_back.jpg");
+    background-size: cover; /*Не работает*/
 }
 
 /* ICECREAM SORTS */
 
+.icecream-bonus {
+    min-height: 330px;
+}
+
 .icecream-sorts {
+    display: flex;
+    justify-content: space-between;
     padding: 0;
     margin-top: 40px;
     margin-bottom: 0;
-    display: flex;
-    justify-content: space-between;
 }
 
 .icecream-sorts-item {
+    position: relative;
     list-style: none;
-    height: 406px;
     width: 294px;
     text-align: center;
+    padding-bottom: 70px;
+}
+
+.icecream-sorts-item::before {
+    display: none;
+    background-color: white;
+    content: "";
+    position: absolute;
+    z-index: -1;
+    /* top: -117px;*/
+    left: -5px;
+    width: 294px;
+    height: calc(100% + 0px);
+    /* calc(100% + высота кнопки + отступ до кнопки и после) */
+    opacity: 0.3;
+    border-radius: 10px;
+}
+
+.icecream-sorts-item:hover::before,
+.icecream-sorts-item:focus::before {
+    display: block;
 }
 
 .icecream-sorts-item img {
@@ -411,15 +455,29 @@ body {
     background-color: #feebc9;
     background-position: center;
     margin-top: 7px;
+    z-index: 1;
 }
-
+/*
 .icecream-sorts-item .hit {
     border-radius: 50%;
     height: 63px;
     width: 63px;
-    position: relative;
-    bottom: 277px;
-    left: 14px;
+    position: absolute;
+    top: 0px;
+}
+*/
+
+.icecream-sorts-item::after {
+    content: " ";
+    background-image: url(../img/hit.jpg);
+    background-repeat: no-repeat;
+    background-color: white;
+    position: absolute;
+    height: 63px;
+    width: 63px;
+    top: 7px;
+    left: 7px;
+    border-radius: 50%;
 }
 
 .price {
@@ -428,9 +486,9 @@ body {
     font-size: 45px;
     line-height: 45px;
     font-weight: 700;
-    position: relative;
-    bottom: 120px;
-    right: 50px;
+    position: absolute;
+    top: 215px;
+    left: 10px;
 }
 
 .min-font {
@@ -438,40 +496,30 @@ body {
     font-weight: 700;
 }
 
-.underline {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-}
-
 .item-description {
+    /*  position: absolute;
+    top: 280px;*/
     line-height: 22px;
     margin: 5px;
-    position: relative;
-    bottom: 100px;
 }
 
 .icecream-sorts-item .btn-orange {
     display: none;
+    position: absolute;
+    margin: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 15px;
 }
 
 .icecream-sorts-item:hover .btn-orange {
     display: block;
-    position: relative;
-    bottom: 95px;
-    left: 50px;
-}
-
-.icecream-sorts-item:hover,
-.icecream-sorts-item:focus {
-    background-color: rgba(255, 255, 255, 0.3);
-    height: 406px;
-    width: 294px;
-    border-radius: 5px;
 }
 
 /* DESCRIPTION */
 .description {
     min-height: 306px;
-    margin-top: 42px;
+    margin-top: -30px;
     box-sizing: border-box;
     padding: 30px 32px 30px 21px;
     border-radius: 20px;
@@ -480,6 +528,7 @@ body {
     background-position: center;
     background-color: #ffe7e1;
     color: black;
+    z-index: -3;
 }
 
 .description h2 {
@@ -874,6 +923,7 @@ body {
     border: 2px solid white;
     border-radius: 30px;
     padding: 10px auto 13px;
+    cursor: pointer;
 }
 
 .btn-filter:hover,
@@ -900,10 +950,11 @@ body {
 
 .icecream-menu-item {
     list-style: none;
-    height: 406px;
     width: 294px;
     border: 1px solid transparent;
     text-align: center;
+    position: relative; /*Задал только для того, чтобы начинать отсчёт*/
+    margin-bottom: 20px;
 }
 
 .icecream-menu-item img {
@@ -913,23 +964,35 @@ body {
     margin-top: 7px;
 }
 
-.icecream-menu-list li:hover,
-.icecream-menu-list li:focus {
-    background-color: rgba(255, 255, 255, 0.3);
-    height: 406px;
+.icecream-menu-item::before {
+    display: none;
+    background-color: white;
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0px;
+    left: 00px;
     width: 294px;
-    border-radius: 5px;
+    height: calc(100% + 70px);
+    /* calc(100% + высота кнопки + отступ до кнопки и после) */
+    opacity: 0.3;
+    border-radius: 10px;
+}
+
+.icecream-menu-item:hover::before,
+.icecream-menu-item:focus::before {
+    display: block;
 }
 
 .catalog-price {
+    position: absolute;
+    top: 215px;
+    left: 10px;
     display: inline;
     margin: 0;
     font-size: 45px;
     line-height: 45px;
     font-weight: 700;
-    position: relative;
-    bottom: 60px;
-    right: 55px;
 }
 
 .catalog-price .min-font {
@@ -937,30 +1000,25 @@ body {
     font-weight: 700;
 }
 
-.icecream-menu-list p {
+.catalog-description {
     text-align: center;
-    margin: 0;
-}
-
-.catalog-underline {
-    line-height: 22px;
-    margin: 10px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-    position: relative;
-    bottom: 40px;
+    margin: 5px;
 }
 
 /* Кнпока */
 
-.icecream-menu-list .btn-orange {
+.icecream-menu-item .btn-orange {
     display: none;
+    position: absolute;
+    margin: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -55px;
+    z-index: 1;
 }
 
 .icecream-menu-list li:hover .btn-orange {
     display: block;
-    position: relative;
-    bottom: 18px;
-    left: 50px;
 }
 
 /* Пагинация */
