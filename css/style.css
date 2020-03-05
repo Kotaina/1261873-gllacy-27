@@ -373,6 +373,9 @@ body {
     box-sizing: border-box;
     background-color: #d35376;
     background-repeat: repeat-y;
+    background-position: center;
+    background-size: 100%;
+    overflow: hidden;
 }
 
 .cards-bonus .container {
@@ -405,7 +408,6 @@ body {
 
 .card-two {
     background-image: url("../img/choc_back.jpg");
-    background-size: cover; /*Не работает*/
 }
 
 /* ICECREAM SORTS */
@@ -428,6 +430,7 @@ body {
     width: 294px;
     text-align: center;
     padding-bottom: 70px;
+    z-index: 100;
 }
 
 .icecream-sorts-item::before {
@@ -794,6 +797,32 @@ body {
 }
 
 /* -------CATALOG-------  */
+
+.current {
+    color: white;
+    background-color: #d07058;
+    box-sizing: content-box;
+    padding: 10px 15px;
+}
+
+.current:hover,
+.current:focus {
+    color: white;
+    background-color: #d07058;
+    box-sizing: content-box;
+    padding: 10px 15px;
+}
+
+.menu-sub-list .current_p {
+    color: white;
+    background-color: #d07058;
+}
+
+.menu-sub-list .current_p:hover,
+.menu-sub-list .current_p:focus {
+    color: white;
+    background-color: #d07058;
+}
 
 .sub-navigation-list {
     display: flex;
