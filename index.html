@@ -60,7 +60,7 @@
                     </li>
                     <li>
                         <button type="button" form="login" class="btn-login"><span>Вход</span></button>
-                        <div class="modal-login visually-hidden">
+                        <div class="modal-login">
                             <form action="https://echo.htmlacademy.ru" method="post">
                                 <div>
                                     <label for="email-input" class="visually-hidden">Электроная почта</label>
@@ -82,26 +82,28 @@
                     </li>
                     <li>
                         <button type="button" class="btn-cart"><span>Пусто</span></button>
-                        <div class="modal-cart">
+                        <div class="modal-cart visually-hidden">
                             <h3 class="visually-hidden">Корзина</h3>
                             <ul class="modal-cart-list">
-                                <li class="modal-cart-item">
-                                    <button type="button">Отменить выбор товара</button>
-                                    <img src="" alt="Превью выбора">
-                                    <p>Пломбир с апельсиновым джемом</p>
-                                    <p>1,5кг х <span class="cart-item-price">200 руб.</span></p>
+                                <li class="modal-cart-item-1">
+
+                                    <button type="button" class="cart-delete"></button>
+
+                                    <img src="img/preview-1.jpg" alt="Превью выбора" width="33px" height="33px" class="preview">
+                                    <p class="cart-item-description">Пломбир с апельсиновым джемом</p>
+                                    <p class="cart-item-price">1,5кг х <span>200 руб.</span></p>
                                     <span>300 руб.</span>
                                 </li>
-                                <li class="modal-cart-item">
-                                    <button type="button">Отменить выбор товара</button>
-                                    <img src="" alt="Превью выбора">
-                                    <p>Клубничный пломбир с присыпкой из белого шоколада</p>
-                                    <p>1,5кг х <span class="cart-item-price">300 руб.</span></p>
+                                <li class="modal-cart-item-2">
+                                    <button type="button" class="cart-delete"></button>
+                                    <img src="img/preview-2.jpg" alt="Превью выбора" width="33px" height="33px" class="preview">
+                                    <p class="cart-item-description">Клубничный пломбир с присыпкой из белого шоколада</p>
+                                    <p class="cart-item-price">1,5кг х <span>300 руб.</span></p>
                                     <span>450 руб.</span>
                                 </li>
                             </ul>
                             <div class="modal-cart-footer">
-                                <p> <span class="cart-total-price">Итого: 750 руб.</span> </p>
+                                <p  class="cart-total-price"> <span>Итого: 750 руб.</span> </p>
                                 <button class="btn btn-orange">Оформить заказ</button>
                             </div>
                         </div>
@@ -118,11 +120,87 @@
     </header>
     <main>
         <h1 class="visually-hidden">Магазин интернет мороженного Glaccy</h1>
-        <section>
-            <!--Карусель-->
+        <section class="carousel">
+            <!-- Моя карусель
+            <div class="container">
+                <div class="carousel-position-one">
+                    <div class="ice-pos-one">
+                        <img src="/img/main_ice2.png"
+                         alt="Пломбир с малиновым джемом"
+                         width="326px"
+                         height="523px">
+                    </div>
+                    <div class="ice-pos-two">
+                        <img src="/img/main_ice1.png"
+                         alt="Крем-брюле"
+                         width="367px"
+                         height="582px">
+                    </div>
+                    <p>Крем-брюле и пломбир с малиновым джемом</p>
+                </div>
+                <div class=" select-buttons visually-hidden" >
+                    <button class="btn1" ></button>
+                    <button class="btn2"></button>
+                    <button class="btn3"></button>
+                </div>
+                <div class="carousel-active">
+                    <div class="select-buttons">
+                        <ul class="select-buttons-list">
+                            <li>
+                                <label for="screen-one">
+                                    <input id="screen-one" type="radio">
+                                </label>
+                            </li>
+                            <li>
+                                <label for="screen-two">
+                                    <input id="screen-two" type="radio">
+                                </label>
+                            </li>
+                            <li>
+                                <label for="screen-three">
+                                    <input id="screen-three" type="radio">
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
+                    <button class="btn btn-orange">Давайте оба!</button>
+                </div>
+            </div>
+            -->
 
-            <!--Карусель со сменой фона и картинки с кнопкой-->
+<!--Не моя-->
+<div class="site-wrapper">
+    <div class="slider-controls">
+    <label for="product-1">Первый</label>
+    <label for="product-2">Второй</label>
+    <label for="product-3">Третий</label>
+    </div>
+            <ul class="slider-list">
+                <li class="slider-item slide" id="slide1">
+                  <h3 class="slide-title">
+                    Крем-брюле и пломбир с малиновым джемом
+                  </h3>
+                  <a class="button slide-button" href="#">Давайте оба!</a>
+                </li>
+                <li class="slider-item slide" id="slide2">
+                    <h3 class="slide-title">
+                      Шоколадный пломбир и лимонный сорбет
+                    </h3>
+                    <a class="button slide-button" href="#">Давайте оба!</a>
+                  </li>
+                  <li class="slider-item slide" id="slide3">
+                    <h3 class="slide-title">
+                      Пломбир с помадкой и клубничный щербет
+                    </h3>
+                    <a class="button slide-button" href="#">Давайте оба!</a>
+                  </li>
+              </ul>
         </section>
+</div>
+
+
+
+        <!--Карточки-->
         <section class="cards-bonus">
             <div class="container">
                 <div class="card card-one">
@@ -214,25 +292,30 @@
                     производства на развес
                 </h2>
                 <div class="about-us">
-                    <p>Всё наше мороженое изготавливается на собственном
+                    <div class="spec">
+                        <p>Всё наше мороженое изготавливается на собственном
                         производстве, с использованием современного оборудования
                         и проверенных временем технологий.</p>
+                    </div>
 
+                    <div class="spec">
+                        <p>Закупка ингридиентов производится только у проверенных
+                        фермерских хозяйств и компаний, с которыми нас связывает
+                        долговременное сотрудничество.</p>
+                    </div>
 
-                    <p>Для приготовления мороженого используются настоящие
+                    <div class="spec">
+                        <p>Для приготовления мороженого используются настоящие
                         сливки и молоко высочаёшего качества. Все дополнительные
                         ингридиенты и добавки произведены из натурального,
                         экологически чистого сырья.</p>
+                    </div>
 
-
-                    <p>Закупка ингридиентов производится только у проверенных
-                        фермерских хозяйств и компаний, с которыми нас связывает
-                        долговременное сотрудничество.</p>
-
-
+                    <div class="spec">
                     <p>Доставка нашего мороженого до заказчиков осуществляется
                         в специальном термопаке, который не даёт мороженому
                         растаять в пути и позволяет сохранить превосходный вкус.</p>
+                    </div>
                 </div>
         </section>
         </div>
@@ -265,6 +348,22 @@
         </section>
         <section class="map">
             <!--Место для карты-->
+            <div class="pin"></div>
+            <div class="metainf">
+                <h2 class="visually-hidden" >Как нас найти?</h2>
+                <p class="adress">
+                    Адрес главного офиса <br>
+                    и офлайн магазина: <br>
+                </p>
+                <span class="adress-bold" >ул. Большая конюшенная 19/8, Санкт-Петербург</span>
+                <p class="phone">
+                    Для заказов по телефону:
+                    <a href="tel:8812450-25-25">8 812 450-25-25</a> <br>
+                    (с 10 до 20 ежедневно)
+                </p>
+
+                <button class="btn btn-orange">Форма обратной связи</button>
+            </div>
         </section>
     </main>
 
@@ -302,11 +401,11 @@
     <!--Форма обратной связи-->
     <section class="popup visually-hidden">
         <h2>Мы обязательно вам ответим!</h2>
-        <button type="button" class="visually-hidden"></button>
+        <button type="button" class="popup-close"></button>
         <form action="https://echo.htmlacademy.ru">
             <div class="popup-name">
                 <label for="popup-name" class="visually-hidden">Введите имя</label>
-                <input type="text" id="popup-name" placeholder="Как вас зовут?">
+                <input type="text" id="popup-name" placeholder="Имя Фамилия">
             </div>
             <div class="popup-mail">
                 <label for="popup-mail" class="visually-hidden">Почта</label>
@@ -314,7 +413,7 @@
             </div>
             <div class="popup-text">
                 <label for="popuptext" class="visually-hidden">Вопрос</label>
-                <textarea name="question-text" id="popuptext" rows="5"></textarea>
+                <textarea name="question-text" id="popuptext" rows="5" placeholder="В свободной форме"></textarea>
             </div>
 
             <button type="submit" class="btn-orange">Отправить</button>

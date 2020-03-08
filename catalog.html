@@ -13,7 +13,7 @@
     <header class="main-header">
         <div class="container header-line">
             <div>
-                <img src="img/logo_main.svg" alt="gllacy logo">
+               <a href="/index.html"> <img src="img/logo_main.svg" alt="gllacy logo"></a>
             </div>
             <nav class="menu-nav">
                 <ul class="menu-list">
@@ -81,23 +81,25 @@
                         <div class="modal-cart">
                             <h3 class="visually-hidden">Корзина</h3>
                             <ul class="modal-cart-list">
-                                <li class="modal-cart-item">
-                                    <button type="button">Отменить выбор товара</button>
-                                    <img src="" alt="Превью выбора">
-                                    <p>Пломбир с апельсиновым джемом</p>
-                                    <p>1,5кг х <span class="cart-item-price">200 руб.</span></p>
+                                <li class="modal-cart-item-1">
+
+                                    <button type="button" class="cart-delete"></button>
+
+                                    <img src="img/preview-1.jpg" alt="Превью выбора" width="33px" height="33px" class="preview">
+                                    <p class="cart-item-description">Пломбир с апельсиновым джемом</p>
+                                    <p class="cart-item-price">1,5кг х <span>200 руб.</span></p>
                                     <span>300 руб.</span>
                                 </li>
-                                <li class="modal-cart-item">
-                                    <button type="button">Отменить выбор товара</button>
-                                    <img src="" alt="Превью выбора">
-                                    <p>Клубничный пломбир с присыпкой из белого шоколада</p>
-                                    <p>1,5кг х <span class="cart-item-price">300 руб.</span></p>
+                                <li class="modal-cart-item-2">
+                                    <button type="button" class="cart-delete"></button>
+                                    <img src="img/preview-2.jpg" alt="Превью выбора" width="33px" height="33px" class="preview">
+                                    <p class="cart-item-description">Клубничный пломбир с присыпкой из белого шоколада</p>
+                                    <p class="cart-item-price">1,5кг х <span>300 руб.</span></p>
                                     <span>450 руб.</span>
                                 </li>
                             </ul>
                             <div class="modal-cart-footer">
-                                <p> <span class="cart-total-price">Итого: 750 руб.</span> </p>
+                                <p  class="cart-total-price"> <span>Итого: 750 руб.</span> </p>
                                 <button class="btn btn-orange">Оформить заказ</button>
                             </div>
                         </div>
@@ -116,9 +118,9 @@
         <section class="sub-navigation">
             <div class="container">
                 <ul class="sub-navigation-list">
-                    <li class="br-underline"> <a href="index.html">Главная</a> </li>
-                    <li class="br-underline"><a href="#">Каталог</a></li>
-                    <li><a href="#">Сливочное</a></li>
+                    <li class="underline"> <a href="index.html">Главная</a> </li>
+                    <li class="underline"><a href="#">Каталог</a></li>
+                    <li>Сливочное</li>
                 </ul>
                 <h2>Сливочное мороженое</h2>
             </div>
@@ -132,8 +134,11 @@
                         <legend>Сортировка</legend>
                         <div class="sort-view">
                             <select name="sort-options">
-                                <option value="popular" selected>По популярности</option>
-                                <option value="new">По новизне</option>
+                                <option value="popular" selected>по популярности</option>
+                                <option value="new">по новизне</option>
+                                <option value="cheap-first">сначала недорогие</option>
+                                <option value="expensive-first">сначала дорогие</option>
+                                <option value="fat-sort">по жирности</option>
                             </select>
                         </div>
                     </fieldset>
@@ -145,46 +150,64 @@
                     <fieldset class="fat-field">
                         <legend>Жирность:</legend>
                         <ul class="fat-radio-list">
-                            <li>
-                                <label for="0per" class="visually-hidden">0</label>
-                                <input id="0per" type="radio" name="fat-select" value="0">0%
+                            <li class="zero-per">
+                                <label for="0per" class="fat-radio">
+                                    <input id="0per" type="radio" name="fat-select" value="0">
+                                    <span class="radio-indicator"></span>0%
+                                </label>
                             </li>
-                            <li>
-                                <label for="10per" class="visually-hidden">До 10</label>
-                                <input id="10per" type="radio" name="fat-select" value="10">До 10%
+                            <li class="ten-per">
+                                <label for="10per" class="fat-radio">
+                                    <input id="10per" type="radio" name="fat-select" value="10">
+                                    <span class="radio-indicator"></span>До 10%
+                                </label>
                             </li>
-                            <li>
-                                <label for="lt30" class="visually-hidden">До 30</label>
-                                <input id="lt30" type="radio" name="fat-select" value="lt30">До 30%
+                            <li class="lt30-per">
+                                <label for="lt30" class="fat-radio">
+                                    <input id="lt30" type="radio" name="fat-select" value="lt30">
+                                    <span class="radio-indicator"></span>До 30%
+                                </label>
                             </li>
-                            <li>
-                                <label for="gt30" class="visually-hidden">Более 30</label>
-                                <input id="gt30" type="radio" name="fat-select" value="gt30">Более 30%
+                            <li class="gt30-per">
+                                <label for="gt30" class="fat-radio">
+                                    <input id="gt30" type="radio" name="fat-select" value="gt30">
+                                    <span class="radio-indicator"></span>Более 30%
+                                </label>
                             </li>
                         </ul>
                     </fieldset>
                     <fieldset class="fill-field">
                         <legend>Наполнители:</legend>
                         <ul class="filling-checkbox-list">
-                            <li class="first">
-                                <label for="chocolate" class="visually-hidden">шоколадные</label>
-                                <input id="chocolate" type="checkbox" name="chocolate" value="chocolate">шоколадные
+                            <li class="chock-select first">
+                                <label for="chocolate" class="fill-checkbox">
+                                    <input id="chocolate" type="checkbox" name="chocolate" value="chocolate" class="visually-hidden">
+                                    <span class="fill-checkbox-indicator"></span> шоколадные
+                                </label>
                             </li>
-                            <li>
-                                <label for="sugar" class="visually-hidden">сахарные</label>
-                                <input id="sugar" type="checkbox" name="sugar" value="sugar">сахарные присыпки
+                            <li class="sugar-select">
+                                <label for="sugar" class="fill-checkbox">
+                                    <input id="sugar" type="checkbox" name="sugar" value="sugar" class="visually-hidden">
+                                    <span class="fill-checkbox-indicator"></span>сахарные присыпки
+                                </label>
                             </li>
-                            <li>
-                                <label for="fruits" class="visually-hidden">фрукты</label>
-                                <input id="fruits" type="checkbox" name="fruits" value="fruits">фрукты
+                            <li class="fruits-select">
+                                <label for="fruits" class="fill-checkbox">
+                                    <input id="fruits" type="checkbox" name="fruits" value="fruits" class="visually-hidden">
+                                    <span class="fill-checkbox-indicator"></span> фрукты
+                                </label>
                             </li>
-                            <li>
-                                <label for="syrup" class="visually-hidden">сиропы</label>
-                                <input id="syrup" type="checkbox" name="syrup" value="syrup">сиропы
+                            <li class="syrup-select">
+                                <label for="syrup" class="fill-checkbox">
+                                    <input id="syrup" type="checkbox" name="syrup" value="syrup" class="visually-hidden">
+                                    <span class="fill-checkbox-indicator"></span> сиропы
+                                </label>
                             </li>
-                            <li>
-                                <label for="jam" class="visually-hidden">джемы</label>
-                                <input id="jam" type="checkbox" name="jam" value="jam">джемы
+                            <li class="jam-select">
+                                <label for="jam" class="fill-checkbox">
+                                    <input id="jam" type="checkbox" name="jam" value="jam" class="visually-hidden">
+                                    <span class="fill-checkbox-indicator"></span> джемы
+                                </label>
                             </li>
                         </ul>
                     </fieldset>
@@ -363,6 +386,8 @@
                     <li><a href="#">3</a></li>
                     <li><a href="#">4</a></li>
                     <li><a href="#">5</a></li>
+                    <li><a href="#"><img src="/img/icon-right-small.png"
+                        alt="Следующая страница" width="7px" height="11px"></a></li>
                 </ul>
             </div>
         </section>
