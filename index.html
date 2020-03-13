@@ -120,89 +120,49 @@
     </header>
     <main>
         <h1 class="visually-hidden">Магазин интернет мороженного Glaccy</h1>
+
         <section class="carousel">
-            <!-- Моя карусель
-            <div class="container">
-                <div class="carousel-position-one">
-                    <div class="ice-pos-one">
-                        <img src="/img/main_ice2.png"
-                         alt="Пломбир с малиновым джемом"
-                         width="326px"
-                         height="523px">
-                    </div>
-                    <div class="ice-pos-two">
-                        <img src="/img/main_ice1.png"
-                         alt="Крем-брюле"
-                         width="367px"
-                         height="582px">
-                    </div>
-                    <p>Крем-брюле и пломбир с малиновым джемом</p>
-                </div>
-                <div class=" select-buttons visually-hidden" >
-                    <button class="btn1" ></button>
-                    <button class="btn2"></button>
-                    <button class="btn3"></button>
-                </div>
-                <div class="carousel-active">
-                    <div class="select-buttons">
-                        <ul class="select-buttons-list">
-                            <li>
-                                <label for="screen-one">
-                                    <input id="screen-one" type="radio">
-                                </label>
-                            </li>
-                            <li>
-                                <label for="screen-two">
-                                    <input id="screen-two" type="radio">
-                                </label>
-                            </li>
-                            <li>
-                                <label for="screen-three">
-                                    <input id="screen-three" type="radio">
-                                </label>
-                            </li>
-                        </ul>
-                    </div>
-                    <button class="btn btn-orange">Давайте оба!</button>
-                </div>
-            </div>
-            -->
-
 <!--Не моя-->
+    <input class="visually-hidden" type="radio" id="product-1" name="toggle" checked>
+    <input class="visually-hidden" type="radio" id="product-2" name="toggle">
+    <input class="visually-hidden" type="radio" id="product-3" name="toggle">
+
 <div class="site-wrapper">
-    <div class="slider-controls">
-    <label for="product-1">Первый</label>
-    <label for="product-2">Второй</label>
-    <label for="product-3">Третий</label>
-    </div>
-            <ul class="slider-list">
-                <li class="slider-item slide" id="slide1">
-                  <h3 class="slide-title">
-                    Крем-брюле и пломбир с малиновым джемом
-                  </h3>
-                  <a class="button slide-button" href="#">Давайте оба!</a>
-                </li>
-                <li class="slider-item slide" id="slide2">
-                    <h3 class="slide-title">
-                      Шоколадный пломбир и лимонный сорбет
-                    </h3>
-                    <a class="button slide-button" href="#">Давайте оба!</a>
-                  </li>
-                  <li class="slider-item slide" id="slide3">
-                    <h3 class="slide-title">
-                      Пломбир с помадкой и клубничный щербет
-                    </h3>
-                    <a class="button slide-button" href="#">Давайте оба!</a>
-                  </li>
-              </ul>
-        </section>
+  <div class="container">
+    <section class="slider">
+        <div class="slider-controls">
+          <label for="product-1">Первый</label>
+          <label for="product-2">Второй</label>
+          <label for="product-3">Третий</label>
+        </div>
+        <ul class="slider-list">
+            <li class="slider-item slide" id="slide1">
+              <h3 class="slide-title">
+                Крем-брюле и пломбир с малиновым джемом
+              </h3>
+              <a class="button slide-button" href="#">Давайте оба!</a>
+            </li>
+            <li class="slider-item slide" id="slide2">
+              <h3 class="slide-title">
+                Шоколадный пломбир и лимонный сорбет
+              </h3>
+              <a class="button slide-button" href="#">Давайте оба!</a>
+            </li>
+            <li class="slider-item slide" id="slide3">
+              <h3 class="slide-title">
+                Пломбир с помадкой и клубничный щербет
+              </h3>
+              <a class="button slide-button" href="#">Давайте оба!</a>
+            </li>
+        </ul>
+    </section>
+  </div>
 </div>
-
-
-
+        </section>
         <!--Карточки-->
-        <section class="cards-bonus">
+
             <div class="container">
+              <section class="cards-bonus">
                 <div class="card card-one">
                     <!--Малинка даром-->
                     <h2>Малинка даром!</h2>
@@ -217,8 +177,9 @@
                         вкуснейшей щоколадной присыпки совершенно бесплатно.</p>
                     <button type="button" class="btn btn-orange">Хочу шоколадки!</button>
                 </div>
+              </section>
             </div>
-        </section>
+
 
         <section class="icecream-bonus">
             <!--Выбор мороженого-->
@@ -373,25 +334,17 @@
                 <h3 class="visually-hidden">Наши соц. сети</h3 class="visually-hidden">
                 <ul class="social-list">
                     <!--Контакты-->
-                    <li>
-                        <div class="twitter">
-                            <a href="#"></a>
-                        </div>
+                    <li class="social-list-item">
+                            <a href="#" class="social-link twitter"></a>
                     </li>
-                    <li>
-                        <div  class="inst">
-                        <a href="#"></a>
-                        </div>
+                    <li class="social-list-item">
+                        <a href="#"   class="social-link inst"></a>
                     </li>
-                    <li>
-                        <div  class="fb">
-                        <a href="#"></a>
-                        </div>
+                    <li class="social-list-item">
+                        <a href="#"  class="social-link fb"></a>
                     </li>
-                    <li>
-                        <div class="vk">
-                        <a href="#"></a>
-                        </div>
+                    <li class="social-list-item">
+                        <a href="#"  class="social-link vk"></a>
                     </li>
                 </ul>
             </div>
