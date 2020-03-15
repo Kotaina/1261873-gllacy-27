@@ -35,6 +35,10 @@ main .underline:focus {
     opacity: 0.3;
 }
 
+.svg-sprite {
+    display: none;
+}
+
 /*Стандартная оранжевая кнопка*/
 .btn-orange {
     width: 189px;
@@ -77,6 +81,7 @@ main .underline:focus {
 /*Все акт. элементы строки*/
 .menu-nav {
     display: flex;
+    position: relative;
     justify-content: space-between;
     flex-grow: 1;
     align-items: center;
@@ -140,7 +145,7 @@ main .underline:focus {
     border-radius: 5px;
     box-sizing: border-box;
     box-shadow: 0px 20px 20px 0 rgba(0, 0, 0, 0.4);
-    z-index: 1;
+    z-index: 2;
 }
 
 .menu-list-item:first-child:hover .menu-sub-list,
@@ -202,7 +207,6 @@ main .underline:focus {
     width: 32px;
     border: 0px solid transparent;
     border-radius: 50%;
-    background-image: url("../img/search.png");
     background-position: center;
     background-repeat: no-repeat;
     background-color: rgba(255, 255, 255, 0.3);
@@ -213,6 +217,17 @@ main .underline:focus {
 .btn-search:hover,
 .btn-search:focus {
     background-color: white;
+}
+
+.svg-search {
+    position: relative;
+    top: 7px;
+    fill: #ffffff;
+}
+
+.btn-search:hover .svg-search,
+.btn-search:focus .svg-search {
+    fill: black;
 }
 
 /*Окно поиска*/
@@ -228,6 +243,7 @@ main .underline:focus {
     background-color: #f8f7f4;
     border-radius: 7px;
     box-shadow: 0px 20px 20px 0 rgba(0, 0, 0, 0.4);
+    z-index: 2;
 }
 
 .btn-search:hover + .modal-search,
@@ -266,15 +282,19 @@ main .underline:focus {
     bottom: 5px;
 }
 
-.btn-login::before {
-    content: url("../img/enter.png");
-    margin-right: 9px;
-}
-
 .btn-login:hover,
 .btn-login:focus {
     background-color: white;
     color: black;
+}
+
+.svg-enter {
+    fill: white;
+}
+
+.btn-login:hover .svg-enter,
+.btn-login:focus .svg-enter {
+    fill: black;
 }
 
 /*Окно входа*/
@@ -290,6 +310,7 @@ main .underline:focus {
     background-color: #f8f7f4;
     border-radius: 5px;
     box-shadow: 0px 20px 20px 0 rgba(0, 0, 0, 0.4);
+    z-index: 3;
 }
 
 .btn-login:hover + .modal-login,
@@ -344,16 +365,18 @@ main .underline:focus {
     cursor: pointer;
 }
 
-.btn-cart::before {
-    content: url("../img/cart.png");
-    height: 23px;
-    width: 23px;
-    margin-right: 6px;
-}
-
 .btn-cart span {
     position: relative;
     bottom: 5px;
+}
+
+.svg-cart {
+    fill: white;
+}
+
+.btn-cart:hover .svg-cart,
+.btn-cart:focus .svg-cart {
+    fill: black;
 }
 
 .btn-cart:hover,
@@ -378,6 +401,7 @@ main .underline:focus {
     background-color: #f8f7f4;
     border-radius: 5px;
     box-shadow: 0px 20px 20px 0 rgba(0, 0, 0, 0.4);
+    z-index: 3;
 }
 
 .btn-cart:hover + .modal-cart,
@@ -486,7 +510,11 @@ main .underline:focus {
 }
 
 /*Время работы*/
+
 .schedule {
+    position: absolute;
+    right: 0;
+    top: 65px;
     font-size: 14px;
     line-height: 16px;
     margin: 0;
@@ -494,6 +522,7 @@ main .underline:focus {
     min-width: 168px;
     min-height: 40px;
     margin-bottom: 10px;
+    z-index: 2;
 }
 
 .schedule a {
@@ -509,8 +538,10 @@ main .underline:focus {
 /* MAIN */
 
 .carousel {
-    max-height: 518px;
-    z-index: -1;
+    position: relative;
+    bottom: 0px;
+    max-height: 557px;
+    z-index: 1;
 }
 
 /* Карусель */
@@ -522,7 +553,6 @@ main .underline:focus {
     background-position: top center;
     transition: background-image 0.5s ease, background-color 0.5s ease;
     min-height: 570px;
-    z-index: -1;
 }
 
 .site-wrapper::before,
@@ -561,7 +591,7 @@ main .underline:focus {
     font-weight: 800;
 }
 
-.button {
+.slide-button {
     display: inline-block;
     padding: 12px 44px;
     font-weight: 600;
@@ -572,13 +602,11 @@ main .underline:focus {
     vertical-align: top;
     text-decoration: none;
     text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
-
     background: #f26843;
     background: linear-gradient(to bottom, #f26843 0%, #e74a35 100%);
     border-radius: 50px;
     box-shadow: 0 2px 2px rgba(172, 16, 0, 0.64);
     border: none;
-
     cursor: pointer;
 }
 
@@ -636,13 +664,17 @@ main .underline:focus {
 }
 
 #product-2:checked ~ .site-wrapper {
-    background-color: #8996a6;
+    /* background-color: #8996a6; */
     background-image: url("../img/slider-item2.png");
 }
 
 #product-3:checked ~ .site-wrapper {
     background-color: #9d8b84;
     background-image: url("../img/slider-item3.png");
+}
+
+#product-2:checked body {
+    background-color: white;
 }
 
 /* CARDS-BONUS */
@@ -663,6 +695,7 @@ main .underline:focus {
     background-position: center;
     background-size: 100%;
     overflow: hidden;
+    z-index: 2;
 }
 
 .cards-bonus {
@@ -733,7 +766,6 @@ main .underline:focus {
     left: -5px;
     width: 294px;
     height: calc(100% + 0px);
-    /* calc(100% + высота кнопки + отступ до кнопки и после) */
     opacity: 0.3;
     border-radius: 10px;
 }
@@ -750,15 +782,6 @@ main .underline:focus {
     margin-top: 7px;
     z-index: 1;
 }
-/*
-.icecream-sorts-item .hit {
-    border-radius: 50%;
-    height: 63px;
-    width: 63px;
-    position: absolute;
-    top: 0px;
-}
-*/
 
 .icecream-sorts-item::after {
     content: " ";
@@ -823,7 +846,6 @@ main .underline:focus {
     background-position: center;
     background-color: #ffe7e1;
     color: black;
-    z-index: ;
 }
 
 .description h2 {
@@ -835,81 +857,66 @@ main .underline:focus {
 
 .about-us {
     display: flex;
+    max-width: 1092px;
     justify-content: space-between;
     flex-wrap: wrap;
     margin: 0;
-    position: relative;
 }
 
-.about-us p {
-    flex-wrap: wrap;
-    margin: 0;
-    line-height: 22px;
-    max-width: 470px;
-    min-height: 81px;
-}
-
-.about-us .spec:nth-child(1n) {
-    padding-left: 55px;
+.short {
     max-width: 476px;
-    padding-top: 26px;
-}
-
-.about-us .spec:nth-child(2n) {
-    padding-left: 85px;
+    padding: 0;
+    margin: 0;
+    padding-left: 56px;
     padding-top: 10px;
-}
-
-.spec:nth-child(3),
-.spec:nth-child(4) {
-    padding-top: 26px;
-}
-
-/*Центровщик иконок*/
-.spec {
+    margin-top: 10px;
     position: relative;
-    bottom: 7px;
 }
 
-.spec:first-child:after {
-    position: absolute;
-    left: 0;
-    top: 15px;
+.short p {
+    padding: 0;
+    margin: 0;
+    font-size: 16px;
+    line-height: 22px;
+}
+
+.short:first-child:after {
     content: url("../img/ici.png");
-    width: 48px;
-    height: 48px;
-    margin-bottom: 30px;
-}
-
-.spec:nth-child(2):after {
-    position: absolute;
-    left: 0px;
-    top: 15px;
-    content: url("../img/cow.png");
-    width: 48px;
-    height: 48px;
-}
-
-.spec:nth-child(3)::after {
     position: absolute;
     left: 0;
-    top: 15px;
-    content: url("../img/leaf.png");
-    width: 48px;
-    height: 48px;
+    top: 0;
+    width: 49px;
+    height: 49px;
 }
 
-.spec:last-child:after {
+.short:nth-child(2):after {
+    content: url("../img/cow.png");
     position: absolute;
-    left: 0px;
-    top: 15px;
+    left: 0;
+    top: 0;
+    width: 49px;
+    height: 49px;
+}
+
+.short:nth-child(3)::after {
+    content: url("../img/leaf.png");
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 49px;
+    height: 49px;
+}
+
+.short:last-child:after {
     content: url("../img/term.png");
-    width: 48px;
-    height: 48px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 49px;
+    height: 49px;
 }
 
 /*Две карточки*/
-
 .additional-cards .container {
     display: flex;
     justify-content: space-between;
@@ -1006,31 +1013,6 @@ main .underline:focus {
     width: 1200px;
     margin: 40px auto 0;
     background-image: url("../img/map.png");
-    z-index: 1;
-}
-
-.pin {
-    position: absolute;
-    top: 139px;
-    left: 275px;
-    height: 140px;
-    width: 80px;
-    background-image: url("../img/pin.svg");
-    z-index: 3;
-}
-
-.map::after {
-    content: "";
-    position: absolute;
-    left: 360px;
-    top: 157px;
-    width: 15px;
-    height: 140px;
-    background-color: black;
-    transform: rotate(50deg);
-    filter: blur(17px);
-    opacity: 0.7;
-    z-index: 2;
 }
 
 .metainf {
@@ -1047,7 +1029,7 @@ main .underline:focus {
     border-radius: 15px;
     box-sizing: border-box;
     text-align: left;
-    z-index: 3;
+    z-index: 6;
 }
 
 .metainf p {
@@ -1290,6 +1272,10 @@ main .underline:focus {
     background-color: #d07058;
 }
 /*Хлебные крошки*/
+.sub-navigation {
+    margin-top: 29px;
+}
+
 .sub-navigation-list {
     display: flex;
     position: relative;
@@ -1297,20 +1283,9 @@ main .underline:focus {
     list-style: none;
 }
 
-.sub-navigation-list li:not(:first-child) {
-    margin-left: 20px;
-}
-
-.sub-navigation-list:after {
-    position: absolute;
-    content: "»";
-    left: 67px;
-}
-
-.sub-navigation-list:before {
-    position: absolute;
-    content: "»";
-    left: 147px;
+.sub-navigation-list li:not(:first-child),
+.sub-navigation-list > span {
+    margin-left: 5px;
 }
 
 .sub-navigation-list a {
@@ -1374,15 +1349,86 @@ main .underline:focus {
     color: black;
 }
 
-.sort-optionst:active option {
+/* .sort-options:active option {
     color: black;
+} */
+
+.sort-options {
+    position: relative;
+    background: transparent;
+    -webkit-appearance: none;
+}
+
+.sort-options::after {
+    content: url("../img/icon-down-dir.svg");
+    position: absolute;
+    top: 0;
+    right: 0px;
+    height: 11px;
+    width: 10px;
 }
 
 /*Фильтр стоимости*/
 .price-volume {
+    border: none;
     width: 219px;
     height: 57px;
 }
+
+.range {
+    position: relative;
+    width: 215px;
+    height: 37px;
+    background-color: #aabbb1;
+    border-radius: 50px;
+}
+
+.range-line {
+    position: absolute;
+    top: 15px;
+    left: 19px;
+    width: 176px;
+    height: 5px;
+    background-color: #d1dad3;
+}
+
+.range-line-inner {
+    position: absolute;
+    top: 0;
+    left: 33px;
+    width: 88px;
+    height: 6px;
+    background-color: #f8f7f4;
+}
+
+.label {
+    cursor: pointer;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    border-radius: 50%;
+    top: -7px;
+}
+
+.dot {
+    position: relative;
+    top: 8px;
+    left: 8px;
+    width: 4px;
+    height: 4px;
+    background-color: #aabbb1;
+    border-radius: 50%;
+}
+
+.label-left {
+    left: -20px;
+}
+
+.label-right {
+    left: 78px;
+}
+
 /*Жирность*/
 .fat-field {
     border: none;
@@ -1683,8 +1729,9 @@ main .underline:focus {
     transform: rotate(180deg);
     opacity: 0.2;
 }
-
+/* POPUP */
 .popup {
+    display: none;
     font-size: 16px;
     line-height: 24px;
     color: #999999;
@@ -1700,6 +1747,15 @@ main .underline:focus {
     background-color: #f8f7f4;
     border-radius: 10px;
     box-shadow: 0 0 0 100vw rgba(0, 0, 0, 0.3);
+}
+
+.popup-show {
+    display: block;
+    animation: bounce 0.6s;
+}
+
+.modal-error {
+    animation: shake 0.6s;
 }
 
 .popup h2 {
@@ -1718,7 +1774,7 @@ main .underline:focus {
     padding: 15px;
     border: 1px solid #d3d3d2;
     border-radius: 5px;
-    color: #d3d3d2;
+    color: black;
     font-size: 16px;
     line-height: 24px;
 }
@@ -1737,7 +1793,7 @@ main .underline:focus {
     margin-bottom: 20px;
     border: 1px solid #d3d3d2;
     border-radius: 5px;
-    color: #d3d3d2;
+    color: black;
     font-size: 16px;
     line-height: 24px;
     padding: 13px 15px;
@@ -1779,4 +1835,44 @@ h2 + .popup-close {
 
 .popup-close::after {
     transform: rotate(-45deg);
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(-2000px);
+    }
+
+    70% {
+        transform: translateY(30px);
+    }
+
+    90% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes shake {
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+        transform: translateX(-10px);
+    }
+
+    20%,
+    40%,
+    60%,
+    80% {
+        transform: translateX(10px);
+    }
 }
