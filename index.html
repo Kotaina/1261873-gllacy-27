@@ -30,6 +30,13 @@
         <circle cx="6.984" cy="18" r="2"/>
         <circle cx="15.984" cy="18" r="2"/>
     </symbol>
+    <symbol viewBox="0 0 21 20" id="empty-cart">
+        <path d="M5.657,2.031L5.422,0H0v2h3.64l1.5,13h13.988l1.699-12.969H5.657z M17.372,13H6.922L5.888,4.031h12.66
+    L17.372,13z"/>
+     <!-- <polygon fill="#E84D37" points="5.888,4.031 6.922,13 17.372,13 18.548,4.031 "/> -->
+        <circle cx="6.984" cy="18" r="2"/>
+        <circle cx="15.984" cy="18" r="2"/>
+    </symbol>
 </svg>
     <!--Шапка-->
     <header class="main-header">
@@ -108,11 +115,11 @@
                         </div>
                     </li>
                     <li>
-                        <button type="button" class="btn-cart">
+                        <button type="button" class="btn-cart-empty">
                             <svg class="svg-cart" width='21' height="20">
-                                <use xlink:href="#cart"></use>
+                                <use xlink:href="#empty-cart"></use>
                             </svg>
-                            <span>2 товара</span>
+                            <span>Пусто</span>
                         </button>
                         <div class="modal-cart visually-hidden">
                             <h3 class="visually-hidden">Корзина</h3>

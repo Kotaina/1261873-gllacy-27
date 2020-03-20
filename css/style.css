@@ -358,6 +358,42 @@ main .underline:focus {
 }
 
 /*Кнопка Корзина*/
+
+.btn-cart-empty {
+    height: 32px;
+    width: 100px;
+    font-size: 14px;
+    line-height: 16px;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    padding: 6px 8px;
+    background-color: rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+    text-align: center;
+}
+
+.btn-cart-empty span {
+    position: relative;
+    bottom: 5px;
+}
+
+.btn-cart-emty:hover,
+.btn-cart-empty:focus {
+    background-color: white;
+    color: black;
+}
+
+.btn-cart-empty .svg-cart {
+    fill: white;
+}
+
+.btn-cart-empty:hover .svg-cart,
+.btn-cart-empty:focus .svg-cart {
+    fill: black;
+}
+
+/*Полная корзина*/
 .btn-cart {
     height: 32px;
     width: 117px;
@@ -385,11 +421,11 @@ main .underline:focus {
     fill: black;
 }
 
-.btn-cart:hover,
+/* .btn-cart:hover,
 .btn-cart:focus {
     background-color: white;
     color: black;
-}
+} */
 
 /*Окно корзины*/
 .modal-cart {
@@ -399,7 +435,7 @@ main .underline:focus {
     right: 00px;
     box-sizing: border-box;
     width: 540px;
-    min-height: 242px; /*Потом уменьшить*/
+    min-height: 242px;
     font-size: 13px;
     line-height: 16px;
     color: black;
@@ -1353,7 +1389,6 @@ main .underline:focus {
 .filters legend {
     margin: 0;
     margin-left: 13px;
-    /* margin-bottom: 3px; */
     font-size: 14px;
     font-family: inherit;
     color: white;
@@ -1374,25 +1409,51 @@ main .underline:focus {
     color: white;
 }
 
+.sort-view {
+    position: relative;
+    background-color: #a9bab0;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    border-radius: 20px;
+    height: 37px;
+    width: 193px;
+}
+
+.sort-view::after {
+    position: absolute;
+    content: url("../img/icon-down-dir.svg");
+    width: 10px;
+    height: 11px;
+    top: 8px;
+    right: 15px;
+    /* transform: translateY(-50%);
+    border-style: solid;
+    border-width: 5px 5px 0 5px;
+    border-color: white transparent transparent transparent; */
+}
+
 .sort-view select {
-    padding-left: 9px;
+    padding-left: 16px;
     color: white;
     font-family: inherit;
     font-size: 16px;
     height: 37px;
     width: 193px;
     border-radius: 20px;
-    background-color: rgba(255, 255, 255, 0.3);
+    background-color: transparent;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    -webkit-appearance: none;
+    /* -moz-appearance: none;
+    -ms-appearance: none;
+    appearance: none; */
 }
 
 .sort-view select:hover,
 .sort-view select:focus {
     color: black;
 }
-
-/* .sort-options:active option {
-    color: black;
-} */
 
 .sort-options {
     position: relative;
