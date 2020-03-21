@@ -446,15 +446,15 @@ main .underline:focus {
     z-index: 3;
 }
 
+.btn-cart:hover + .modal-cart,
+.btn-cart:focus + .modal-cart {
+    display: block;
+}
+
 .modal-cart-list,
 .modal-cart-item p {
     margin: 0;
     padding: 0;
-}
-
-.btn-cart:hover + .modal-cart,
-.btn-cart:focus + .modal-cart {
-    display: block;
 }
 
 .modal-cart-list {
