@@ -82,6 +82,10 @@ main .underline:focus {
     padding-top: 10px;
 }
 
+.main_logo {
+    z-index: 500;
+}
+
 /*Все акт. элементы строки*/
 .menu-nav {
     display: flex;
@@ -91,6 +95,7 @@ main .underline:focus {
     align-items: center;
     margin: 0;
     padding-top: 0px;
+    z-index: 2;
 }
 
 .menu-nav li {
@@ -125,16 +130,17 @@ main .underline:focus {
 .menu-list-link {
     display: block;
     text-decoration: none;
-    padding: 5px 8px;
+    padding: 7px 13px;
     border-radius: 20px;
 }
 
 .menu-list-link:hover,
 .menu-list-link:focus {
     color: black;
+    max-height: 32px;
     background-color: white;
     box-sizing: content-box;
-    padding: 5px 8px;
+    padding: 7px 13px;
 }
 
 /* Описание выпадающего меню:*/
@@ -378,10 +384,15 @@ main .underline:focus {
     bottom: 5px;
 }
 
-.btn-cart-emty:hover,
+.btn-cart-empty:hover,
 .btn-cart-empty:focus {
     background-color: white;
     color: black;
+}
+
+.btn-cart-empty:hover + .modal-cart,
+.btn-cart-empty:focus + .modal-cart {
+    display: block;
 }
 
 .btn-cart-empty .svg-cart {
@@ -391,6 +402,20 @@ main .underline:focus {
 .btn-cart-empty:hover .svg-cart,
 .btn-cart-empty:focus .svg-cart {
     fill: black;
+}
+
+.empty-label {
+    height: 111px;
+}
+
+.empty-label span {
+    position: relative;
+    top: 50%;
+    left: calc(50% - 144px);
+    display: inline-block;
+    font-size: 24px;
+    color: gray;
+    font-style: italic;
 }
 
 /*Полная корзина*/
@@ -582,25 +607,42 @@ main .underline:focus {
 .carousel {
     position: relative;
     bottom: 0px;
-    max-height: 570px;
+    height: 570px;
     z-index: 1;
 }
-
+все нормально
 /* Карусель */
 .site-wrapper {
-    min-width: 940px;
+    position: absolute;
+    /* top: 0; */
+    /* min-width: 940px; */
     background-color: #849d8f;
     background-image: url("../img/slider-item1.png");
     background-repeat: no-repeat;
     background-position: top center;
-    transition: background-image 0.5s ease, background-color 0.5s ease;
-    min-height: 570px;
+    /* box-shadow: 10px 10px 10px 15px white; */
+    /* transition: background-image 0.5s ease, background-color 0.5s ease; */
+    /* min-height: 570px; */
 }
 
 .site-wrapper::before,
 .site-wrapper::after {
+    position: absolute;
     content: "";
     visibility: hidden;
+}
+
+.site-wrapper,
+.site-wrapper::before,
+.site-wrapper::after {
+    position: absolute;
+    top: -78px;
+    left: 78px;
+    z-index: -15;
+    height: 700px;
+    min-width: 1200px;
+    background-repeat: no-repeat;
+    transition: background-image 0.5s ease, background-color 0.5s ease;
 }
 
 .site-wrapper::before {
@@ -625,6 +667,9 @@ main .underline:focus {
 }
 /* Текст */
 .slide-title {
+    position: relative;
+    top: 72px;
+    right: 77px;
     width: 700px;
     margin: 0 auto;
     margin-bottom: 27px;
@@ -634,6 +679,9 @@ main .underline:focus {
 }
 
 .slide-button {
+    position: relative;
+    top: 78px;
+    right: 81px;
     display: inline-block;
     padding: 8px 44px;
     font-weight: 600;
@@ -678,8 +726,8 @@ main .underline:focus {
 
 .slider-controls {
     position: absolute;
-    bottom: 19px;
-    left: 0;
+    bottom: -61px;
+    left: -50px;
     z-index: 20;
     font-size: 0;
 }
@@ -711,7 +759,7 @@ main .underline:focus {
 }
 
 #product-3:checked ~ .site-wrapper {
-    background-color: #9d8b84;
+    /* background-color: #9d8b84; */
     background-image: url("../img/slider-item3.png");
 }
 
@@ -1067,19 +1115,16 @@ main .underline:focus {
 /* Карта */
 .map {
     position: relative;
-    height: 429px;
-    width: 1200px;
     margin: 40px auto 0;
     background-image: url("../img/map.png");
     margin-bottom: 2px;
 }
 
 .metainf {
-    border: 1px solid black;
     position: absolute;
     padding: 28px 25px 31px 25px;
-    top: 63px;
-    right: 27px;
+    top: 66px;
+    right: 120px;
     width: 302px;
     height: 305px;
     background-color: #ffffff;
@@ -1196,12 +1241,12 @@ main .underline:focus {
     left: 3px;
     height: 32px;
     width: 32px;
-    opacity: 0.8;
+    opacity: 1;
 }
 
 .social-link:hover,
 .social-link:focus {
-    opacity: 1;
+    opacity: 10;
 }
 
 .social-link:active {
@@ -1312,7 +1357,7 @@ main .underline:focus {
     color: white;
     background-color: #d07058;
     box-sizing: content-box;
-    padding: 7px 14px;
+    padding: 7px 13px;
 }
 
 .current:hover,
@@ -1320,7 +1365,7 @@ main .underline:focus {
     color: white;
     background-color: #d07058;
     box-sizing: content-box;
-    padding: 9px 12px;
+    padding: 9px 13px;
 }
 
 .menu-sub-list .current_p {

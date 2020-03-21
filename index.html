@@ -6,10 +6,7 @@
     <title>Магазин мороженого Gllacy</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/normalize.css">
-    <link href="https://fonts.googleapis.com/css?
-    family=Roboto:400,500,700&display=swap&subset=cyrillic"
-     rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,700,700i&display=swap&subset=cyrillic,cyrillic-ext" rel="stylesheet">
 </head>
 
 <body>
@@ -41,7 +38,7 @@
     <!--Шапка-->
     <header class="main-header">
         <div class="container header-line header-main">
-            <div>
+            <div class="main_logo">
                 <img src="img/logo_main.svg" alt="gllacy logo">
             </div>
             <nav class="menu-nav">
@@ -119,30 +116,16 @@
                             <svg class="svg-cart" width='21' height="20">
                                 <use xlink:href="#empty-cart"></use>
                             </svg>
-                            <span>Пусто</span>
+                            <span class="value">Пусто</span>
                         </button>
                         <div class="modal-cart visually-hidden">
                             <h3 class="visually-hidden">Корзина</h3>
-                            <ul class="modal-cart-list">
-                                <li class="modal-cart-item-1">
+                            <div class="empty-label">
+                                <span>В корзине пока ничего нет</span>
+                            </div>
 
-                                    <button type="button" class="cart-delete"></button>
-
-                                    <img src="img/preview-1.jpg" alt="Превью выбора" width="33px" height="33px" class="preview">
-                                    <p class="cart-item-description">Пломбир с апельсиновым джемом</p>
-                                    <p class="cart-item-price">1,5кг х <span>200 руб.</span></p>
-                                    <span>300 руб.</span>
-                                </li>
-                                <li class="modal-cart-item-2">
-                                    <button type="button" class="cart-delete"></button>
-                                    <img src="img/preview-2.jpg" alt="Превью выбора" width="33px" height="33px" class="preview">
-                                    <p class="cart-item-description">Клубничный пломбир с присыпкой из белого шоколада</p>
-                                    <p class="cart-item-price">1,5кг х <span>300 руб.</span></p>
-                                    <span>450 руб.</span>
-                                </li>
-                            </ul>
                             <div class="modal-cart-footer">
-                                <p  class="cart-total-price"> <span>Итого: 750 руб.</span> </p>
+                                <p  class="cart-total-price"> <span>Итого: 0 руб.</span> </p>
                                 <button class="btn btn-orange">Оформить заказ</button>
                             </div>
                         </div>
@@ -157,14 +140,15 @@
     </header>
     <main>
         <h1 class="visually-hidden">Интернет-магазин мороженного Glaccy</h1>
-    <section class="carousel">
+    <section class="carousel container">
+        <!-- <div class="highlight"></div> -->
 <!--Карусель-->
     <input class="visually-hidden" type="radio" id="product-1" name="toggle" checked>
     <input class="visually-hidden" type="radio" id="product-2" name="toggle">
     <input class="visually-hidden" type="radio" id="product-3" name="toggle">
 
-<div class="site-wrapper">
-  <div class="container">
+        <div class="site-wrapper">
+
     <section class="slider">
         <div class="slider-controls">
           <label for="product-1">Первый</label>
@@ -191,9 +175,9 @@
               <a class="button slide-button" href="#">Давайте оба!</a>
             </li>
         </ul>
+
     </section>
-  </div>
-</div>
+       </div>
         </section>
         <!--Карточки-->
 
@@ -345,7 +329,7 @@
         </section>
         <section class="map">
             <div class="imap">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d706.6142983638214!2d30.32328361800127!3d59.938662374727826!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1584287093833!5m2!1sru!2sru" width="1200" height="429" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d706.6142983638214!2d30.32328361800127!3d59.938662374727826!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1584287093833!5m2!1sru!2sru" width="100%" height="430" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
             </div>
             <div class="metainf">
                 <h2 class="visually-hidden" >Как нас найти?</h2>
