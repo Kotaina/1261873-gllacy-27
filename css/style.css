@@ -412,12 +412,12 @@ main .underline:focus {
     bottom: 5px;
 }
 
-.svg-cart {
+.btn-cart:hover .svg-cart,
+.btn-cart:focus .svg-cart {
     fill: black;
 }
 
-.btn-cart:hover .svg-cart,
-.btn-cart:focus .svg-cart {
+.svg-cart {
     fill: black;
 }
 
