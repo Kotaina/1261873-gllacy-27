@@ -407,14 +407,14 @@ main .underline:focus {
     cursor: pointer;
 }
 
-.btn-cart span {
-    position: relative;
-    bottom: 5px;
-}
-
 .btn-cart:hover .svg-cart,
 .btn-cart:focus .svg-cart {
     fill: black;
+}
+
+.btn-cart span {
+    position: relative;
+    bottom: 5px;
 }
 
 .svg-cart {
