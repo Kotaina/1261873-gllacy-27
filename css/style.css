@@ -1495,6 +1495,11 @@ main .underline:focus {
     -webkit-appearance: none;
 }
 
+.sort-view:hover::after,
+.sort-view:focus::after {
+    border-color: #000000 transparent transparent transparent;
+}
+
 .sort-view::after {
     content: "";
     position: absolute;
@@ -1504,11 +1509,6 @@ main .underline:focus {
     border-width: 10px 5.5px 0 5.5px;
     border-color: #ffffff transparent transparent transparent;
     z-index: 100;
-}
-
-.sort-view:hover::after,
-.sort-view:focus::after {
-    border-color: #000000 transparent transparent transparent;
 }
 
 /*Фильтр стоимости*/
