@@ -112,11 +112,8 @@
                             </div>
                         </li>
                         <li>
-                            <button
-                                type="button"
-                                form="login"
-                                class="btn-login"
-                            >
+                            <!-- form="login" -->
+                            <button type="button" class="btn-login">
                                 <svg class="svg-enter" width="20" height="19">
                                     <use xlink:href="#enter"></use>
                                 </svg>
@@ -261,6 +258,7 @@
             </section>
 
             <section class="filters">
+                <h3 class="visually-hidden">Фильтры выбора</h3>
                 <div class="container">
                     <form method="get" action="https://echo.htmlacademy.ru">
                         <!--Фильтры выбора-->
@@ -300,7 +298,7 @@
                                             class="label label-left"
                                             for="range-number-min"
                                         >
-                                            <div class="dot"></div>
+                                            <span class="dot"></span>
                                             <span class="visually-hidden"
                                                 >Цена вниз</span
                                             >
@@ -315,7 +313,7 @@
                                             class="label label-right"
                                             for="range-number-max"
                                         >
-                                            <div class="dot"></div>
+                                            <span class="dot"></span>
                                             <span class="visually-hidden"
                                                 >Цена вверх</span
                                             >
@@ -466,6 +464,9 @@
                 </div>
             </section>
             <section class="icecream-menu">
+                <h2 class="visually-hidden">
+                    Выбор мороженого в нашем магазине
+                </h2>
                 <div class="container">
                     <!--Список с мороженым-->
                     <ul class="icecream-menu-list">
@@ -803,6 +804,7 @@
                 </div>
             </section>
             <section>
+                <h4 class="visually-hidden">Следующие страницы</h4>
                 <!--Пагинация-->
                 <div class="container">
                     <ul class="pagination-list">

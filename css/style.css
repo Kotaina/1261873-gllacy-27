@@ -639,7 +639,7 @@ main .underline:focus {
     top: -78px;
     left: 78px;
     z-index: -15;
-    height: 700px;
+    height: 830px;
     min-width: 1200px;
     background-repeat: no-repeat;
     transition: background-image 0.5s ease, background-color 0.5s ease;
@@ -1120,6 +1120,11 @@ main .underline:focus {
     margin-bottom: 2px;
 }
 
+.imap {
+    width: 100%;
+    height: 430px;
+}
+
 .metainf {
     position: absolute;
     padding: 28px 25px 31px 25px;
@@ -1464,19 +1469,6 @@ main .underline:focus {
     width: 193px;
 }
 
-.sort-view::after {
-    position: absolute;
-    content: url("../img/icon-down-dir.svg");
-    width: 10px;
-    height: 11px;
-    top: 8px;
-    right: 15px;
-    /* transform: translateY(-50%);
-    border-style: solid;
-    border-width: 5px 5px 0 5px;
-    border-color: white transparent transparent transparent; */
-}
-
 .sort-view select {
     padding-left: 16px;
     color: white;
@@ -1490,9 +1482,6 @@ main .underline:focus {
     outline: 0;
     cursor: pointer;
     -webkit-appearance: none;
-    /* -moz-appearance: none;
-    -ms-appearance: none;
-    appearance: none; */
 }
 
 .sort-view select:hover,
@@ -1506,13 +1495,20 @@ main .underline:focus {
     -webkit-appearance: none;
 }
 
-.sort-options::after {
-    content: url("../img/icon-down-dir.svg");
+.sort-view::after {
+    content: "";
     position: absolute;
-    top: 0;
-    right: 0px;
-    height: 11px;
-    width: 10px;
+    top: 14px;
+    right: 15px;
+    border-style: solid;
+    border-width: 10px 5.5px 0 5.5px;
+    border-color: #ffffff transparent transparent transparent;
+    z-index: 100;
+}
+
+.sort-view select:hover .sort-view::after,
+.sort-view select:focus .sort-view::after {
+    border-color: #000000 transparent transparent transparent;
 }
 
 /*Фильтр стоимости*/
@@ -1560,13 +1556,15 @@ main .underline:focus {
 }
 
 .dot {
+    display: inline-block;
     position: relative;
-    top: 8px;
+    bottom: 2px;
     left: 8px;
     width: 4px;
     height: 4px;
     background-color: #aabbb1;
     border-radius: 50%;
+    z-index: 100;
 }
 
 .label-left {
