@@ -884,7 +884,7 @@ main .underline:focus {
 /* HIT */
 .icecream-sorts-item::after {
     content: " ";
-    background-image: url(../img/hit.jpg);
+    background-image: url("../img/hit.jpg");
     background-repeat: no-repeat;
     background-color: white;
     position: absolute;
@@ -1113,16 +1113,22 @@ main .underline:focus {
 }
 
 /* Карта */
-.map {
+.static-map {
     position: relative;
     margin: 40px auto 0;
     background-image: url("../img/map.png");
     margin-bottom: 2px;
+    width: 1146px;
+    height: 430px;
 }
 
-.imap {
-    width: 100%;
+iframe {
+    position: absolute;
+    left: 0;
+    /* right: 0; */
+    width: 100vw;
     height: 430px;
+    z-index: 1;
 }
 
 .metainf {
@@ -1233,10 +1239,10 @@ main .underline:focus {
     z-index: -1;
 }
 
-.social-list-item:hover,
+/* .social-list-item:hover,
 .social-list-item:focus {
     opacity: 0.7;
-}
+} */
 
 .social-link {
     background-repeat: no-repeat;
@@ -1246,6 +1252,11 @@ main .underline:focus {
     left: 3px;
     height: 32px;
     width: 32px;
+    opacity: 0.8;
+}
+
+.social-list-item:hover .social-link,
+.social-list-item:focus .social-link {
     opacity: 1;
 }
 
@@ -1370,7 +1381,7 @@ main .underline:focus {
     color: white;
     background-color: #d07058;
     box-sizing: content-box;
-    padding: 9px 13px;
+    padding: 7px 13px;
 }
 
 .menu-sub-list .current_p {
@@ -1500,6 +1511,11 @@ main .underline:focus {
     border-color: #000000 transparent transparent transparent;
 }
 
+.sort-view:hover::after > .sort-options,
+.sort-view:focus::after > .sort-options {
+    color: black;
+}
+
 .sort-view::after {
     content: "";
     position: absolute;
@@ -1508,7 +1524,12 @@ main .underline:focus {
     border-style: solid;
     border-width: 10px 5.5px 0 5.5px;
     border-color: #ffffff transparent transparent transparent;
-    z-index: 100;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.sort-view:hover select {
+    color: black;
 }
 
 /*Фильтр стоимости*/
@@ -1615,7 +1636,7 @@ main .underline:focus {
 }
 
 .radio-indicator {
-    content: url(/img/radio-off.svg);
+    content: url("../img/radio-off.svg");
     position: absolute;
     left: 1px;
     top: -2px;
@@ -1627,7 +1648,7 @@ main .underline:focus {
 .ten-per input[type="radio"]:checked + .radio-indicator,
 .lt30-per input[type="radio"]:checked + .radio-indicator,
 .gt30-per input[type="radio"]:checked + .radio-indicator {
-    content: url(/img/radio-on.svg);
+    content: url("../img/radio-on.svg");
 }
 
 /*Фильтр Наполнители*/
@@ -1677,7 +1698,7 @@ main .underline:focus {
 
 /*Пустой чекбокс*/
 .fill-checkbox-indicator {
-    content: url(/img/checkbox-off.svg);
+    content: url("../img/checkbox-off.svg");
     position: absolute;
     top: 0;
     left: 3px;
@@ -1691,7 +1712,7 @@ main .underline:focus {
 .fruits-select input[type="checkbox"]:checked + .fill-checkbox-indicator,
 .syrup-select input[type="checkbox"]:checked + .fill-checkbox-indicator,
 .jam-select input[type="checkbox"]:checked + .fill-checkbox-indicator {
-    content: url(/img/checkbox-on.png);
+    content: url("../img/checkbox-on.png");
     width: 23px;
     height: 20px;
 }
