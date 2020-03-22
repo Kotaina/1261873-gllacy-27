@@ -1506,8 +1506,8 @@ main .underline:focus {
     z-index: 100;
 }
 
-.sort-view select:hover .sort-view::after,
-.sort-view select:focus .sort-view::after {
+.sort-view:hover::after,
+.sort-view:focus::after {
     border-color: #000000 transparent transparent transparent;
 }
 
