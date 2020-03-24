@@ -75,15 +75,19 @@ main .underline:focus {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    /* padding-top: 10px; */
-}
-
-.header-main {
     padding-top: 10px;
 }
 
-.main_logo {
+.header-main {
+    padding-top: 6px;
+}
+
+/* .main_logo {
     z-index: 500;
+} */
+
+.header-main img {
+    z-index: 10;
 }
 
 /*Все акт. элементы строки*/
@@ -136,11 +140,16 @@ main .underline:focus {
 
 .menu-list-link:hover,
 .menu-list-link:focus {
+    outline: none;
     color: black;
     max-height: 32px;
     background-color: white;
     box-sizing: content-box;
     padding: 7px 13px;
+}
+
+.menu-list-link:active {
+    box-shadow: inset 0px 2px 1px 0 #696969;
 }
 
 /* Описание выпадающего меню:*/
@@ -208,14 +217,18 @@ main .underline:focus {
     margin-top: 15px;
     min-width: 245px;
     position: relative;
-    margin-left: 288px;
+    /* margin-left: 280px; */
 }
 
-.menu-forms li {
+.menu-forms > li {
     margin-left: 10px;
+    padding-bottom: 25px;
 }
 /*Кнопка Поиск*/
 .btn-search {
+    display: inline-block;
+    vertical-align: middle;
+    box-sizing: border-box;
     height: 32px;
     width: 32px;
     border: 0px solid transparent;
@@ -224,7 +237,9 @@ main .underline:focus {
     background-repeat: no-repeat;
     background-color: rgba(255, 255, 255, 0.3);
     cursor: pointer;
+    padding-left: 8px;
     padding-bottom: 15px;
+    /* margin-bottom: 20px; */
 }
 
 .btn-search:hover,
@@ -243,11 +258,17 @@ main .underline:focus {
     fill: black;
 }
 
+.view-form,
+.login-form {
+    position: relative;
+}
+
+
 /*Окно поиска*/
 .modal-search {
     display: none;
     position: absolute;
-    right: 210px;
+    right: 0;
     top: 40px;
     width: 341px;
     height: 84px;
@@ -259,8 +280,8 @@ main .underline:focus {
     z-index: 2;
 }
 
-.btn-search:hover + .modal-search,
-.btn-search:focus + .modal-search {
+.view-form:hover .modal-search,
+.view-form:focus .modal-search {
     display: block;
 }
 
@@ -278,6 +299,10 @@ main .underline:focus {
 
 /*Кнопка Вход*/
 .btn-login {
+    display: inline-block;
+    vertical-align: middle;
+    box-sizing: border-box;
+    text-decoration: none;
     color: white;
     font-size: 14px;
     line-height: 16px;
@@ -285,7 +310,7 @@ main .underline:focus {
     width: 92px;
     border: none;
     border-radius: 15px;
-    padding: 7px 15px;
+    padding: 7px 18px;
     background-color: rgba(255, 255, 255, 0.3);
     cursor: pointer;
 }
@@ -310,11 +335,13 @@ main .underline:focus {
     fill: black;
 }
 
+
 /*Окно входа*/
 .modal-login {
     display: none;
     position: absolute;
-    right: 110px;
+    /* right: 110px; */
+    right: 0;
     top: 40px;
     width: 280px;
     height: 214px;
@@ -326,8 +353,8 @@ main .underline:focus {
     z-index: 3;
 }
 
-.btn-login:hover + .modal-login,
-.btn-login:focus + .modal-login {
+.login-form:hover .modal-login,
+.login-form:focus .modal-login {
     display: block;
 }
 
@@ -367,6 +394,10 @@ main .underline:focus {
 /*Кнопка Корзина*/
 
 .btn-cart-empty {
+    display: inline-block;
+    vertical-align: middle;
+    box-sizing: border-box;
+    text-decoration: none;
     height: 32px;
     width: 100px;
     font-size: 14px;
@@ -391,8 +422,8 @@ main .underline:focus {
     color: black;
 }
 
-.btn-cart-empty:hover + .modal-cart,
-.btn-cart-empty:focus + .modal-cart {
+.cart-form:hover .modal-cart,
+.cart-form:hover .modal-cart {
     display: block;
 }
 
@@ -414,13 +445,18 @@ main .underline:focus {
     top: 50%;
     left: calc(50% - 144px);
     display: inline-block;
+    vertical-align: middle;
     font-size: 24px;
     color: gray;
     font-style: italic;
 }
 
 /*Полная корзина*/
-.btn-cart {
+.menu-forms .btn-cart {
+    display: inline-block;
+    vertical-align: middle;
+    box-sizing: border-box;
+    text-decoration: none;
     height: 32px;
     width: 117px;
     font-size: 14px;
@@ -428,7 +464,7 @@ main .underline:focus {
     color: black;
     border: none;
     border-radius: 15px;
-    padding: 6px 8px;
+    padding: 6px 15px;
     background-color: rgb(255, 255, 255);
     cursor: pointer;
 }
@@ -595,6 +631,7 @@ main .underline:focus {
 
 .schedule a {
     display: inline-block;
+    vertical-align: middle;
     margin-top: 4px;
     color: white;
     text-decoration: none;
@@ -611,7 +648,7 @@ main .underline:focus {
     height: 570px;
     z-index: 1;
 }
-все нормально
+
 /* Карусель */
 .site-wrapper {
     position: absolute;
@@ -638,7 +675,7 @@ main .underline:focus {
 .site-wrapper::after {
     position: absolute;
     top: -78px;
-    left: 78px;
+    left: 0px;
     z-index: -15;
     height: 830px;
     min-width: 1200px;
@@ -669,8 +706,8 @@ main .underline:focus {
 /* Текст */
 .slide-title {
     position: relative;
-    top: 72px;
-    right: 77px;
+    top: 70px;
+    right: 0px;
     width: 700px;
     margin: 0 auto;
     margin-bottom: 27px;
@@ -681,16 +718,17 @@ main .underline:focus {
 
 .slide-button {
     position: relative;
-    top: 78px;
-    right: 81px;
+    top: 77px;
+    right: 0px;
     display: inline-block;
+    vertical-align: top;
+
     padding: 8px 44px;
     font-weight: 600;
     font-size: 31px;
     line-height: 41px;
     text-align: center;
     color: #ffffff;
-    vertical-align: top;
     text-decoration: none;
     text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
     background: #f26843;
@@ -713,6 +751,7 @@ main .underline:focus {
 
 .slider-controls label {
     display: inline-block;
+    vertical-align: middle;
     width: 17px;
     height: 17px;
     margin-right: 8px;
@@ -727,8 +766,8 @@ main .underline:focus {
 
 .slider-controls {
     position: absolute;
-    bottom: -61px;
-    left: -50px;
+    bottom: -59px;
+    left: 27px;
     z-index: 20;
     font-size: 0;
 }
@@ -809,12 +848,24 @@ main .underline:focus {
     margin-bottom: 42px;
 }
 
-.card-one .btn-orange {
-    max-width: 165px;
-    margin-left: 352px;
+.card .btn {
+    display: inline-block;
+    vertical-align: middle;
+    text-decoration: none;
+    box-sizing: border-box;
+    padding-top: 10px;
+    /* padding-bottom: 1px; */
 }
 
-.card-two .btn {
+.card-one .btn-orange {
+    max-width: 165px;
+    min-height: 46px;
+
+    margin-left: 352px;
+    margin-bottom: 1px;
+}
+
+.card-two .btn-orange {
     width: 189px;
     margin-left: 333px;
 }
@@ -919,17 +970,31 @@ main .underline:focus {
     margin: 5px;
 }
 
+/* .item-description span {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+} */
+
+.icecream-sorts-item:hover .des {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
 .icecream-sorts-item .btn-orange {
+    text-decoration: none;
     display: none;
     position: absolute;
+    vertical-align: middle;
+    box-sizing: border-box;
     margin: 0;
     left: 50%;
     transform: translateX(-50%);
     bottom: 15px;
+    width: 200px;
+    height: 44px;
+    padding-top: 10px;
 }
 
 .icecream-sorts-item:hover .btn-orange {
-    display: block;
+    display: inline-block;
 }
 
 /* DESCRIPTION */
@@ -1030,7 +1095,7 @@ main .underline:focus {
 .news-card,
 .subscribe-card {
     border-radius: 15px;
-    height: 219px;
+    min-height: 219px;
     width: 560px;
     box-sizing: border-box;
     color: black;
@@ -1040,6 +1105,7 @@ main .underline:focus {
     padding: 23px 250px 50px 20px;
     background-image: url("../img/straw_back.jpg");
     background-color: white;
+    background-repeat: no-repeat;
 }
 
 .news-card h2 {
@@ -1068,16 +1134,18 @@ main .underline:focus {
     padding: 6px;
     background-image: url("../img/post_back.jpg");
     background-position: center;
+    background-repeat: repeat-y;
     background-color: whitesmoke;
+    min-height: 219px;
 }
 
 .subscribe-card .face-color {
     background-color: #f8f7f4;
-    background-position: center;
+    /* background-position: center; */
     border-radius: 20px;
     border: 1px solid transparent;
     padding: 27px 19px 0px 21px;
-    height: 177px;
+    min-height: 177px;
 }
 
 .subscribe-card p {
@@ -1120,10 +1188,10 @@ main .underline:focus {
     background-image: url("../img/map.png");
     margin-bottom: 2px;
     width: 1146px;
-    height: 430px;
+    min-height: 430px;
 }
 
-iframe {
+.imap {
     position: absolute;
     left: 0;
     width: 100%;
@@ -1135,9 +1203,9 @@ iframe {
     position: absolute;
     padding: 28px 25px 31px 25px;
     top: 66px;
-    right: 120px;
+    right: -1px;
     width: 302px;
-    height: 305px;
+    min-height: 305px;
     background-color: #ffffff;
     color: black;
     font-size: 14px;
@@ -1160,6 +1228,7 @@ iframe {
 
 .adress-bold {
     display: inline-block;
+    vertical-align: middle;
     font-size: 18px;
     line-height: 24px;
     font-weight: bold;
@@ -1170,6 +1239,7 @@ iframe {
     text-decoration: none;
     color: inherit;
     display: inline-block;
+    vertical-align: middle;
     font-size: 18px;
     line-height: 22px;
     font-weight: bold;
@@ -1184,7 +1254,14 @@ iframe {
     margin-bottom: 26px;
 }
 
-.metainf button {
+.btn-popup {
+    display: inline-block;
+    vertical-align: middle;
+
+    text-decoration: none;
+    box-sizing: border-box;
+    /* padding: auto; */
+    padding-top: 8px;
     width: 252px;
     height: 44px;
     z-index: 1;
@@ -1253,6 +1330,7 @@ iframe {
 .social-link:hover,
 .social-link:focus {
     opacity: 1;
+    outline: none;
 }
 
 .social-link:active {
@@ -1303,6 +1381,7 @@ iframe {
 .info-list a:hover,
 .info-list a:focus {
     color: #ffbc9e;
+    outline: none;
 }
 
 .info-list li:nth-child(3) {
@@ -1386,7 +1465,7 @@ iframe {
 }
 /*Хлебные крошки*/
 .sub-navigation {
-    margin-top: 24px;
+    margin-top: 17px;
 }
 
 .sub-navigation-list {
@@ -1568,8 +1647,9 @@ iframe {
 
 .dot {
     display: inline-block;
+    vertical-align: middle;
     position: relative;
-    bottom: 2px;
+    top: 1px;
     left: 8px;
     width: 4px;
     height: 4px;
@@ -1589,7 +1669,7 @@ iframe {
 /*Жирность*/
 .fat-field {
     border: none;
-    max-width: 414px;
+    min-width: 414px;
     padding-left: 0;
     margin: 0;
 }
@@ -1600,8 +1680,8 @@ iframe {
     justify-content: space-between;
     align-items: baseline;
     box-sizing: border-box;
-    height: 37px;
-    width: 414px;
+    min-height: 37px;
+    min-width: 414px;
     background-color: rgba(255, 255, 255, 0.3);
     margin: 0;
     padding: 9px 15px 7px 15px;
@@ -1632,6 +1712,13 @@ iframe {
     top: -2px;
     height: 22px;
     width: 22px;
+    opacity: 0.7;
+}
+
+.radio-indicator:hover,
+.radio-indicator:focus {
+    opacity: 1;
+    outline: none;
 }
 
 .zero-per input[type="radio"]:checked + .radio-indicator,
@@ -1645,7 +1732,7 @@ iframe {
 .fill-field {
     border: none;
     padding-left: 0;
-    max-width: 707px;
+    min-width: 703px;
     margin: 0;
 }
 
@@ -1663,8 +1750,8 @@ iframe {
     border-radius: 30px;
     margin: 0;
     box-sizing: border-box;
-    height: 35px;
-    width: 703px;
+    min-height: 35px;
+    min-width: 703px;
     background-color: rgba(255, 255, 255, 0.3);
 }
 
@@ -1694,6 +1781,13 @@ iframe {
     left: 3px;
     height: 20px;
     width: 20px;
+    opacity: 0.7;
+}
+
+.fill-checkbox-indicator:hover,
+.fill-checkbox-indicator:focus {
+    opacity: 1;
+    outline: none;
 }
 
 /* Включение чекбокса */
@@ -1728,11 +1822,12 @@ iframe {
 .btn-filter:focus {
     color: black;
     background-color: white;
+    outline: none;
 }
 
 .btn-filter:active {
     border: none;
-    box-shadow: inset 0 1px 2px #8a8b8a;
+    box-shadow: inset 0px 2px 1px 0 #696969;
 }
 
 /* Список мороженого */
@@ -1787,6 +1882,9 @@ iframe {
 .icecream-menu-item:hover::before,
 .icecream-menu-item:focus::before {
     display: block;
+}
+.icecream-menu-item:hover .des {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .icecream-menu-item:hover {
@@ -1868,6 +1966,7 @@ iframe {
 
 .page-1:hover {
     color: black;
+    outline: none;
 }
 
 .pagination-list a {
@@ -1890,6 +1989,7 @@ iframe {
     text-decoration: none;
     background-color: rgba(255, 255, 255, 0.7);
     border-radius: 20px;
+    outline: none;
 }
 
 .pagination-list li:last-child::after,

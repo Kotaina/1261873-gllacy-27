@@ -3,7 +3,12 @@
     <head>
         <meta charset="utf-8" />
         <title>Сливочное мороженое</title>
-        <link rel="stylesheet" href="css/style.css" />
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,700,700i&display=swap&subset=cyrillic,cyrillic-ext"
+        />
+        <link rel="stylesheet" href="css/normalize.css" />
+        <link rel="stylesheet" href="css/style-min.css" />
     </head>
 
     <body>
@@ -60,9 +65,9 @@
                                     <span>Новинки</span>
                                 </li>
                                 <li>
-                                    <a href="catalog.html" class="current_p"
-                                        >Сливочное</a
-                                    >
+                                    <a href="catalog.html" class="current_p">
+                                        Сливочное
+                                    </a>
                                 </li>
                                 <li>
                                     <a href="#">Щербеты</a>
@@ -88,12 +93,12 @@
                     </ul>
 
                     <ul class="menu-forms">
-                        <li>
-                            <button type="button" class="btn-search">
+                        <li class="view-form">
+                            <a href="#" class="btn-search">
                                 <svg class="svg-search" width="17" height="17">
                                     <use xlink:href="#search"></use>
                                 </svg>
-                            </button>
+                            </a>
                             <div class="modal-search">
                                 <h2 class="visually-hidden">Форма поиска</h2>
                                 <form action="https://echo.htmlacademy.ru">
@@ -111,14 +116,14 @@
                                 </form>
                             </div>
                         </li>
-                        <li>
+                        <li class="login-form">
                             <!-- form="login" -->
-                            <button type="button" class="btn-login">
+                            <a href="#" class="btn-login">
                                 <svg class="svg-enter" width="20" height="19">
                                     <use xlink:href="#enter"></use>
                                 </svg>
                                 <span>Вход</span>
-                            </button>
+                            </a>
                             <div class="modal-login">
                                 <form
                                     action="https://echo.htmlacademy.ru"
@@ -158,25 +163,27 @@
                                         </button>
                                         <ul>
                                             <li>
-                                                <a href="#">Забыли пароль?</a>
+                                                <a href="#">
+                                                    Забыли пароль?
+                                                </a>
                                             </li>
                                             <li>
-                                                <a href="#"
-                                                    >Новая регистрация</a
-                                                >
+                                                <a href="#">
+                                                    Новая регистрация
+                                                </a>
                                             </li>
                                         </ul>
                                     </div>
                                 </form>
                             </div>
                         </li>
-                        <li>
-                            <button type="button" class="btn-cart">
+                        <li class="cart-form">
+                            <a href="#" class="btn-cart">
                                 <svg class="svg-cart" width="21" height="20">
                                     <use xlink:href="#cart"></use>
                                 </svg>
                                 <span>2 товара</span>
-                            </button>
+                            </a>
                             <div class="modal-cart visually-hidden">
                                 <h3 class="visually-hidden">Корзина</h3>
                                 <ul class="modal-cart-list">
@@ -266,19 +273,21 @@
                             <legend>Сортировка:</legend>
                             <div class="sort-view">
                                 <select name="sort-options">
-                                    <option value="popular" selected
-                                        >по популярности</option
-                                    >
-                                    <option value="new">по новизне</option>
-                                    <option value="cheap-first"
-                                        >сначала недорогие</option
-                                    >
+                                    <option value="popular" selected>
+                                        по популярности
+                                    </option>
+                                    <option value="new">
+                                        по новизне
+                                    </option>
+                                    <option value="cheap-first">
+                                        сначала недорогие
+                                    </option>
                                     <option value="expensive-first"
                                         >сначала дорогие</option
                                     >
                                     <option value="fat-sort"
-                                        >по жирности</option
-                                    >
+                                        >по жирности
+                                    </option>
                                 </select>
                             </div>
                         </fieldset>
@@ -299,9 +308,9 @@
                                             for="range-number-min"
                                         >
                                             <span class="dot"></span>
-                                            <span class="visually-hidden"
-                                                >Цена вниз</span
-                                            >
+                                            <span class="visually-hidden">
+                                                Цена вниз
+                                            </span>
                                         </label>
                                         <input
                                             class="visually-hidden"
@@ -314,9 +323,9 @@
                                             for="range-number-max"
                                         >
                                             <span class="dot"></span>
-                                            <span class="visually-hidden"
-                                                >Цена вверх</span
-                                            >
+                                            <span class="visually-hidden">
+                                                Цена вверх
+                                            </span>
                                         </label>
                                     </div>
                                 </div>
@@ -333,7 +342,12 @@
                                             name="fat-select"
                                             value="0"
                                         />
-                                        <span class="radio-indicator"></span>0%
+                                        <span
+                                            class="radio-indicator"
+                                            tabindex="0"
+                                        >
+                                        </span
+                                        >0%
                                     </label>
                                 </li>
                                 <li class="ten-per">
@@ -344,8 +358,11 @@
                                             name="fat-select"
                                             value="10"
                                         />
-                                        <span class="radio-indicator"></span>до
-                                        10%
+                                        <span
+                                            class="radio-indicator"
+                                            tabindex="0"
+                                        ></span
+                                        >до 10%
                                     </label>
                                 </li>
                                 <li class="lt30-per">
@@ -356,8 +373,11 @@
                                             name="fat-select"
                                             value="lt30"
                                         />
-                                        <span class="radio-indicator"></span>до
-                                        30%
+                                        <span
+                                            class="radio-indicator"
+                                            tabindex="0"
+                                        ></span
+                                        >до 30%
                                     </label>
                                 </li>
                                 <li class="gt30-per">
@@ -368,7 +388,11 @@
                                             name="fat-select"
                                             value="gt30"
                                         />
-                                        <span class="radio-indicator"></span
+                                        <span
+                                            class="radio-indicator"
+                                            tabindex="0"
+                                        >
+                                        </span
                                         >выше 30%
                                     </label>
                                 </li>
@@ -391,7 +415,9 @@
                                         />
                                         <span
                                             class="fill-checkbox-indicator"
-                                        ></span>
+                                            tabindex="0"
+                                        >
+                                        </span>
                                         шоколадные
                                     </label>
                                 </li>
@@ -406,8 +432,10 @@
                                         />
                                         <span
                                             class="fill-checkbox-indicator"
-                                        ></span
-                                        >сахарные присыпки
+                                            tabindex="0"
+                                        >
+                                        </span>
+                                        сахарные присыпки
                                     </label>
                                 </li>
                                 <li class="fruits-select">
@@ -421,7 +449,9 @@
                                         />
                                         <span
                                             class="fill-checkbox-indicator"
-                                        ></span>
+                                            tabindex="0"
+                                        >
+                                        </span>
                                         фрукты
                                     </label>
                                 </li>
@@ -436,6 +466,7 @@
                                         />
                                         <span
                                             class="fill-checkbox-indicator"
+                                            tabindex="0"
                                         ></span>
                                         сиропы
                                     </label>
@@ -451,7 +482,9 @@
                                         />
                                         <span
                                             class="fill-checkbox-indicator"
-                                        ></span>
+                                            tabindex="0"
+                                        >
+                                        </span>
                                         джемы
                                     </label>
                                 </li>
@@ -482,15 +515,15 @@
                             </div>
 
                             <p class="catalog-price">
-                                310 <span class="rouble">₽</span
-                                ><span class="min-font">/кг</span>
+                                310 <span class="rouble">₽</span>
+                                <span class="min-font">/кг</span>
                             </p>
 
                             <p class="catalog-description ">
-                                <span class="underline"
-                                    >Сливочное с апельсиновым джемом и
-                                    цитрусовой стружкой</span
-                                >
+                                <span class="des">
+                                    Сливочное с апельсиновым джемом и цитрусовой
+                                    стружкой
+                                </span>
                             </p>
 
                             <button class="btn btn-orange">
@@ -510,15 +543,14 @@
                             </div>
 
                             <p class="catalog-price">
-                                380 <span class="rouble">₽</span
-                                ><span class="min-font">/кг</span>
+                                380 <span class="rouble">₽</span>
+                                <span class="min-font">/кг</span>
                             </p>
 
                             <p class="catalog-description ">
-                                <span class="underline"
-                                    >Сливочно-кофейное с кусочками
-                                    шоколада</span
-                                >
+                                <span class="des">
+                                    Сливочно-кофейное с кусочками шоколада
+                                </span>
                             </p>
 
                             <button class="btn btn-orange">
@@ -538,15 +570,15 @@
                             </div>
 
                             <p class="catalog-price">
-                                355 <span class="rouble">₽</span
-                                ><span class="min-font">/кг</span>
+                                355 <span class="rouble">₽</span>
+                                <span class="min-font">/кг</span>
                             </p>
 
                             <p class="catalog-description ">
-                                <span class="underline"
-                                    >Сливочно-клубничное с <br />
-                                    присыпкой из белого шоколада</span
-                                >
+                                <span class="des">
+                                    Сливочно-клубничное с <br />
+                                    присыпкой из белого шоколада
+                                </span>
                             </p>
 
                             <button class="btn btn-orange">
@@ -566,15 +598,14 @@
                             </div>
 
                             <p class="catalog-price">
-                                415 <span class="rouble">₽</span
-                                ><span class="min-font">/кг</span>
+                                415 <span class="rouble">₽</span>
+                                <span class="min-font">/кг</span>
                             </p>
 
-                            <p class="catalog-description ">
-                                <span class="underline"
-                                    >Сливочное крем-брюле с карамельной
-                                    подливкой</span
-                                >
+                            <p class="catalog-description">
+                                <span class="des">
+                                    Сливочное крем-брюле с карамельной подливкой
+                                </span>
                             </p>
 
                             <button class="btn btn-orange">
@@ -594,14 +625,14 @@
                             </div>
 
                             <p class="catalog-price">
-                                325 <span class="rouble">₽</span
-                                ><span class="min-font">/кг</span>
+                                325 <span class="rouble">₽</span>
+                                <span class="min-font">/кг</span>
                             </p>
 
                             <p class="catalog-description ">
-                                <span class="underline"
-                                    >Сливочное с брусничным джемом</span
-                                >
+                                <span class="des">
+                                    Сливочное с брусничным джемом
+                                </span>
                             </p>
 
                             <button class="btn btn-orange">
@@ -621,15 +652,15 @@
                             </div>
 
                             <p class="catalog-price">
-                                410 <span class="rouble">₽</span
-                                ><span class="min-font">/кг</span>
+                                410 <span class="rouble">₽</span>
+                                <span class="min-font">/кг</span>
                             </p>
 
                             <p class="catalog-description ">
-                                <span class="underline"
-                                    >Сливочно-черничное с цельными ягодами
-                                    брусники</span
-                                >
+                                <span class="des">
+                                    Сливочно-черничное с цельными ягодами
+                                    брусники
+                                </span>
                             </p>
 
                             <button class="btn btn-orange">
@@ -649,15 +680,14 @@
                             </div>
 
                             <p class="catalog-price">
-                                375 <span class="rouble">₽</span
-                                ><span class="min-font">/кг</span>
+                                375 <span class="rouble">₽</span>
+                                <span class="min-font">/кг</span>
                             </p>
 
                             <p class="catalog-description ">
-                                <span class="underline"
-                                    >Сливочно-лимонное с карамельной
-                                    присыпокой</span
-                                >
+                                <span class="des">
+                                    Сливочно-лимонное с карамельной присыпокой
+                                </span>
                             </p>
 
                             <button class="btn btn-orange">
@@ -677,14 +707,14 @@
                             </div>
 
                             <p class="catalog-price">
-                                320 <span class="rouble">₽</span
-                                ><span class="min-font">/кг</span>
+                                320 <span class="rouble">₽</span>
+                                <span class="min-font">/кг</span>
                             </p>
 
                             <p class="catalog-description ">
-                                <span class="underline"
-                                    >Сливочное с шоколадной стружкой</span
-                                >
+                                <span class="des">
+                                    Сливочное с шоколадной стружкой
+                                </span>
                             </p>
 
                             <button class="btn btn-orange">
@@ -704,15 +734,14 @@
                             </div>
 
                             <p class="catalog-price">
-                                440 <span class="rouble">₽</span
-                                ><span class="min-font">/кг</span>
+                                440 <span class="rouble">₽</span>
+                                <span class="min-font">/кг</span>
                             </p>
 
                             <p class="catalog-description ">
-                                <span class="underline"
-                                    >Сливочно-ванильное с кусочками
-                                    шоколада</span
-                                >
+                                <span class="des">
+                                    Сливочно-ванильное с кусочками шоколада
+                                </span>
                             </p>
 
                             <button class="btn btn-orange">
@@ -732,14 +761,14 @@
                             </div>
 
                             <p class="catalog-price">
-                                435 <span class="rouble">₽</span
-                                ><span class="min-font">/кг</span>
+                                435 <span class="rouble">₽</span>
+                                <span class="min-font">/кг</span>
                             </p>
 
                             <p class="catalog-description ">
-                                <span class="underline"
-                                    >Сливочное с ментоловым сиропом</span
-                                >
+                                <span class="des">
+                                    Сливочное с ментоловым сиропом
+                                </span>
                             </p>
 
                             <button class="btn btn-orange">
@@ -759,15 +788,14 @@
                             </div>
 
                             <p class="catalog-price">
-                                355 <span class="rouble">₽</span
-                                ><span class="min-font">/кг</span>
+                                355 <span class="rouble">₽</span>
+                                <span class="min-font">/кг</span>
                             </p>
 
                             <p class="catalog-description ">
-                                <span class="underline"
-                                    >Сливочное с кусочками чёрного
-                                    шоколада</span
-                                >
+                                <span class="des">
+                                    Сливочное с кусочками чёрного шоколада
+                                </span>
                             </p>
 
                             <button class="btn btn-orange">
@@ -786,14 +814,14 @@
                             </div>
 
                             <p class="catalog-price">
-                                420 <span class="rouble">₽</span
-                                ><span class="min-font">/кг</span>
+                                420 <span class="rouble">₽</span>
+                                <span class="min-font">/кг</span>
                             </p>
 
                             <p class="catalog-description ">
-                                <span class="underline"
-                                    >Сливочное с мятным сиропом</span
-                                >
+                                <span class="des"
+                                    >Сливочное с мятным сиропом
+                                </span>
                             </p>
 
                             <button class="btn btn-orange">
@@ -825,16 +853,26 @@
                     <ul class="social-list">
                         <!--Контакты-->
                         <li class="social-list-item">
-                            <a href="#" class="social-link twitter"></a>
+                            <a href="#" class="social-link twitter">
+                                <span class="visually-hidden">Твиттер</span>
+                            </a>
                         </li>
                         <li class="social-list-item">
-                            <a href="#" class="social-link inst"></a>
+                            <a href="#" class="social-link inst">
+                                <span class="visually-hidden">Инстаграмм</span>
+                            </a>
                         </li>
                         <li class="social-list-item">
-                            <a href="#" class="social-link fb"></a>
+                            <a href="#" class="social-link fb">
+                                <span class="visually-hidden">Фейсбук</span>
+                            </a>
                         </li>
                         <li class="social-list-item">
-                            <a href="#" class="social-link vk"></a>
+                            <a href="#" class="social-link vk">
+                                <span class="visually-hidden">
+                                    Вконтакте
+                                </span>
+                            </a>
                         </li>
                     </ul>
                 </div>
@@ -843,22 +881,26 @@
                     <ul class="info-list">
                         <!--Справочная информация jk-->
                         <li>
-                            <a href="#"
-                                ><span class="suppliers underline"
-                                    >Для поставщиков</span
-                                ></a
-                            >
+                            <a href="#">
+                                <span class="suppliers underline">
+                                    Для поставщиков
+                                </span>
+                            </a>
                         </li>
                         <li>
-                            <a href="#" class="underline">Наши документы</a>
+                            <a href="#" class="underline">
+                                Наши документы
+                            </a>
                         </li>
                         <li>
-                            <a href="#" class="underline">О производстве</a>
+                            <a href="#" class="underline">
+                                О производстве
+                            </a>
                         </li>
                         <li>
-                            <a href="#" class="underline"
-                                >Экологические стандарты</a
-                            >
+                            <a href="#" class="underline">
+                                Экологические стандарты
+                            </a>
                         </li>
                     </ul>
                 </div>
@@ -874,45 +916,15 @@
 
                     <p>
                         Сделано в
-                        <a href="#"
-                            ><span class="html-font underline">
-                                HTML Academy</span
-                            > </a
-                        >© 2019
+                        <a href="#">
+                            <span class="html-font underline">
+                                HTML Academy
+                            </span>
+                        </a>
+                        © 2019
                     </p>
                 </div>
             </div>
         </footer>
-        <!--Форма обратной связи-->
-        <section class="visually-hidden popup">
-            <h2>Мы обязательно вам ответим!</h2>
-            <button type="button"></button>
-            <form action="https://echo.htmlacademy.ru">
-                <div>
-                    <label for="name" class="visually-hidden"
-                        >Введите имя</label
-                    >
-                    <input type="text" id="name" placeholder="Как вас зовут?" />
-                </div>
-                <div>
-                    <label for="mail" class="visually-hidden">Почта</label>
-                    <input
-                        type="text"
-                        id="mail"
-                        placeholder="Ваша почта для ответа?"
-                    />
-                </div>
-                <div>
-                    <label for="text" class="visually-hidden">Вопрос</label>
-                    <textarea
-                        name="question-text"
-                        id="text"
-                        rows="5"
-                    ></textarea>
-                </div>
-
-                <button type="submit">Отправить</button>
-            </form>
-        </section>
     </body>
 </html>

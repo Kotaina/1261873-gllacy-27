@@ -3,12 +3,12 @@
     <head>
         <meta charset="utf-8" />
         <title>Магазин мороженого Gllacy</title>
-        <link rel="stylesheet" href="css/style.css" />
-        <link rel="stylesheet" href="css/normalize.css" />
         <link
-            href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,700,700i&display=swap&subset=cyrillic,cyrillic-ext"
             rel="stylesheet"
+            href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,700,700i&display=swap&subset=cyrillic,cyrillic-ext"
         />
+        <link rel="stylesheet" href="css/normalize.css" />
+        <link rel="stylesheet" href="css/style-min.css" />
     </head>
 
     <body>
@@ -53,21 +53,19 @@
         <!--Шапка-->
         <header class="main-header">
             <div class="container header-line header-main">
-                <div class="main_logo">
-                    <img
-                        src="img/logo_main.svg"
-                        alt="gllacy logo"
-                        width="154"
-                        height="64"
-                    />
-                </div>
+                <img
+                    src="img/logo_main.svg"
+                    alt="gllacy logo"
+                    width="154"
+                    height="64"
+                />
                 <nav class="menu-nav">
                     <ul class="menu-list">
                         <!--Разделы сайта-->
                         <li class="menu-list-item">
                             <a href="#" class="menu-list-link">
-                                <span class="underline">Каталог</span></a
-                            >
+                                <span class="underline">Каталог</span>
+                            </a>
                             <ul class="menu-sub-list">
                                 <li>
                                     <span>Новинки</span>
@@ -99,12 +97,12 @@
                     </ul>
 
                     <ul class="menu-forms">
-                        <li>
-                            <button type="button" class="btn-search">
+                        <li class="view-form">
+                            <a href="#" class="btn-search">
                                 <svg class="svg-search" width="17" height="17">
                                     <use xlink:href="#search"></use>
                                 </svg>
-                            </button>
+                            </a>
                             <div class="modal-search">
                                 <h2 class="visually-hidden">Форма поиска</h2>
                                 <form action="https://echo.htmlacademy.ru">
@@ -112,7 +110,8 @@
                                         <label
                                             for="search-input"
                                             class="visually-hidden"
-                                        ></label>
+                                        >
+                                        </label>
                                         <input
                                             id="search-input"
                                             type="text"
@@ -122,14 +121,14 @@
                                 </form>
                             </div>
                         </li>
-                        <li>
+                        <li class="login-form">
                             <!-- form="login" -->
-                            <button type="button" class="btn-login">
+                            <a href="#" class="btn-login">
                                 <svg class="svg-enter" width="20" height="19">
                                     <use xlink:href="#enter"></use>
                                 </svg>
                                 <span>Вход</span>
-                            </button>
+                            </a>
                             <div class="modal-login">
                                 <form
                                     action="https://echo.htmlacademy.ru"
@@ -139,8 +138,8 @@
                                         <label
                                             for="email-input"
                                             class="visually-hidden"
-                                            >Электроная почта</label
-                                        >
+                                            >Электроная почта
+                                        </label>
                                         <input
                                             type="text"
                                             name="email"
@@ -152,7 +151,8 @@
                                         <label
                                             for="password-input"
                                             class="visually-hidden"
-                                        ></label>
+                                        >
+                                        </label>
                                         <input
                                             type="password"
                                             name="password"
@@ -181,13 +181,13 @@
                                 </form>
                             </div>
                         </li>
-                        <li>
-                            <button type="button" class="btn-cart-empty">
+                        <li class="cart-form">
+                            <a href="#" class="btn-cart-empty">
                                 <svg class="svg-cart" width="21" height="20">
                                     <use xlink:href="#empty-cart"></use>
                                 </svg>
                                 <span class="value">Пусто</span>
-                            </button>
+                            </a>
                             <div class="modal-cart visually-hidden">
                                 <h3 class="visually-hidden">Корзина</h3>
                                 <div class="empty-label">
@@ -250,25 +250,25 @@
                                 <h3 class="slide-title">
                                     Крем-брюле и пломбир с малиновым джемом
                                 </h3>
-                                <a class="button slide-button" href="#"
-                                    >Давайте оба!</a
-                                >
+                                <a class="button slide-button" href="#">
+                                    Давайте оба!
+                                </a>
                             </li>
                             <li class="slider-item slide" id="slide2">
                                 <h3 class="slide-title">
                                     Шоколадный пломбир и лимонный сорбет
                                 </h3>
-                                <a class="button slide-button" href="#"
-                                    >Давайте оба!</a
-                                >
+                                <a class="button slide-button" href="#">
+                                    Давайте оба!
+                                </a>
                             </li>
                             <li class="slider-item slide" id="slide3">
                                 <h3 class="slide-title">
                                     Пломбир с помадкой и клубничный щербет
                                 </h3>
-                                <a class="button slide-button" href="#"
-                                    >Давайте оба!</a
-                                >
+                                <a class="button slide-button" href="#">
+                                    Давайте оба!
+                                </a>
                             </li>
                         </ul>
                     </section>
@@ -286,9 +286,9 @@
                             добавим в ваш заказ банку малинового варенья
                             бесплатно.
                         </p>
-                        <button type="button" class="btn btn-orange">
+                        <a href="#" class="btn btn-orange">
                             Хочу варенье!
-                        </button>
+                        </a>
                     </div>
                     <div class="card card-two">
                         <!--Шоколадки даром!-->
@@ -298,9 +298,9 @@
                             упаковку вкуснейшей щоколадной присыпки совершенно
                             бесплатно.
                         </p>
-                        <button type="button" class="btn btn-orange">
+                        <a href="#" class="btn btn-orange">
                             Хочу шоколадки!
-                        </button>
+                        </a>
                     </div>
                 </section>
             </div>
@@ -313,111 +313,100 @@
 
                     <ul class="icecream-sorts">
                         <li class="icecream-sorts-item">
-                            <div>
-                                <img
-                                    src="img/ice1.jpg"
-                                    alt="Сливочное с апельсиновым
+                            <img
+                                src="img/ice1.jpg"
+                                alt="Сливочное с апельсиновым
           джемом и цитрусовой стружкой"
-                                    width="267"
-                                    height="267"
-                                />
-                            </div>
+                                width="267"
+                                height="267"
+                            />
 
                             <p class="price">
-                                310 <span class="rouble">₽</span
-                                ><span class="min-font">/кг</span>
+                                310 <span class="rouble">₽</span>
+                                <span class="min-font">/кг</span>
                             </p>
 
                             <p class="item-description">
-                                <span class="underline"
-                                    >Сливочное с апельсиновым <br />
-                                    джемом и цитрусовой стружкой</span
-                                >
+                                <span class="des">
+                                    Сливочное с апельсиновым <br />
+                                    джемом и цитрусовой стружкой
+                                </span>
                             </p>
-                            <button class="btn btn-orange">
+                            <a href="#" class="btn btn-orange">
                                 Быстрый просмотр
-                            </button>
+                            </a>
                         </li>
 
                         <li class="icecream-sorts-item">
-                            <div>
-                                <img
-                                    src="img/ice2.jpg"
-                                    alt="Сливочно-кофейное с кусочками
-                    шоколада"
-                                    width="267"
-                                    height="267"
-                                />
-                            </div>
+                            <img
+                                src="img/ice2.jpg"
+                                alt="Сливочно-кофейное с кусочками шоколада"
+                                width="267"
+                                height="267"
+                            />
 
                             <p class="price">
-                                380 <span class="rouble">₽</span
-                                ><span class="min-font">/кг</span>
+                                380 <span class="rouble">₽</span>
+                                <span class="min-font">/кг</span>
                             </p>
 
                             <p class="item-description">
-                                <span class="underline"
-                                    >Сливочно-кофейное с кусочками
-                                    шоколада</span
-                                >
+                                <span class="des">
+                                    Сливочно-кофейное с кусочками шоколада
+                                </span>
                             </p>
-                            <button class="btn btn-orange">
+                            <a href="#" class="btn btn-orange">
                                 Быстрый просмотр
-                            </button>
+                            </a>
                         </li>
 
                         <li class="icecream-sorts-item">
-                            <div>
-                                <img
-                                    src="img/ice3.jpg"
-                                    alt="Сливочно-клубничное с
+                            <img
+                                src="img/ice3.jpg"
+                                alt="Сливочно-клубничное с
                     присыпкой из белого шоколада"
-                                    width="267"
-                                    height="267"
-                                />
-                            </div>
+                                width="267"
+                                height="267"
+                            />
 
                             <p class="price">
-                                355 <span class="rouble">₽</span
-                                ><span class="min-font">/кг</span>
+                                355 <span class="rouble">₽</span>
+                                <span class="min-font">/кг</span>
                             </p>
 
                             <p class="item-description">
-                                <span class="underline"
-                                    >Сливочно-клубничное<br />с присыпкой из
-                                    белого шоколада</span
-                                >
+                                <span class="des">
+                                    Сливочно-клубничное<br />с присыпкой из
+                                    белого шоколада
+                                </span>
                             </p>
-                            <button class="btn btn-orange">
+                            <a href="#" class="btn btn-orange">
                                 Быстрый просмотр
-                            </button>
+                            </a>
                         </li>
 
                         <li class="icecream-sorts-item">
-                            <div>
-                                <img
-                                    src="img/ice4.jpg"
-                                    alt="Сливочное крем-брюле с
+                            <img
+                                src="img/ice4.jpg"
+                                alt="Сливочное крем-брюле с
                     карамельной подливкой"
-                                    width="267"
-                                    height="267"
-                                />
-                            </div>
+                                width="267"
+                                height="267"
+                            />
 
                             <p class="price">
-                                415 <span class="rouble">₽</span
-                                ><span class="min-font">/кг</span>
+                                415 <span class="rouble">₽</span>
+                                <span class="min-font">/кг</span>
                             </p>
 
                             <p class="item-description">
-                                <span class="underline"
-                                    >Сливочное крем-брюле с карамельной
-                                    подливкой</span
-                                >
+                                <span class="des">
+                                    Сливочное крем-брюле с карамельной подливкой
+                                </span>
                             </p>
-                            <button class="btn btn-orange">
+                            <a href="#" class="btn btn-orange">
                                 Быстрый просмотр
-                            </button>
+                            </a>
                         </li>
                     </ul>
                 </div>
@@ -518,15 +507,14 @@
             </section>
             <section class="map">
                 <h3 class="visually-hidden">Карта</h3>
-                <!-- <div class="imap"> -->
                 <iframe
+                    class="imap"
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d706.6142983638214!2d30.32328361800127!3d59.938662374727826!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1584287093833!5m2!1sru!2sru"
                     style="border:0;"
                     allowfullscreen=""
                     aria-hidden="false"
                     tabindex="0"
                 ></iframe>
-                <!-- </div> -->
 
                 <div class="static-map">
                     <div class="metainf">
@@ -535,9 +523,9 @@
                             Адрес главного офиса <br />
                             и офлайн магазина: <br />
                         </p>
-                        <span class="adress-bold"
-                            >ул. Большая конюшенная 19/8, Санкт-Петербург</span
-                        >
+                        <span class="adress-bold">
+                            ул. Большая конюшенная 19/8, Санкт-Петербург
+                        </span>
                         <p class="phone">
                             Для заказов по телефону:
                             <a href="tel:8812450-25-25">8 812 450-25-25</a>
@@ -545,9 +533,9 @@
                             (с 10 до 20 ежедневно)
                         </p>
 
-                        <button class="btn-orange btn-popup">
+                        <a href="#" class="btn-orange btn-popup">
                             Форма обратной связи
-                        </button>
+                        </a>
                     </div>
                 </div>
             </section>
@@ -560,16 +548,26 @@
                     <ul class="social-list">
                         <!--Контакты-->
                         <li class="social-list-item">
-                            <a href="#" class="social-link twitter"></a>
+                            <a href="#" class="social-link twitter">
+                                <span class="visually-hidden">Твиттер</span>
+                            </a>
                         </li>
                         <li class="social-list-item">
-                            <a href="#" class="social-link inst"></a>
+                            <a href="#" class="social-link inst">
+                                <span class="visually-hidden">Инстаграмм</span>
+                            </a>
                         </li>
                         <li class="social-list-item">
-                            <a href="#" class="social-link fb"></a>
+                            <a href="#" class="social-link fb">
+                                <span class="visually-hidden">Фейсбук</span>
+                            </a>
                         </li>
                         <li class="social-list-item">
-                            <a href="#" class="social-link vk"></a>
+                            <a href="#" class="social-link vk">
+                                <span class="visually-hidden">
+                                    Вконтакте
+                                </span>
+                            </a>
                         </li>
                     </ul>
                 </div>
@@ -578,22 +576,26 @@
                     <ul class="info-list">
                         <!--Справочная информация jk-->
                         <li>
-                            <a href="#"
-                                ><span class="suppliers underline"
-                                    >Для поставщиков</span
-                                ></a
-                            >
+                            <a href="#">
+                                <span class="suppliers underline">
+                                    Для поставщиков
+                                </span>
+                            </a>
                         </li>
                         <li>
-                            <a href="#" class="underline">Наши документы</a>
+                            <a href="#" class="underline">
+                                Наши документы
+                            </a>
                         </li>
                         <li>
-                            <a href="#" class="underline">О производстве</a>
+                            <a href="#" class="underline">
+                                О производстве
+                            </a>
                         </li>
                         <li>
-                            <a href="#" class="underline"
-                                >Экологические стандарты</a
-                            >
+                            <a href="#" class="underline">
+                                Экологические стандарты
+                            </a>
                         </li>
                     </ul>
                 </div>
@@ -664,6 +666,6 @@
                 <button type="submit" class="btn-orange">Отправить</button>
             </form>
         </section>
-        <script src="js/script.js"></script>
+        <script src="js/script-min.js"></script>
     </body>
 </html>
