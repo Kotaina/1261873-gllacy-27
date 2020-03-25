@@ -808,7 +808,6 @@ main .underline:focus {
     text-decoration: none;
     box-sizing: border-box;
     padding-top: 10px;
-    /* padding-bottom: 1px; */
 }
 
 .card-one .btn-orange {
@@ -1849,8 +1848,6 @@ main .underline:focus {
 .icecream-menu-list li:hover .btn-orange {
     display: block;
 }
-
-/* Пагинация */
 
 .pagination-list {
     display: flex;
