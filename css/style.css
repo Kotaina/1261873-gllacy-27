@@ -39,7 +39,6 @@ main .underline:focus {
     display: none;
 }
 
-/*Стандартная оранжевая кнопка*/
 .btn-orange {
     width: 189px;
     height: 46px;
@@ -69,7 +68,6 @@ main .underline:focus {
     background: linear-gradient(to bottom, #d84732 0%, #e1613e 100%);
 }
 
-/* HEADER */
 
 .header-line {
     display: flex;
@@ -82,15 +80,10 @@ main .underline:focus {
     padding-top: 6px;
 }
 
-/* .main_logo {
-    z-index: 500;
-} */
-
 .header-main img {
     z-index: 10;
 }
 
-/*Все акт. элементы строки*/
 .menu-nav {
     display: flex;
     position: relative;
@@ -110,11 +103,10 @@ main .underline:focus {
     color: inherit;
 }
 
-/*Три ссылки*/
+
 .menu-list {
     display: flex;
     justify-content: space-between;
-    /* align-self: center; */
     align-items: center;
     min-width: 352px;
     font-size: 16px;
@@ -130,7 +122,6 @@ main .underline:focus {
     margin-left: 5px;
 }
 
-/*Белая кнопка ссылки*/
 .menu-list-link {
     display: block;
     text-decoration: none;
@@ -152,7 +143,6 @@ main .underline:focus {
     box-shadow: inset 0px 2px 1px 0 #696969;
 }
 
-/* Описание выпадающего меню:*/
 .menu-sub-list {
     display: none;
     position: absolute;
@@ -209,7 +199,6 @@ main .underline:focus {
     padding: 6px 17px 6px 21px;
 }
 
-/*Три кнопки*/
 .menu-forms {
     display: flex;
     align-self: flex-start;
@@ -217,14 +206,13 @@ main .underline:focus {
     margin-top: 15px;
     min-width: 245px;
     position: relative;
-    /* margin-left: 280px; */
 }
 
 .menu-forms > li {
     margin-left: 10px;
     padding-bottom: 25px;
 }
-/*Кнопка Поиск*/
+
 .btn-search {
     display: inline-block;
     vertical-align: middle;
@@ -239,7 +227,6 @@ main .underline:focus {
     cursor: pointer;
     padding-left: 8px;
     padding-bottom: 15px;
-    /* margin-bottom: 20px; */
 }
 
 .btn-search:hover,
@@ -263,8 +250,6 @@ main .underline:focus {
     position: relative;
 }
 
-
-/*Окно поиска*/
 .modal-search {
     display: none;
     position: absolute;
@@ -297,7 +282,6 @@ main .underline:focus {
     border-radius: 5px;
 }
 
-/*Кнопка Вход*/
 .btn-login {
     display: inline-block;
     vertical-align: middle;
@@ -336,11 +320,9 @@ main .underline:focus {
 }
 
 
-/*Окно входа*/
 .modal-login {
     display: none;
     position: absolute;
-    /* right: 110px; */
     right: 0;
     top: 40px;
     width: 280px;
@@ -371,7 +353,6 @@ main .underline:focus {
     margin-bottom: 20px;
 }
 
-/*Кнопка и две ссылки*/
 .login-active {
     display: flex;
     justify-content: space-between;
@@ -390,8 +371,6 @@ main .underline:focus {
     width: 100px;
     height: 44px;
 }
-
-/*Кнопка Корзина*/
 
 .btn-cart-empty {
     display: inline-block;
@@ -451,7 +430,6 @@ main .underline:focus {
     font-style: italic;
 }
 
-/*Полная корзина*/
 .menu-forms .btn-cart {
     display: inline-block;
     vertical-align: middle;
@@ -483,13 +461,6 @@ main .underline:focus {
     fill: black;
 }
 
-/* .btn-cart:hover,
-.btn-cart:focus {
-    background-color: white;
-    color: black;
-} */
-
-/*Окно корзины*/
 .modal-cart {
     display: none;
     position: absolute;
@@ -613,8 +584,6 @@ main .underline:focus {
     width: 170px;
 }
 
-/*Время работы*/
-
 .schedule {
     position: absolute;
     right: 0;
@@ -640,8 +609,6 @@ main .underline:focus {
     font-weight: 600;
 }
 
-/* MAIN */
-
 .carousel {
     position: relative;
     bottom: 0px;
@@ -649,18 +616,12 @@ main .underline:focus {
     z-index: 1;
 }
 
-/* Карусель */
 .site-wrapper {
     position: absolute;
-    /* top: 0; */
-    /* min-width: 940px; */
     background-color: #849d8f;
     background-image: url("../img/slider-item1.png");
     background-repeat: no-repeat;
     background-position: top center;
-    /* box-shadow: 10px 10px 10px 15px white; */
-    /* transition: background-image 0.5s ease, background-color 0.5s ease; */
-    /* min-height: 570px; */
 }
 
 .site-wrapper::before,
@@ -703,7 +664,7 @@ main .underline:focus {
     padding: 0;
     list-style: none;
 }
-/* Текст */
+
 .slide-title {
     position: relative;
     top: 70px;
@@ -722,7 +683,6 @@ main .underline:focus {
     right: 0px;
     display: inline-block;
     vertical-align: top;
-
     padding: 8px 44px;
     font-weight: 600;
     font-size: 31px;
@@ -755,9 +715,7 @@ main .underline:focus {
     width: 17px;
     height: 17px;
     margin-right: 8px;
-
     vertical-align: top;
-
     background-color: transparent;
     border: 2px solid #ffffff;
     border-radius: 50%;
@@ -794,20 +752,16 @@ main .underline:focus {
 }
 
 #product-2:checked ~ .site-wrapper {
-    /* background-color: #8996a6; */
     background-image: url("../img/slider-item2.png");
 }
 
 #product-3:checked ~ .site-wrapper {
-    /* background-color: #9d8b84; */
     background-image: url("../img/slider-item3.png");
 }
 
 #product-2:checked body {
     background-color: white;
 }
-
-/* CARDS-BONUS */
 
 .cards-bonus .card {
     border: 0 solid transparent;
@@ -878,8 +832,6 @@ main .underline:focus {
     background-image: url("../img/choc_back.jpg");
 }
 
-/* ICECREAM SORTS */
-
 .icecream-bonus {
     min-height: 330px;
     position: relative;
@@ -933,7 +885,6 @@ main .underline:focus {
     z-index: 1;
 }
 
-/* HIT */
 .icecream-sorts-item::after {
     content: " ";
     background-image: url("../img/hit.jpg");
@@ -970,10 +921,6 @@ main .underline:focus {
     margin: 5px;
 }
 
-/* .item-description span {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-} */
-
 .icecream-sorts-item:hover .des {
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
@@ -997,7 +944,6 @@ main .underline:focus {
     display: inline-block;
 }
 
-/* DESCRIPTION */
 .description {
     position: relative;
     bottom: 8px;
@@ -1019,7 +965,6 @@ main .underline:focus {
     font-weight: 500;
     margin: 0;
     letter-spacing: normal;
-    /* margin-bottom: 10px; */
 }
 
 .about-us {
@@ -1084,7 +1029,6 @@ main .underline:focus {
     height: 49px;
 }
 
-/*Две карточки*/
 .additional-cards .container {
     display: flex;
     justify-content: space-between;
@@ -1141,7 +1085,6 @@ main .underline:focus {
 
 .subscribe-card .face-color {
     background-color: #f8f7f4;
-    /* background-position: center; */
     border-radius: 20px;
     border: 1px solid transparent;
     padding: 27px 19px 0px 21px;
@@ -1172,16 +1115,10 @@ main .underline:focus {
 
 .subscribe-card-action {
     display: flex;
-    align-items: center; /* Для разнообразия*/
+    align-items: center;
     height: 50px;
-
-    /* Жёсткое позиционирование:
-    margin-top: 43px;
-    margin-bottom: 32px;
-*/
 }
 
-/* Карта */
 .static-map {
     position: relative;
     margin: 40px auto 0;
@@ -1257,17 +1194,14 @@ main .underline:focus {
 .btn-popup {
     display: inline-block;
     vertical-align: middle;
-
     text-decoration: none;
     box-sizing: border-box;
-    /* padding: auto; */
     padding-top: 8px;
     width: 252px;
     height: 44px;
     z-index: 1;
 }
 
-/* FOOTER */
 .footer-line {
     display: flex;
     justify-content: space-between;
@@ -1281,7 +1215,6 @@ main .underline:focus {
     list-style: none;
 }
 
-/* Иконки соц. сетей*/
 .social-list {
     display: flex;
     justify-content: space-between;
@@ -1353,7 +1286,6 @@ main .underline:focus {
     background-image: url("../img/vk.svg");
 }
 
-/*Ссылки в центре*/
 .info-list {
     position: relative;
     margin: 0;
@@ -1402,7 +1334,6 @@ main .underline:focus {
     height: 13px;
 }
 
-/*Логотип*/
 .footer-logo {
     height: 61px;
     width: 200px;
@@ -1436,8 +1367,6 @@ main .underline:focus {
     line-height: 18px;
 }
 
-/* -------CATALOG-------  */
-/*Находимся на странице*/
 .current {
     color: white;
     background-color: #d07058;
@@ -1463,7 +1392,7 @@ main .underline:focus {
     color: white;
     background-color: #d07058;
 }
-/*Хлебные крошки*/
+
 .sub-navigation {
     margin-top: 17px;
 }
@@ -1501,8 +1430,6 @@ main .underline:focus {
     margin-bottom: 25px;
 }
 
-/*Фильтры*/
-
 .filters li {
     list-style: none;
 }
@@ -1523,7 +1450,7 @@ main .underline:focus {
     font-family: inherit;
     color: white;
 }
-/*Сортировка*/
+
 .sort-field {
     border: none;
     padding-left: 0;
@@ -1601,7 +1528,6 @@ main .underline:focus {
     color: black;
 }
 
-/*Фильтр стоимости*/
 .price-volume {
     border: none;
     width: 219px;
@@ -1666,7 +1592,6 @@ main .underline:focus {
     left: 78px;
 }
 
-/*Жирность*/
 .fat-field {
     border: none;
     min-width: 414px;
@@ -1694,8 +1619,6 @@ main .underline:focus {
     position: relative;
     padding-left: 32px;
 }
-
-/*Радио кнопки*/
 
 .fat-radio {
     cursor: pointer;
@@ -1728,7 +1651,6 @@ main .underline:focus {
     content: url("../img/radio-on.svg");
 }
 
-/*Фильтр Наполнители*/
 .fill-field {
     border: none;
     padding-left: 0;
@@ -1740,7 +1662,6 @@ main .underline:focus {
     padding-top: 1px;
 }
 
-/*Список чекбоксов*/
 .filling-checkbox-list {
     display: flex;
     justify-content: space-between;
@@ -1773,7 +1694,6 @@ main .underline:focus {
     display: none;
 }
 
-/*Пустой чекбокс*/
 .fill-checkbox-indicator {
     content: url("../img/checkbox-off.svg");
     position: absolute;
@@ -1790,7 +1710,6 @@ main .underline:focus {
     outline: none;
 }
 
-/* Включение чекбокса */
 .chock-select input[type="checkbox"]:checked + .fill-checkbox-indicator,
 .sugar-select input[type="checkbox"]:checked + .fill-checkbox-indicator,
 .fruits-select input[type="checkbox"]:checked + .fill-checkbox-indicator,
@@ -1801,7 +1720,6 @@ main .underline:focus {
     height: 20px;
 }
 
-/*Кнопка применить*/
 .btn-filter {
     align-self: flex-end;
     position: relative;
@@ -1830,12 +1748,10 @@ main .underline:focus {
     box-shadow: inset 0px 2px 1px 0 #696969;
 }
 
-/* Список мороженого */
-
 .icecream-menu-list {
     padding: 0;
     box-sizing: border-box;
-    max-width: 1200px; /*Не уверен, что надо так*/
+    max-width: 1200px;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -1845,10 +1761,10 @@ main .underline:focus {
 
 .icecream-menu-item {
     list-style: none;
-    width: 284px; /*По макету 293*/
+    width: 284px;
     border: 1px solid transparent;
     text-align: center;
-    position: relative; /*Задал только для того, чтобы начинать отсчёт*/
+    position: relative;
     margin-bottom: 29px;
 }
 
@@ -1863,7 +1779,7 @@ main .underline:focus {
     background-color: darkorange;
     margin-top: 7px;
 }
-/* Белый ховер */
+
 .icecream-menu-item::before {
     display: none;
     background-color: white;
@@ -1872,9 +1788,8 @@ main .underline:focus {
     z-index: -1;
     top: 0px;
     left: 00px;
-    width: 284px; /*По макету 293*/
+    width: 284px;
     height: calc(100% + 70px);
-    /* calc(100% + высота кнопки + отступ до кнопки и после) */
     opacity: 0.3;
     border-radius: 10px;
 }
@@ -1920,8 +1835,6 @@ main .underline:focus {
     margin: 5px;
     padding: 0 10px;
 }
-
-/* Кнопка */
 
 .icecream-menu-item .btn-orange {
     display: none;
@@ -2014,7 +1927,7 @@ main .underline:focus {
     transform: rotate(180deg);
     opacity: 0.2;
 }
-/* POPUP */
+
 .popup {
     display: none;
     font-size: 16px;
@@ -2071,7 +1984,7 @@ main .underline:focus {
 .popup textarea {
     max-width: 430px;
     max-height: 155px;
-    min-width: 430px; /*При обычном всё растягивается*/
+    min-width: 430px;
     min-height: 155px;
     box-sizing: border-box;
     padding: 15px;
